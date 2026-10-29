@@ -1,0 +1,879 @@
+{
+  "version": "mt1-v1",
+  "sourceUrl": "https://docs.google.com/spreadsheets/d/1BA9Po0CIEQOEjw-CDZXhAqgFCmLH79YIm1vCbLwWDKU/edit",
+  "rules": [
+    {
+      "id": "M001",
+      "family": "십성",
+      "feature": "비견",
+      "condition": "비견 천간/본기 1개 이상",
+      "motifs": [
+        "자기 기준",
+        "독립"
+      ],
+      "copy": "스스로 기준을 세우고 꾸준히 밀어가는 인물",
+      "nameMotifs": [
+        "자립",
+        "중심"
+      ],
+      "priority": 2,
+      "constraint": "단독으로 성격 단정 금지; 위치·반복·상반 특징 함께 제시",
+      "source": "자평 기본표+MT1 편집"
+    },
+    {
+      "id": "M002",
+      "family": "십성",
+      "feature": "겁재",
+      "condition": "겁재 천간/본기 1개 이상",
+      "motifs": [
+        "경쟁",
+        "동료",
+        "전환"
+      ],
+      "copy": "또래와 부딪치며 방법을 다시 고르는 인물",
+      "nameMotifs": [
+        "경쟁",
+        "연대"
+      ],
+      "priority": 2,
+      "constraint": "단독으로 성격 단정 금지; 위치·반복·상반 특징 함께 제시",
+      "source": "자평 기본표+MT1 편집"
+    },
+    {
+      "id": "M003",
+      "family": "십성",
+      "feature": "식신",
+      "condition": "식신 천간/본기 1개 이상",
+      "motifs": [
+        "제작",
+        "돌봄",
+        "꾸준함"
+      ],
+      "copy": "무언가를 만들고 길러 결과를 쌓는 인물",
+      "nameMotifs": [
+        "결실",
+        "손길"
+      ],
+      "priority": 2,
+      "constraint": "단독으로 성격 단정 금지; 위치·반복·상반 특징 함께 제시",
+      "source": "자평 기본표+MT1 편집"
+    },
+    {
+      "id": "M004",
+      "family": "십성",
+      "feature": "상관",
+      "condition": "상관 천간/본기 1개 이상",
+      "motifs": [
+        "표현",
+        "질문",
+        "변칙"
+      ],
+      "copy": "익숙한 방식에 질문을 던지고 새 표현을 찾는 인물",
+      "nameMotifs": [
+        "언어",
+        "새길"
+      ],
+      "priority": 2,
+      "constraint": "단독으로 성격 단정 금지; 위치·반복·상반 특징 함께 제시",
+      "source": "자평 기본표+MT1 편집"
+    },
+    {
+      "id": "M005",
+      "family": "십성",
+      "feature": "편재",
+      "condition": "편재 천간/본기 1개 이상",
+      "motifs": [
+        "기회",
+        "교류",
+        "개척"
+      ],
+      "copy": "낯선 사람과 가능성을 연결하는 인물",
+      "nameMotifs": [
+        "길",
+        "확장"
+      ],
+      "priority": 2,
+      "constraint": "단독으로 성격 단정 금지; 위치·반복·상반 특징 함께 제시",
+      "source": "자평 기본표+MT1 편집"
+    },
+    {
+      "id": "M006",
+      "family": "십성",
+      "feature": "정재",
+      "condition": "정재 천간/본기 1개 이상",
+      "motifs": [
+        "관리",
+        "약속",
+        "축적"
+      ],
+      "copy": "맡은 것을 오래 지키고 신뢰를 쌓는 인물",
+      "nameMotifs": [
+        "결실",
+        "신뢰"
+      ],
+      "priority": 2,
+      "constraint": "단독으로 성격 단정 금지; 위치·반복·상반 특징 함께 제시",
+      "source": "자평 기본표+MT1 편집"
+    },
+    {
+      "id": "M007",
+      "family": "십성",
+      "feature": "칠살",
+      "condition": "칠살 천간/본기 1개 이상",
+      "motifs": [
+        "압력",
+        "결단",
+        "도전"
+      ],
+      "copy": "어려운 상황에서 결정을 요구받는 인물",
+      "nameMotifs": [
+        "용기",
+        "전환"
+      ],
+      "priority": 2,
+      "constraint": "단독으로 성격 단정 금지; 위치·반복·상반 특징 함께 제시",
+      "source": "자평 기본표+MT1 편집"
+    },
+    {
+      "id": "M008",
+      "family": "십성",
+      "feature": "정관",
+      "condition": "정관 천간/본기 1개 이상",
+      "motifs": [
+        "책임",
+        "질서",
+        "공동체"
+      ],
+      "copy": "규칙과 약속 속에서 자신의 자리를 찾는 인물",
+      "nameMotifs": [
+        "약속",
+        "바름"
+      ],
+      "priority": 2,
+      "constraint": "단독으로 성격 단정 금지; 위치·반복·상반 특징 함께 제시",
+      "source": "자평 기본표+MT1 편집"
+    },
+    {
+      "id": "M009",
+      "family": "십성",
+      "feature": "편인",
+      "condition": "편인 천간/본기 1개 이상",
+      "motifs": [
+        "탐구",
+        "직관",
+        "독학"
+      ],
+      "copy": "남들이 지나친 단서를 오래 들여다보는 인물",
+      "nameMotifs": [
+        "통찰",
+        "별"
+      ],
+      "priority": 2,
+      "constraint": "단독으로 성격 단정 금지; 위치·반복·상반 특징 함께 제시",
+      "source": "자평 기본표+MT1 편집"
+    },
+    {
+      "id": "M010",
+      "family": "십성",
+      "feature": "정인",
+      "condition": "정인 천간/본기 1개 이상",
+      "motifs": [
+        "배움",
+        "보호",
+        "기억"
+      ],
+      "copy": "배운 것을 이어받아 누군가에게 전하는 인물",
+      "nameMotifs": [
+        "기억",
+        "빛"
+      ],
+      "priority": 2,
+      "constraint": "단독으로 성격 단정 금지; 위치·반복·상반 특징 함께 제시",
+      "source": "자평 기본표+MT1 편집"
+    },
+    {
+      "id": "M011",
+      "family": "계절·일간",
+      "feature": "월지 목 계절",
+      "condition": "month_branch∈寅卯",
+      "motifs": [
+        "시작",
+        "성장"
+      ],
+      "copy": "변화가 싹트는 계절의 이미지",
+      "nameMotifs": [
+        "새싹",
+        "봄"
+      ],
+      "priority": 2,
+      "constraint": "계절 이미지, 운명 아님",
+      "source": "오행 상징+MT1 편집"
+    },
+    {
+      "id": "M012",
+      "family": "계절·일간",
+      "feature": "월지 화 계절",
+      "condition": "month_branch∈巳午",
+      "motifs": [
+        "표현",
+        "확산"
+      ],
+      "copy": "바깥으로 드러나는 계절의 이미지",
+      "nameMotifs": [
+        "빛",
+        "여름"
+      ],
+      "priority": 2,
+      "constraint": "월지 하나로 성격 단정 금지",
+      "source": "오행 상징+MT1 편집"
+    },
+    {
+      "id": "M013",
+      "family": "계절·일간",
+      "feature": "월지 금 계절",
+      "condition": "month_branch∈申酉",
+      "motifs": [
+        "정리",
+        "선택"
+      ],
+      "copy": "무르익은 뒤 무엇을 남길지 고르는 이미지",
+      "nameMotifs": [
+        "결실",
+        "가을"
+      ],
+      "priority": 2,
+      "constraint": "인물의 실제 성향 아님",
+      "source": "오행 상징+MT1 편집"
+    },
+    {
+      "id": "M014",
+      "family": "계절·일간",
+      "feature": "월지 수 계절",
+      "condition": "month_branch∈亥子",
+      "motifs": [
+        "보존",
+        "준비"
+      ],
+      "copy": "잠시 멈추어 다음 움직임을 준비하는 이미지",
+      "nameMotifs": [
+        "깊이",
+        "겨울"
+      ],
+      "priority": 2,
+      "constraint": "연도별 절입 기준",
+      "source": "오행 상징+MT1 편집"
+    },
+    {
+      "id": "M015",
+      "family": "계절·일간",
+      "feature": "월지 토 환절",
+      "condition": "month_branch∈辰未戌丑",
+      "motifs": [
+        "전환",
+        "매개"
+      ],
+      "copy": "계절과 계절 사이를 건너는 이미지",
+      "nameMotifs": [
+        "다리",
+        "터"
+      ],
+      "priority": 2,
+      "constraint": "토=항상 안정으로 단정 금지",
+      "source": "오행 상징+MT1 편집"
+    },
+    {
+      "id": "M016",
+      "family": "계절·일간",
+      "feature": "일간 목",
+      "condition": "day_stem∈甲乙",
+      "motifs": [
+        "성장",
+        "길찾기"
+      ],
+      "copy": "줄기를 세우거나 가지를 뻗는 중심 이미지",
+      "nameMotifs": [
+        "나무",
+        "길"
+      ],
+      "priority": 2,
+      "constraint": "甲/乙 표현은 별도",
+      "source": "오행 상징+MT1 편집"
+    },
+    {
+      "id": "M017",
+      "family": "계절·일간",
+      "feature": "일간 화",
+      "condition": "day_stem∈丙丁",
+      "motifs": [
+        "밝힘",
+        "전달"
+      ],
+      "copy": "빛을 비추거나 작은 불을 이어가는 이미지",
+      "nameMotifs": [
+        "빛",
+        "등불"
+      ],
+      "priority": 2,
+      "constraint": "丙/丁 표현은 별도",
+      "source": "오행 상징+MT1 편집"
+    },
+    {
+      "id": "M018",
+      "family": "계절·일간",
+      "feature": "일간 토",
+      "condition": "day_stem∈戊己",
+      "motifs": [
+        "기반",
+        "품기"
+      ],
+      "copy": "산 또는 밭의 중심 이미지",
+      "nameMotifs": [
+        "산",
+        "터"
+      ],
+      "priority": 2,
+      "constraint": "戊/己 표현은 별도",
+      "source": "오행 상징+MT1 편집"
+    },
+    {
+      "id": "M019",
+      "family": "계절·일간",
+      "feature": "일간 금",
+      "condition": "day_stem∈庚辛",
+      "motifs": [
+        "선택",
+        "다듬기"
+      ],
+      "copy": "거친 것을 벼리거나 보석처럼 다듬는 이미지",
+      "nameMotifs": [
+        "결",
+        "쇠"
+      ],
+      "priority": 2,
+      "constraint": "庚/辛 표현은 별도",
+      "source": "오행 상징+MT1 편집"
+    },
+    {
+      "id": "M020",
+      "family": "계절·일간",
+      "feature": "일간 수",
+      "condition": "day_stem∈壬癸",
+      "motifs": [
+        "흐름",
+        "관찰"
+      ],
+      "copy": "강 또는 이슬의 중심 이미지",
+      "nameMotifs": [
+        "강",
+        "이슬"
+      ],
+      "priority": 2,
+      "constraint": "壬/癸 표현은 별도",
+      "source": "오행 상징+MT1 편집"
+    },
+    {
+      "id": "M021",
+      "family": "상호작용",
+      "feature": "투간",
+      "condition": "month_hidden_stem in visible_stems",
+      "motifs": [
+        "드러남",
+        "선언"
+      ],
+      "copy": "숨은 계절의 주제가 말이나 역할로 드러나는 장면",
+      "nameMotifs": [
+        "드러남",
+        "소리"
+      ],
+      "priority": 3,
+      "constraint": "격국 성패와 동일시 금지",
+      "source": "전통 관계표+MT1 편집"
+    },
+    {
+      "id": "M022",
+      "family": "상호작용",
+      "feature": "일간 통근",
+      "condition": "day_stem_element in branch_hidden_stems",
+      "motifs": [
+        "기반",
+        "귀속"
+      ],
+      "copy": "돌아갈 뿌리나 오래된 바탕이 있는 장면",
+      "nameMotifs": [
+        "뿌리",
+        "터"
+      ],
+      "priority": 3,
+      "constraint": "강약 확정 금지",
+      "source": "전통 관계표+MT1 편집"
+    },
+    {
+      "id": "M023",
+      "family": "상호작용",
+      "feature": "천간합 짝",
+      "condition": "stem_pair in five_combinations",
+      "motifs": [
+        "협상",
+        "결속"
+      ],
+      "copy": "서로 다른 역할이 손을 잡는 선택",
+      "nameMotifs": [
+        "연결",
+        "약속"
+      ],
+      "priority": 2,
+      "constraint": "합화로 단정 금지",
+      "source": "전통 관계표+MT1 편집"
+    },
+    {
+      "id": "M024",
+      "family": "상호작용",
+      "feature": "육합 짝",
+      "condition": "branch_pair in six_combinations",
+      "motifs": [
+        "동행",
+        "관계"
+      ],
+      "copy": "뜻밖의 동행이나 연결의 계기",
+      "nameMotifs": [
+        "동행",
+        "잇기"
+      ],
+      "priority": 2,
+      "constraint": "다른 충과 동시 존재 가능",
+      "source": "전통 관계표+MT1 편집"
+    },
+    {
+      "id": "M025",
+      "family": "상호작용",
+      "feature": "삼합 완성",
+      "condition": "three_branches in same_trine",
+      "motifs": [
+        "합류",
+        "팀"
+      ],
+      "copy": "흩어진 셋이 하나의 일을 위해 모이는 장면",
+      "nameMotifs": [
+        "모임",
+        "강"
+      ],
+      "priority": 3,
+      "constraint": "합화 강도 별도",
+      "source": "전통 관계표+MT1 편집"
+    },
+    {
+      "id": "M026",
+      "family": "상호작용",
+      "feature": "반합 후보",
+      "condition": "two_branches in same_trine",
+      "motifs": [
+        "미완의 동맹"
+      ],
+      "copy": "함께할 가능성은 있으나 아직 모이지 않은 장면",
+      "nameMotifs": [
+        "기다림",
+        "이음"
+      ],
+      "priority": 1,
+      "constraint": "삼합 완성과 구별",
+      "source": "전통 관계표+MT1 편집"
+    },
+    {
+      "id": "M027",
+      "family": "상호작용",
+      "feature": "충",
+      "condition": "branch_pair in six_clashes",
+      "motifs": [
+        "이별",
+        "변화",
+        "갈림길"
+      ],
+      "copy": "두 방향이 부딪쳐 결정을 내리는 장면",
+      "nameMotifs": [
+        "갈림길",
+        "새길"
+      ],
+      "priority": 3,
+      "constraint": "충=불행 단정 금지",
+      "source": "전통 관계표+MT1 편집"
+    },
+    {
+      "id": "M028",
+      "family": "상호작용",
+      "feature": "형",
+      "condition": "branch_group in punishment_table",
+      "motifs": [
+        "마찰",
+        "반복"
+      ],
+      "copy": "같은 문제를 다른 방식으로 풀어 보는 장면",
+      "nameMotifs": [
+        "새 매듭"
+      ],
+      "priority": 1,
+      "constraint": "판본/복합 조건 검토",
+      "source": "전통 관계표+MT1 편집"
+    },
+    {
+      "id": "M029",
+      "family": "상호작용",
+      "feature": "해",
+      "condition": "branch_pair in harm_table",
+      "motifs": [
+        "오해",
+        "거리"
+      ],
+      "copy": "말하지 못한 마음을 다시 확인하는 장면",
+      "nameMotifs": [
+        "마음",
+        "말"
+      ],
+      "priority": 1,
+      "constraint": "사건 예언 금지",
+      "source": "전통 관계표+MT1 편집"
+    },
+    {
+      "id": "M030",
+      "family": "상호작용",
+      "feature": "파",
+      "condition": "branch_pair in break_table",
+      "motifs": [
+        "균열",
+        "재구성"
+      ],
+      "copy": "기존 약속을 다시 짜는 장면",
+      "nameMotifs": [
+        "새 틀"
+      ],
+      "priority": 0,
+      "constraint": "v1 검색 점수 0; 설명 실험만",
+      "source": "전통 관계표+MT1 편집"
+    },
+    {
+      "id": "M031",
+      "family": "신살·운성",
+      "feature": "역마 연지",
+      "condition": "year_branch trine→horse in any_branch",
+      "motifs": [
+        "이동",
+        "여정"
+      ],
+      "copy": "자리를 옮기며 새로운 세계를 만나는 서사",
+      "nameMotifs": [
+        "길",
+        "바람"
+      ],
+      "priority": 1,
+      "constraint": "실제 이사/해외운 예언 아님",
+      "source": "삼명통회/12운성 관용표+MT1 편집"
+    },
+    {
+      "id": "M032",
+      "family": "신살·운성",
+      "feature": "역마 일지",
+      "condition": "day_branch trine→horse in any_branch",
+      "motifs": [
+        "이동",
+        "여정"
+      ],
+      "copy": "익숙한 자리를 떠나는 선택의 서사",
+      "nameMotifs": [
+        "길",
+        "바람"
+      ],
+      "priority": 1,
+      "constraint": "연지 역마와 별도 저장",
+      "source": "삼명통회/12운성 관용표+MT1 편집"
+    },
+    {
+      "id": "M033",
+      "family": "신살·운성",
+      "feature": "도화 연지",
+      "condition": "year_branch trine→peach in any_branch",
+      "motifs": [
+        "관계",
+        "주목"
+      ],
+      "copy": "사람들 사이에 모습을 드러내는 서사",
+      "nameMotifs": [
+        "꽃",
+        "빛"
+      ],
+      "priority": 1,
+      "constraint": "매력/성별/연애 운명 단정 금지",
+      "source": "삼명통회/12운성 관용표+MT1 편집"
+    },
+    {
+      "id": "M034",
+      "family": "신살·운성",
+      "feature": "도화 일지",
+      "condition": "day_branch trine→peach in any_branch",
+      "motifs": [
+        "관계",
+        "주목"
+      ],
+      "copy": "관계에서 자신을 새로 발견하는 서사",
+      "nameMotifs": [
+        "꽃",
+        "빛"
+      ],
+      "priority": 1,
+      "constraint": "연지 도화와 별도 저장",
+      "source": "삼명통회/12운성 관용표+MT1 편집"
+    },
+    {
+      "id": "M035",
+      "family": "신살·운성",
+      "feature": "화개 연지",
+      "condition": "year_branch trine→canopy in any_branch",
+      "motifs": [
+        "몰입",
+        "고독",
+        "예술"
+      ],
+      "copy": "혼자 깊이 파고드는 시간을 가진 서사",
+      "nameMotifs": [
+        "별",
+        "깊이"
+      ],
+      "priority": 1,
+      "constraint": "고독/종교 인생 단정 금지",
+      "source": "삼명통회/12운성 관용표+MT1 편집"
+    },
+    {
+      "id": "M036",
+      "family": "신살·운성",
+      "feature": "화개 일지",
+      "condition": "day_branch trine→canopy in any_branch",
+      "motifs": [
+        "몰입",
+        "고독",
+        "예술"
+      ],
+      "copy": "혼자 만든 것을 세상에 내놓는 서사",
+      "nameMotifs": [
+        "별",
+        "깊이"
+      ],
+      "priority": 1,
+      "constraint": "연지 화개와 별도 저장",
+      "source": "삼명통회/12운성 관용표+MT1 편집"
+    },
+    {
+      "id": "M037",
+      "family": "신살·운성",
+      "feature": "천을귀인",
+      "condition": "day_stem table→branch present",
+      "motifs": [
+        "도움",
+        "연결"
+      ],
+      "copy": "도움을 주고받는 인연이 나타나는 서사",
+      "nameMotifs": [
+        "인연",
+        "손"
+      ],
+      "priority": 1,
+      "constraint": "실제 귀인 출현 예언 금지",
+      "source": "삼명통회/12운성 관용표+MT1 편집"
+    },
+    {
+      "id": "M038",
+      "family": "신살·운성",
+      "feature": "12운성 장생·관대",
+      "condition": "day_stem stage in 長生/冠帶",
+      "motifs": [
+        "시작",
+        "준비"
+      ],
+      "copy": "새 역할을 시험하는 단계 이미지",
+      "nameMotifs": [
+        "시작",
+        "옷"
+      ],
+      "priority": 0,
+      "constraint": "v1 점수 제외",
+      "source": "삼명통회/12운성 관용표+MT1 편집"
+    },
+    {
+      "id": "M039",
+      "family": "신살·운성",
+      "feature": "12운성 제왕·쇠",
+      "condition": "day_stem stage in 帝旺/衰",
+      "motifs": [
+        "절정",
+        "전환"
+      ],
+      "copy": "이룬 것을 다시 정리하는 단계 이미지",
+      "nameMotifs": [
+        "결실",
+        "갈림"
+      ],
+      "priority": 0,
+      "constraint": "v1 점수 제외",
+      "source": "삼명통회/12운성 관용표+MT1 편집"
+    },
+    {
+      "id": "M040",
+      "family": "신살·운성",
+      "feature": "12운성 묘·절·태",
+      "condition": "day_stem stage in 墓/絶/胎",
+      "motifs": [
+        "저장",
+        "재시작"
+      ],
+      "copy": "끝과 시작을 잇는 단계 이미지",
+      "nameMotifs": [
+        "씨앗",
+        "새길"
+      ],
+      "priority": 0,
+      "constraint": "죽음/질병으로 읽지 않음",
+      "source": "삼명통회/12운성 관용표+MT1 편집"
+    },
+    {
+      "id": "M041",
+      "family": "복합 장면",
+      "feature": "정관+정인",
+      "condition": "visible 正官 and 正印",
+      "motifs": [
+        "책임",
+        "배움"
+      ],
+      "copy": "배운 기준으로 누군가를 책임지는 인물",
+      "nameMotifs": [
+        "약속",
+        "배움"
+      ],
+      "priority": 3,
+      "constraint": "관인상생의 성립 단정 금지",
+      "source": "MT1 창작 편집"
+    },
+    {
+      "id": "M042",
+      "family": "복합 장면",
+      "feature": "식신+편재",
+      "condition": "visible 食神 and 偏財",
+      "motifs": [
+        "제작",
+        "교류"
+      ],
+      "copy": "만든 것을 낯선 세계에 내놓는 인물",
+      "nameMotifs": [
+        "손길",
+        "길"
+      ],
+      "priority": 3,
+      "constraint": "식신생재 성립 단정 금지",
+      "source": "MT1 창작 편집"
+    },
+    {
+      "id": "M043",
+      "family": "복합 장면",
+      "feature": "상관+정관",
+      "condition": "visible 傷官 and 正官",
+      "motifs": [
+        "질문",
+        "규칙"
+      ],
+      "copy": "규칙을 지키려는 마음과 바꾸려는 마음의 갈등",
+      "nameMotifs": [
+        "말",
+        "새길"
+      ],
+      "priority": 3,
+      "constraint": "상관견관 길흉 판정 금지",
+      "source": "MT1 창작 편집"
+    },
+    {
+      "id": "M044",
+      "family": "복합 장면",
+      "feature": "칠살+식신",
+      "condition": "visible 七殺 and 食神",
+      "motifs": [
+        "압박",
+        "기술"
+      ],
+      "copy": "압박을 솜씨와 준비로 마주하는 인물",
+      "nameMotifs": [
+        "솜씨",
+        "용기"
+      ],
+      "priority": 3,
+      "constraint": "식신제살 성립 단정 금지",
+      "source": "MT1 창작 편집"
+    },
+    {
+      "id": "M045",
+      "family": "복합 장면",
+      "feature": "편인+식신",
+      "condition": "visible 偏印 and 食神",
+      "motifs": [
+        "직관",
+        "제작"
+      ],
+      "copy": "혼자 탐구한 것을 실제로 만들어 보는 인물",
+      "nameMotifs": [
+        "통찰",
+        "손길"
+      ],
+      "priority": 2,
+      "constraint": "도식 길흉 단정 금지",
+      "source": "MT1 창작 편집"
+    },
+    {
+      "id": "M046",
+      "family": "복합 장면",
+      "feature": "충+합 공존",
+      "condition": "both clash and combine",
+      "motifs": [
+        "갈등",
+        "동행"
+      ],
+      "copy": "서로 다른 선택이 동시에 끌어당기는 이야기",
+      "nameMotifs": [
+        "매듭",
+        "갈림"
+      ],
+      "priority": 3,
+      "constraint": "하나가 다른 하나를 무효화한다고 보지 않음",
+      "source": "MT1 창작 편집"
+    },
+    {
+      "id": "M047",
+      "family": "복합 장면",
+      "feature": "통근+투간",
+      "condition": "root and exposed month stem",
+      "motifs": [
+        "기반",
+        "표현"
+      ],
+      "copy": "오래된 뿌리를 세상에 드러내는 이야기",
+      "nameMotifs": [
+        "뿌리",
+        "빛"
+      ],
+      "priority": 3,
+      "constraint": "신강 및 격 성패 별도",
+      "source": "MT1 창작 편집"
+    },
+    {
+      "id": "M048",
+      "family": "복합 장면",
+      "feature": "역마+화개",
+      "condition": "both sinsal flags",
+      "motifs": [
+        "여정",
+        "몰입"
+      ],
+      "copy": "멀리 떠나 홀로 탐구한 것을 가지고 돌아오는 이야기",
+      "nameMotifs": [
+        "길",
+        "별"
+      ],
+      "priority": 2,
+      "constraint": "두 표지는 약한 보조 근거",
+      "source": "MT1 창작 편집"
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+[
+  {
+    "id": "seoul",
+    "name": "서울",
+    "longitude": 126.9784,
+    "latitude": 37.566,
+    "source": "https://www.geonames.org/search.html?country=KR",
+    "sourceVersion": "2026-10-29 search snapshot",
+    "coordinateType": "city point",
+    "verified": true
+  },
+  {
+    "id": "seongnam",
+    "name": "성남",
+    "longitude": 127.137778,
+    "latitude": 37.438611,
+    "source": "https://www.geonames.org/search.html?country=KR",
+    "sourceVersion": "2026-10-29 search snapshot",
+    "coordinateType": "city point",
+    "verified": true
+  },
+  {
+    "id": "incheon",
+    "name": "인천",
+    "longitude": 126.70515,
+    "latitude": 37.45646,
+    "source": "https://www.geonames.org/search.html?country=KR",
+    "sourceVersion": "2026-10-29 search snapshot",
+    "coordinateType": "city point",
+    "verified": true
+  },
+  {
+    "id": "suwon",
+    "name": "수원",
+    "longitude": 127.031644,
+    "latitude": 37.278176,
+    "source": "https://www.geonames.org/search.html?country=KR",
+    "sourceVersion": "2026-10-29 search snapshot",
+    "coordinateType": "city point",
+    "verified": true
+  },
+  {
+    "id": "chuncheon",
+    "name": "춘천",
+    "longitude": 127.7289,
+    "latitude": 37.883025,
+    "source": "https://www.geonames.org/search.html?country=KR",
+    "sourceVersion": "2026-10-29 search snapshot",
+    "coordinateType": "city point",
+    "verified": true
+  },
+  {
+    "id": "sokcho",
+    "name": "속초",
+    "longitude": 128.591812,
+    "latitude": 38.207009,
+    "source": "https://www.geonames.org/search.html?country=KR",
+    "sourceVersion": "2026-10-29 search snapshot",
+    "coordinateType": "city point",
+    "verified": true
+  },
+  {
+    "id": "gangneung",
+    "name": "강릉",
+    "longitude": 128.872392,
+    "latitude": 37.752657,
+    "source": "https://www.geonames.org/search.html?country=KR",
+    "sourceVersion": "2026-10-29 search snapshot",
+    "coordinateType": "city point",
+    "verified": true
+  },
+  {
+    "id": "daejeon",
+    "name": "대전",
+    "longitude": 127.385,
+    "latitude": 36.35,
+    "source": "https://www.geonames.org/search.html?country=KR",
+    "sourceVersion": "2026-10-29 search snapshot",
+    "coordinateType": "city point",
+    "verified": true
+  },
+  {
+    "id": "cheongju",
+    "name": "청주",
+    "longitude": 127.489722,
+    "latitude": 36.637222,
+    "source": "https://www.geonames.org/search.html?country=KR",
+    "sourceVersion": "2026-10-29 search snapshot",
+    "coordinateType": "city point",
+    "verified": true
+  },
+  {
+    "id": "cheonan",
+    "name": "천안",
+    "longitude": 127.1522,
+    "latitude": 36.8065,
+    "source": "https://www.geonames.org/search.html?country=KR",
+    "sourceVersion": "2026-10-29 search snapshot",
+    "coordinateType": "city point",
+    "verified": true
+  },
+  {
+    "id": "jeonju",
+    "name": "전주",
+    "longitude": 127.147963,
+    "latitude": 35.82483,
+    "source": "https://www.geonames.org/search.html?country=KR",
+    "sourceVersion": "2026-10-29 search snapshot",
+    "coordinateType": "city point",
+    "verified": true
+  },
+  {
+    "id": "gunsan",
+    "name": "군산",
+    "longitude": 126.711389,
+    "latitude": 35.978611,
+    "source": "https://www.geonames.org/search.html?country=KR",
+    "sourceVersion": "2026-10-29 search snapshot",
+    "coordinateType": "city point",
+    "verified": true
+  },
+  {
+    "id": "gwangju",
+    "name": "광주",
+    "longitude": 126.915556,
+    "latitude": 35.154722,
+    "source": "https://www.geonames.org/search.html?country=KR",
+    "sourceVersion": "2026-10-29 search snapshot",
+    "coordinateType": "city point",
+    "verified": true
+  },
+  {
+    "id": "mokpo",
+    "name": "목포",
+    "longitude": 126.388611,
+    "latitude": 34.793611,
+    "source": "https://ungegn.un.org/dashboard/cities/details?id=2621",
+    "sourceVersion": "2026-10-29 search snapshot",
+    "coordinateType": "city point",
+    "verified": true
+  },
+  {
+    "id": "daegu",
+    "name": "대구",
+    "longitude": 128.601214,
+    "latitude": 35.871017,
+    "source": "https://www.geonames.org/search.html?country=KR",
+    "sourceVersion": "2026-10-29 search snapshot",
+    "coordinateType": "city point",
+    "verified": true
+  },
+  {
+    "id": "pohang",
+    "name": "포항",
+    "longitude": 129.364812,
+    "latitude": 36.029168,
+    "source": "https://www.geonames.org/search.html?country=KR",
+    "sourceVersion": "2026-10-29 search snapshot",
+    "coordinateType": "city point",
+    "verified": true
+  },
+  {
+    "id": "busan",
+    "name": "부산",
+    "longitude": 129.03004,
+    "latitude": 35.10168,
+    "source": "https://www.geonames.org/search.html?country=KR",
+    "sourceVersion": "2026-10-29 search snapshot",
+    "coordinateType": "city point",
+    "verified": true
+  },
+  {
+    "id": "changwon",
+    "name": "창원",
+    "longitude": 128.681111,
+    "latitude": 35.228056,
+    "source": "https://www.geonames.org/search.html?country=KR",
+    "sourceVersion": "2026-10-29 search snapshot",
+    "coordinateType": "city point",
+    "verified": true
+  },
+  {
+    "id": "ulsan",
+    "name": "울산",
+    "longitude": 129.312389,
+    "latitude": 35.539169,
+    "source": "https://www.geonames.org/search.html?country=KR",
+    "sourceVersion": "2026-10-29 search snapshot",
+    "coordinateType": "city point",
+    "verified": true
+  },
+  {
+    "id": "jeju",
+    "name": "제주",
+    "longitude": 126.52194,
+    "latitude": 33.50972,
+    "source": "https://www.geonames.org/search.html?country=KR",
+    "sourceVersion": "2026-10-29 search snapshot",
+    "coordinateType": "city point",
+    "verified": true
+  }
+]

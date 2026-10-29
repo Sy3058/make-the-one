@@ -1,0 +1,36 @@
+{
+  "name": "make-the-one",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --import tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "next build",
+    "build:index": "node --import tsx scripts/build-index.ts",
+    "load:index": "node --import tsx scripts/load-index.ts",
+    "dev": "next dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "astronomy-engine": "2.1.19",
+    "moment": "2.31.0",
+    "moment-timezone": "0.6.5",
+    "next": "16.4.3",
+    "pg": "8.16.3",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "24.9.1",
+    "@types/pg": "8.15.5",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3"
+  }
+}
