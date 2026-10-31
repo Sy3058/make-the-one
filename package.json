@@ -5,10 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "node --import tsx --test tests/*.test.ts",
+    "test:db": "node --env-file-if-exists=.env --env-file-if-exists=.env.local --import tsx --test tests/index-load.integration.ts",
     "typecheck": "tsc --noEmit",
     "build": "next build",
     "build:index": "node --import tsx scripts/build-index.ts",
-    "load:index": "node --import tsx scripts/load-index.ts",
+    "load:index": "node --env-file-if-exists=.env --env-file-if-exists=.env.local --import tsx scripts/load-index.ts",
+    "check:services": "node --env-file-if-exists=.env --env-file-if-exists=.env.local --import tsx scripts/check-services.ts",
+    "db:init": "node --env-file-if-exists=.env --env-file-if-exists=.env.local --import tsx scripts/init-db.ts",
+    "load:names": "node --env-file-if-exists=.env --env-file-if-exists=.env.local --import tsx scripts/load-names.ts",
     "dev": "next dev"
   },
   "keywords": [],
@@ -33,6 +37,7 @@
     "@types/pg": "8.15.5",
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.2",
+    "lunar-javascript": "1.7.7",
     "tsx": "4.20.6",
     "typescript": "5.9.3"
   }

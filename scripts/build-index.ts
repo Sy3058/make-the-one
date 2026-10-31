@@ -1,28 +1,37 @@
-import {createWriteStream,mkdirSync} from 'node:fs';
+import {createWriteStream,createReadStream,mkdirSync,existsSync,readdirSync} from 'node:fs';
 import {createGzip} from 'node:zlib';
 import {once} from 'node:events';
 import {createHash} from 'node:crypto';
+import {pipeline} from 'node:stream/promises';
+import moment from 'moment-timezone';
+import packageInfo from '../package.json' with {type:'json'};
+import ruleset from '../data/ruleset.json' with {type:'json'};
 import places from '../data/places.json' with {type:'json'};
 import {nearbyTerms,occurrence,solarTerms,type Place} from '../src/calendar.ts';
 import {extract} from '../src/features.ts';
+import {validateSolarTerms} from '../src/calendar-validation.ts';
+import {civilYearWindow} from '../src/index-window.ts';
 const yearFrom=Number(process.argv[2]??2024),yearTo=Number(process.argv[3]??yearFrom);
 const cityArg=process.argv[4]??'seoul,seongnam,sokcho,mokpo';
 const selected=(cityArg==='all'?places:places.filter(p=>cityArg.split(',').includes(p.id))) as Place[];
-if(yearFrom<1980||yearTo>2039||yearFrom>yearTo||!selected.length) throw new Error('invalid year or places');
+const {start:START,end:END}=civilYearWindow(yearFrom,yearTo);
+if(!selected.length||(cityArg!=='all'&&cityArg.split(',').some(id=>!places.some(p=>p.id===id)))) throw new Error('invalid places');
 const out=process.argv[5]??'data/generated';
+const solarTermValidation=validateSolarTerms();
+if(existsSync(out)&&readdirSync(out).length) throw new Error('Output directory is not empty; refusing overwrite');
 mkdirSync(out,{recursive:true});
 const seen=new Set<string>();
 const hash=createHash('sha256');
 let count=0,motifCount=0,representative=0;
+const completedFiles:Promise<void>[]=[];
 const writers=Object.fromEntries(['charts','occurrences','motifs'].map(kind=>{
-  const gz=createGzip(); gz.pipe(createWriteStream(`${out}/${kind}.jsonl.gz`));
+  const gz=createGzip();completedFiles.push(pipeline(gz,createWriteStream(`${out}/${kind}.jsonl.gz`)));
   return [kind,gz];
 })) as Record<string,ReturnType<typeof createGzip>>;
 async function write(kind:string,row:unknown) {
   const line=JSON.stringify(row)+'\n';
   if(!writers[kind].write(line)) await once(writers[kind],'drain');
 }
-const START=Date.UTC(yearFrom,0,1),END=Date.UTC(yearTo+1,0,1);
 for(const place of selected){
   console.error(`building ${place.id} (${selected.indexOf(place)+1}/${selected.length})`);
   let t=Date.UTC(yearFrom-1,11,30,23)-place.longitude*240_000;
@@ -30,8 +39,9 @@ for(const place of selected){
   while(t<end) {
     const next=t+7_200_000;
     const jie=nearbyTerms(new Date(t)).filter(x=>x.isJie&&x.utc.getTime()>t&&x.utc.getTime()<next);
-    const splits=[t,...jie.map(x=>x.utc.getTime()),next];
+    const splits=[Math.max(t,START),...jie.map(x=>x.utc.getTime()).filter(x=>x>START&&x<END),Math.min(next,END)];
     for(let j=0;j<splits.length-1;j++){
+      if(splits[j]>=splits[j+1]) continue;
       const mid=Math.round((splits[j]+splits[j+1])/2);
       if(mid<START||mid>=END) continue;
       const row=occurrence(new Date(mid),place);
@@ -57,12 +67,24 @@ for(const place of selected){
     t=next;
   }
 }
-for(const stream of Object.values(writers)){stream.end();await once(stream,'end');}
+for(const stream of Object.values(writers)) stream.end();
+await Promise.all(completedFiles);
+const files:Record<string,{sha256:string}>= {};
+for(const kind of ['charts','occurrences','motifs']){
+  const digest=createHash('sha256');
+  for await(const chunk of createReadStream(`${out}/${kind}.jsonl.gz`)) digest.update(chunk);
+  files[kind]={sha256:digest.digest('hex')};
+}
 const manifest={policy_id:'kr-mean-solar-23-v1',years:[yearFrom,yearTo],places:selected.map(p=>p.id),
   chart_count:seen.size,occurrence_count:count,motif_count:motifCount,representative_count:representative,
-  checksum_sha256:hash.digest('hex'),status:'draft',timestamp:new Date().toISOString()};
+  checksum_sha256:hash.digest('hex'),status:'draft',timestamp:new Date().toISOString(),solar_term_validation:solarTermValidation,files,
+  versions:{astronomy:packageInfo.dependencies['astronomy-engine'],timezone:packageInfo.dependencies['moment-timezone'],
+    tzdb:moment.tz.dataVersion,ruleset:ruleset.version,places:[...new Set(places.map(p=>p.sourceVersion))]},
+  interval:{startUtc:new Date(START).toISOString(),endUtcExclusive:new Date(END).toISOString(),civilTimezone:'Asia/Seoul'}};
 const fs=await import('node:fs/promises');
+const terms=JSON.stringify(Array.from({length:yearTo-yearFrom+3},(_,i)=>
+  solarTerms(yearFrom-1+i).map(t=>({year:t.year,longitude:t.longitude,instant_utc:t.utc.toISOString()}))).flat(),null,2)+'\n';
+await fs.writeFile(`${out}/solar_terms.json`,terms);
+manifest.files.solar_terms={sha256:createHash('sha256').update(terms).digest('hex')};
 await fs.writeFile(`${out}/manifest.json`,JSON.stringify(manifest,null,2)+'\n');
-await fs.writeFile(`${out}/solar_terms.json`,JSON.stringify(Array.from({length:yearTo-yearFrom+2},(_,i)=>
-  solarTerms(yearFrom+i).map(t=>({year:t.year,longitude:t.longitude,instant_utc:t.utc.toISOString()}))).flat(),null,2)+'\n');
 console.log(JSON.stringify(manifest));

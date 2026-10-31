@@ -1,0 +1,2495 @@
+{
+  "version": "ko-names-v1",
+  "checked_at": "2026-11-01",
+  "review_method": "court-character-reading-check-and-Codex-editorial-review",
+  "meaning_policy": "Character glosses are source-checked facts; combined meanings, motif tags and naturalness scores are project-authored creative judgments. No human-panel review is claimed.",
+  "sources": [
+    {
+      "id": "court-hanja",
+      "url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "pdf_url": "https://efamily.scourt.go.kr/downloads/etc/hanja.pdf",
+      "pdf_sha256": "60c26021aa3dea8ec7fab3ab2d7736a472eb7c2bca8c327e4bd846253d4b17ea"
+    },
+    {
+      "id": "unihan17",
+      "url": "https://www.unicode.org/Public/17.0.0/ucd/Unihan.zip",
+      "sha256": "f7a48b2b545acfaa77b2d607ae28747404ce02baefee16396c5d2d7a8ef34b5e",
+      "fields_consulted": [
+        "kHangul",
+        "kDefinition"
+      ],
+      "note": "No original dictionary definition strings are redistributed; Korean component glosses are independently phrased factual annotations."
+    },
+    {
+      "id": "nikl-spelling",
+      "url": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=90&pageIndex=1&qna_seq=328273",
+      "note": "Word-internal readings such as 림/린 are preserved; court-listed readings are checked per character."
+    }
+  ],
+  "characters": {
+    "瑞": {
+      "readings": [
+        "서"
+      ],
+      "meaning_ko": "상서로움",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=745e",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "0802bd04d285edd2abed8159c2fa795d40a46e3136a7b33b79f746478293b97c"
+    },
+    "潤": {
+      "readings": [
+        "윤"
+      ],
+      "meaning_ko": "윤택함",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=6f64",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "94799045c35f350f229e8c7bf92ec6c84656990980f85ae594451ca22c2eea0f"
+    },
+    "妍": {
+      "readings": [
+        "연"
+      ],
+      "meaning_ko": "고움",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=598d",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "d58ef30b528c98d9bd757192862a0c034a22814f1d295edc35a0105b3c166232"
+    },
+    "賢": {
+      "readings": [
+        "현"
+      ],
+      "meaning_ko": "어짊",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=8ce2",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "06acfc35d7928105dbeca09ba023228c132fc6ee7adf25a2c1a6ffdcb692bf1e"
+    },
+    "雅": {
+      "readings": [
+        "아"
+      ],
+      "meaning_ko": "우아함",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=96c5",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "50b13d5d6323e128122e5f0c0bf0f0298a487db8aea6d4ee8f873b23407f0c5c"
+    },
+    "宇": {
+      "readings": [
+        "우"
+      ],
+      "meaning_ko": "집",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=5b87",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "28c722741e245d106a9f96ee041183e2920cddb54701a2f0e24b6317de753740"
+    },
+    "恩": {
+      "readings": [
+        "은"
+      ],
+      "meaning_ko": "은혜",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=6069",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "4f7f80f261fc2b994ed56c2d48012aeb6a80a859c8bccde23605affe43f10411"
+    },
+    "英": {
+      "readings": [
+        "영"
+      ],
+      "meaning_ko": "꽃",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=82f1",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "2eaef2257b6686df2f405565322e980a47327fd90730708e2d7506ed4c77abef"
+    },
+    "律": {
+      "readings": [
+        "률",
+        "율"
+      ],
+      "meaning_ko": "규칙",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=5f8b",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "93535c7cf3bde46e8c10507a39f33427756f1ef5fab431b38a9e5d046c210ce0"
+    },
+    "眞": {
+      "readings": [
+        "진"
+      ],
+      "meaning_ko": "진실",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=771e",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "46f5e13b4799a5b9fbc3ab6a4a180ef6e4af536f75091128547befe4fb1dd586"
+    },
+    "元": {
+      "readings": [
+        "원"
+      ],
+      "meaning_ko": "으뜸",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=5143",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "dc7ffdfc0a0bea8c85df8ba3d9750afad9002f6f9df069d02fd6460143e70518"
+    },
+    "俊": {
+      "readings": [
+        "준"
+      ],
+      "meaning_ko": "뛰어남",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=4fca",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "e8f086dd6772eefb7d8bd06e245bec580e4407b367e67765af07a14ec90c345c"
+    },
+    "河": {
+      "readings": [
+        "하"
+      ],
+      "meaning_ko": "강",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=6cb3",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "f244cce3ea9068fccdca7a89f072a96281a86b16088118ffd36d1e8fbb90736e"
+    },
+    "智": {
+      "readings": [
+        "지"
+      ],
+      "meaning_ko": "슬기",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=667a",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "5fd378713ea78f59d2e5027a5ed8b1eb25fb3f68cec70db54129e0022b82c95a"
+    },
+    "柔": {
+      "readings": [
+        "유"
+      ],
+      "meaning_ko": "부드러움",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=67d4",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "e5c116f09f18fb27fe421da346f739ee30824cdbc55ce97902993e7982577d59"
+    },
+    "安": {
+      "readings": [
+        "안"
+      ],
+      "meaning_ko": "편안함",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=5b89",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "94980130e33d6c997326cb4503af7ab2ef0bb33c39ba221a09e94bec3cc2ea22"
+    },
+    "敏": {
+      "readings": [
+        "민"
+      ],
+      "meaning_ko": "민첩함",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=654f",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "48030cbf882b1617b67b4639e437e5c279ab02ced04086cdc8475b27a464cf21"
+    },
+    "浩": {
+      "readings": [
+        "호"
+      ],
+      "meaning_ko": "넓음",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=6d69",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "81a83ccfddcc60d21df618cfdb4982dcce45809c3c539e2247d8a49025f827eb"
+    },
+    "厚": {
+      "readings": [
+        "후"
+      ],
+      "meaning_ko": "두터움",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=539a",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "afc415709341c28477f524522bf8448f02eeae8acb429698a6b790fbb4b02b96"
+    },
+    "道": {
+      "readings": [
+        "도"
+      ],
+      "meaning_ko": "길",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=9053",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "bdec5f7374340080335e654633cea9bc95a64d58393a1dc9ffa00840e696f664"
+    },
+    "景": {
+      "readings": [
+        "경"
+      ],
+      "meaning_ko": "빛",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=666f",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "52b8208402c507898b3dfe3fdab651421103fcf45d6927afdf633a27c5894376"
+    },
+    "潾": {
+      "readings": [
+        "린",
+        "인"
+      ],
+      "meaning_ko": "맑은물",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=6f7e",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "35e48536606e2a5f3f673ef01e9b26f6284d9a0e550f9d615be2c2544157bd01"
+    },
+    "藍": {
+      "readings": [
+        "남",
+        "람"
+      ],
+      "meaning_ko": "쪽빛",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=85cd",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "983d4009014b243ac497dc82ca568840dad8f6056a56db5c403058ec1f87858f"
+    },
+    "娜": {
+      "readings": [
+        "나"
+      ],
+      "meaning_ko": "아름다움",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=5a1c",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "f0993a34e10113503edc363610a2984dbdcf0e75c43e13981deef7ec15e77dd0"
+    },
+    "彬": {
+      "readings": [
+        "빈"
+      ],
+      "meaning_ko": "빛남",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=5f6c",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "b1351e0b89b900f9393450a59cd06fc10c33dd92a3e4749b0b0fab792ab02cc5"
+    },
+    "林": {
+      "readings": [
+        "림",
+        "임"
+      ],
+      "meaning_ko": "숲",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=6797",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "2d834953c5e1044be574b9d3ae0a1c6477b820866994985b32b0b63351bd38cb"
+    },
+    "時": {
+      "readings": [
+        "시"
+      ],
+      "meaning_ko": "때",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=6642",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "85fd2e43a74df20b5469377724f6460a14c9899d4196678d695bd0de4ef22462"
+    },
+    "溫": {
+      "readings": [
+        "온"
+      ],
+      "meaning_ko": "따뜻함",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=6eab",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "78fe5b4494544bfc2e7c1daba0aacb719e51229a727e72bc1afe82f0dd654ffe"
+    },
+    "彩": {
+      "readings": [
+        "채"
+      ],
+      "meaning_ko": "빛깔",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=5f69",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "a785c2f99c220256b89fbf27b49216c8642f3ce8911e7dda00f7c0e4fea49985"
+    },
+    "材": {
+      "readings": [
+        "재"
+      ],
+      "meaning_ko": "재목",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=6750",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "5e45a43d7e7a53767faae71f74cd3912ce53a78b756c1e1bd74c30750d16852e"
+    },
+    "藝": {
+      "readings": [
+        "예"
+      ],
+      "meaning_ko": "재주",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=85dd",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "cc3c03b3a0b4a4fc1fdac190791cab365ec1df04b887bd85334078898dc6f6f3"
+    },
+    "秀": {
+      "readings": [
+        "수"
+      ],
+      "meaning_ko": "빼어남",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=79c0",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "8aa9dad8535aa25a7d67c4dbc16ddb69776c3321238c6a02cb1eb6ca142ca334"
+    },
+    "泰": {
+      "readings": [
+        "태"
+      ],
+      "meaning_ko": "큼",
+      "court_allowed": true,
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=6cf0",
+      "checked_at": "2026-11-01",
+      "evidence_sha256": "9324fe7a20dcf6fe9b2658f1915deb499afae4188179efcc123def04ad1f45b5"
+    }
+  },
+  "entries": [
+    {
+      "name_id": "ko-serious-001",
+      "hangul": "서윤",
+      "hanja": "瑞潤",
+      "reading_verified": true,
+      "meaning_ko": "상서로움·윤택함에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "기회",
+        "시작",
+        "재시작",
+        "돌봄",
+        "성장",
+        "흐름"
+      ],
+      "style_tags": [
+        "현대적",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-002",
+      "hangul": "서연",
+      "hanja": "瑞妍",
+      "reading_verified": true,
+      "meaning_ko": "상서로움·고움에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "기회",
+        "시작",
+        "재시작",
+        "표현",
+        "예술",
+        "다듬기"
+      ],
+      "style_tags": [
+        "현대적",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-003",
+      "hangul": "서현",
+      "hanja": "瑞賢",
+      "reading_verified": true,
+      "meaning_ko": "상서로움·어짊에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "기회",
+        "시작",
+        "재시작",
+        "배움",
+        "관찰",
+        "관리",
+        "책임"
+      ],
+      "style_tags": [
+        "현대적",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-004",
+      "hangul": "서아",
+      "hanja": "瑞雅",
+      "reading_verified": true,
+      "meaning_ko": "상서로움·우아함에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "기회",
+        "시작",
+        "재시작",
+        "예술",
+        "다듬기",
+        "자기 기준"
+      ],
+      "style_tags": [
+        "현대적",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-005",
+      "hangul": "서우",
+      "hanja": "瑞宇",
+      "reading_verified": true,
+      "meaning_ko": "상서로움·집에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "기회",
+        "시작",
+        "재시작",
+        "기반",
+        "보호",
+        "공동체"
+      ],
+      "style_tags": [
+        "현대적",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-006",
+      "hangul": "서은",
+      "hanja": "瑞恩",
+      "reading_verified": true,
+      "meaning_ko": "상서로움·은혜에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "기회",
+        "시작",
+        "재시작",
+        "돌봄",
+        "도움",
+        "관계"
+      ],
+      "style_tags": [
+        "현대적",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-007",
+      "hangul": "서영",
+      "hanja": "瑞英",
+      "reading_verified": true,
+      "meaning_ko": "상서로움·꽃에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "기회",
+        "시작",
+        "재시작",
+        "성장",
+        "드러남",
+        "주목"
+      ],
+      "style_tags": [
+        "현대적",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-008",
+      "hangul": "서율",
+      "hanja": "瑞律",
+      "reading_verified": true,
+      "meaning_ko": "상서로움·규칙에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "기회",
+        "시작",
+        "재시작",
+        "규칙",
+        "질서",
+        "꾸준함"
+      ],
+      "style_tags": [
+        "현대적",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-009",
+      "hangul": "서진",
+      "hanja": "瑞眞",
+      "reading_verified": true,
+      "meaning_ko": "상서로움·진실에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "기회",
+        "시작",
+        "재시작",
+        "자기 기준",
+        "선언",
+        "약속"
+      ],
+      "style_tags": [
+        "현대적",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-010",
+      "hangul": "서원",
+      "hanja": "瑞元",
+      "reading_verified": true,
+      "meaning_ko": "상서로움·으뜸에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "기회",
+        "시작",
+        "재시작",
+        "기반",
+        "독립"
+      ],
+      "style_tags": [
+        "현대적",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-011",
+      "hangul": "서준",
+      "hanja": "瑞俊",
+      "reading_verified": true,
+      "meaning_ko": "상서로움·뛰어남에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "기회",
+        "시작",
+        "재시작",
+        "기술",
+        "제작",
+        "도전"
+      ],
+      "style_tags": [
+        "현대적",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-012",
+      "hangul": "서하",
+      "hanja": "瑞河",
+      "reading_verified": true,
+      "meaning_ko": "상서로움·강에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "기회",
+        "시작",
+        "재시작",
+        "흐름",
+        "이동",
+        "여정"
+      ],
+      "style_tags": [
+        "현대적",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-013",
+      "hangul": "지우",
+      "hanja": "智宇",
+      "reading_verified": true,
+      "meaning_ko": "슬기·집에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "배움",
+        "탐구",
+        "독학",
+        "질문",
+        "기반",
+        "보호",
+        "공동체"
+      ],
+      "style_tags": [
+        "고전적",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-014",
+      "hangul": "지유",
+      "hanja": "智柔",
+      "reading_verified": true,
+      "meaning_ko": "슬기·부드러움에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "배움",
+        "탐구",
+        "독학",
+        "질문",
+        "관계",
+        "협상",
+        "연결"
+      ],
+      "style_tags": [
+        "고전적",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-015",
+      "hangul": "지안",
+      "hanja": "智安",
+      "reading_verified": true,
+      "meaning_ko": "슬기·편안함에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "배움",
+        "탐구",
+        "독학",
+        "질문",
+        "보호",
+        "귀속",
+        "기반"
+      ],
+      "style_tags": [
+        "고전적",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-016",
+      "hangul": "지윤",
+      "hanja": "智潤",
+      "reading_verified": true,
+      "meaning_ko": "슬기·윤택함에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "배움",
+        "탐구",
+        "독학",
+        "질문",
+        "돌봄",
+        "성장",
+        "흐름"
+      ],
+      "style_tags": [
+        "고전적",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-017",
+      "hangul": "지민",
+      "hanja": "智敏",
+      "reading_verified": true,
+      "meaning_ko": "슬기·민첩함에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "배움",
+        "탐구",
+        "독학",
+        "질문",
+        "관찰",
+        "결단",
+        "도전"
+      ],
+      "style_tags": [
+        "고전적",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-018",
+      "hangul": "지원",
+      "hanja": "智元",
+      "reading_verified": true,
+      "meaning_ko": "슬기·으뜸에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "배움",
+        "탐구",
+        "독학",
+        "질문",
+        "시작",
+        "기반",
+        "독립"
+      ],
+      "style_tags": [
+        "고전적",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-019",
+      "hangul": "지아",
+      "hanja": "智雅",
+      "reading_verified": true,
+      "meaning_ko": "슬기·우아함에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "배움",
+        "탐구",
+        "독학",
+        "질문",
+        "예술",
+        "다듬기",
+        "자기 기준"
+      ],
+      "style_tags": [
+        "고전적",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-020",
+      "hangul": "지호",
+      "hanja": "智浩",
+      "reading_verified": true,
+      "meaning_ko": "슬기·넓음에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "배움",
+        "탐구",
+        "독학",
+        "질문",
+        "개척",
+        "확산",
+        "독립"
+      ],
+      "style_tags": [
+        "고전적",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-021",
+      "hangul": "지후",
+      "hanja": "智厚",
+      "reading_verified": true,
+      "meaning_ko": "슬기·두터움에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "배움",
+        "탐구",
+        "독학",
+        "질문",
+        "보존",
+        "축적",
+        "꾸준함"
+      ],
+      "style_tags": [
+        "고전적",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-022",
+      "hangul": "지율",
+      "hanja": "智律",
+      "reading_verified": true,
+      "meaning_ko": "슬기·규칙에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "배움",
+        "탐구",
+        "독학",
+        "질문",
+        "규칙",
+        "질서",
+        "꾸준함"
+      ],
+      "style_tags": [
+        "고전적",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-023",
+      "hangul": "도윤",
+      "hanja": "道潤",
+      "reading_verified": true,
+      "meaning_ko": "길·윤택함에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "길찾기",
+        "선택",
+        "여정",
+        "돌봄",
+        "성장",
+        "흐름"
+      ],
+      "style_tags": [
+        "고전적",
+        "선명함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-024",
+      "hangul": "도현",
+      "hanja": "道賢",
+      "reading_verified": true,
+      "meaning_ko": "길·어짊에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "길찾기",
+        "선택",
+        "여정",
+        "배움",
+        "관찰",
+        "관리",
+        "책임"
+      ],
+      "style_tags": [
+        "고전적",
+        "선명함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-025",
+      "hangul": "도하",
+      "hanja": "道河",
+      "reading_verified": true,
+      "meaning_ko": "길·강에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "길찾기",
+        "선택",
+        "여정",
+        "흐름",
+        "이동"
+      ],
+      "style_tags": [
+        "고전적",
+        "선명함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-026",
+      "hangul": "도연",
+      "hanja": "道妍",
+      "reading_verified": true,
+      "meaning_ko": "길·고움에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "길찾기",
+        "선택",
+        "여정",
+        "표현",
+        "예술",
+        "다듬기"
+      ],
+      "style_tags": [
+        "고전적",
+        "선명함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-027",
+      "hangul": "도경",
+      "hanja": "道景",
+      "reading_verified": true,
+      "meaning_ko": "길·빛에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "길찾기",
+        "선택",
+        "여정",
+        "밝힘",
+        "주목",
+        "관찰"
+      ],
+      "style_tags": [
+        "고전적",
+        "선명함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-028",
+      "hangul": "도영",
+      "hanja": "道英",
+      "reading_verified": true,
+      "meaning_ko": "길·꽃에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "길찾기",
+        "선택",
+        "여정",
+        "성장",
+        "드러남",
+        "주목"
+      ],
+      "style_tags": [
+        "고전적",
+        "선명함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-029",
+      "hangul": "도원",
+      "hanja": "道元",
+      "reading_verified": true,
+      "meaning_ko": "길·으뜸에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "길찾기",
+        "선택",
+        "여정",
+        "시작",
+        "기반",
+        "독립"
+      ],
+      "style_tags": [
+        "고전적",
+        "선명함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-030",
+      "hangul": "하윤",
+      "hanja": "河潤",
+      "reading_verified": true,
+      "meaning_ko": "강·윤택함에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "흐름",
+        "이동",
+        "여정",
+        "돌봄",
+        "성장"
+      ],
+      "style_tags": [
+        "현대적",
+        "차분함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-031",
+      "hangul": "하은",
+      "hanja": "河恩",
+      "reading_verified": true,
+      "meaning_ko": "강·은혜에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "흐름",
+        "이동",
+        "여정",
+        "돌봄",
+        "도움",
+        "관계"
+      ],
+      "style_tags": [
+        "현대적",
+        "차분함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-032",
+      "hangul": "하린",
+      "hanja": "河潾",
+      "reading_verified": true,
+      "meaning_ko": "강·맑은물에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "흐름",
+        "이동",
+        "여정",
+        "관찰",
+        "다듬기"
+      ],
+      "style_tags": [
+        "현대적",
+        "차분함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-033",
+      "hangul": "하율",
+      "hanja": "河律",
+      "reading_verified": true,
+      "meaning_ko": "강·규칙에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "흐름",
+        "이동",
+        "여정",
+        "규칙",
+        "질서",
+        "꾸준함"
+      ],
+      "style_tags": [
+        "현대적",
+        "차분함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-034",
+      "hangul": "하연",
+      "hanja": "河妍",
+      "reading_verified": true,
+      "meaning_ko": "강·고움에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "흐름",
+        "이동",
+        "여정",
+        "표현",
+        "예술",
+        "다듬기"
+      ],
+      "style_tags": [
+        "현대적",
+        "차분함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-035",
+      "hangul": "하준",
+      "hanja": "河俊",
+      "reading_verified": true,
+      "meaning_ko": "강·뛰어남에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "흐름",
+        "이동",
+        "여정",
+        "기술",
+        "제작",
+        "도전"
+      ],
+      "style_tags": [
+        "현대적",
+        "차분함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-036",
+      "hangul": "하람",
+      "hanja": "河藍",
+      "reading_verified": true,
+      "meaning_ko": "강·쪽빛에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "흐름",
+        "이동",
+        "여정",
+        "예술",
+        "몰입",
+        "품기"
+      ],
+      "style_tags": [
+        "현대적",
+        "차분함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-037",
+      "hangul": "유나",
+      "hanja": "柔娜",
+      "reading_verified": true,
+      "meaning_ko": "부드러움·아름다움에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "관계",
+        "협상",
+        "연결",
+        "표현",
+        "예술"
+      ],
+      "style_tags": [
+        "차분함",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-038",
+      "hangul": "유진",
+      "hanja": "柔眞",
+      "reading_verified": true,
+      "meaning_ko": "부드러움·진실에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "관계",
+        "협상",
+        "연결",
+        "자기 기준",
+        "선언",
+        "약속"
+      ],
+      "style_tags": [
+        "차분함",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-039",
+      "hangul": "유빈",
+      "hanja": "柔彬",
+      "reading_verified": true,
+      "meaning_ko": "부드러움·빛남에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "관계",
+        "협상",
+        "연결",
+        "제작",
+        "기술",
+        "다듬기"
+      ],
+      "style_tags": [
+        "차분함",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-040",
+      "hangul": "유민",
+      "hanja": "柔敏",
+      "reading_verified": true,
+      "meaning_ko": "부드러움·민첩함에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "관계",
+        "협상",
+        "연결",
+        "관찰",
+        "결단",
+        "도전"
+      ],
+      "style_tags": [
+        "차분함",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-041",
+      "hangul": "유현",
+      "hanja": "柔賢",
+      "reading_verified": true,
+      "meaning_ko": "부드러움·어짊에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "관계",
+        "협상",
+        "연결",
+        "배움",
+        "관찰",
+        "관리",
+        "책임"
+      ],
+      "style_tags": [
+        "차분함",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-042",
+      "hangul": "유준",
+      "hanja": "柔俊",
+      "reading_verified": true,
+      "meaning_ko": "부드러움·뛰어남에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "관계",
+        "협상",
+        "연결",
+        "기술",
+        "제작",
+        "도전"
+      ],
+      "style_tags": [
+        "차분함",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-043",
+      "hangul": "유림",
+      "hanja": "柔林",
+      "reading_verified": true,
+      "meaning_ko": "부드러움·숲에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "관계",
+        "협상",
+        "연결",
+        "공동체",
+        "동료",
+        "성장"
+      ],
+      "style_tags": [
+        "차분함",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-044",
+      "hangul": "시우",
+      "hanja": "時宇",
+      "reading_verified": true,
+      "meaning_ko": "때·집에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "준비",
+        "전환",
+        "기억",
+        "기반",
+        "보호",
+        "공동체"
+      ],
+      "style_tags": [
+        "현대적",
+        "선명함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-045",
+      "hangul": "시윤",
+      "hanja": "時潤",
+      "reading_verified": true,
+      "meaning_ko": "때·윤택함에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "준비",
+        "전환",
+        "기억",
+        "돌봄",
+        "성장",
+        "흐름"
+      ],
+      "style_tags": [
+        "현대적",
+        "선명함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-046",
+      "hangul": "시현",
+      "hanja": "時賢",
+      "reading_verified": true,
+      "meaning_ko": "때·어짊에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "준비",
+        "전환",
+        "기억",
+        "배움",
+        "관찰",
+        "관리",
+        "책임"
+      ],
+      "style_tags": [
+        "현대적",
+        "선명함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-047",
+      "hangul": "시원",
+      "hanja": "時元",
+      "reading_verified": true,
+      "meaning_ko": "때·으뜸에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "준비",
+        "전환",
+        "기억",
+        "시작",
+        "기반",
+        "독립"
+      ],
+      "style_tags": [
+        "현대적",
+        "선명함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-048",
+      "hangul": "시온",
+      "hanja": "時溫",
+      "reading_verified": true,
+      "meaning_ko": "때·따뜻함에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "준비",
+        "전환",
+        "기억",
+        "돌봄",
+        "관계",
+        "보호"
+      ],
+      "style_tags": [
+        "현대적",
+        "선명함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-049",
+      "hangul": "은우",
+      "hanja": "恩宇",
+      "reading_verified": true,
+      "meaning_ko": "은혜·집에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "돌봄",
+        "도움",
+        "관계",
+        "기반",
+        "보호",
+        "공동체"
+      ],
+      "style_tags": [
+        "차분함",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-050",
+      "hangul": "은서",
+      "hanja": "恩瑞",
+      "reading_verified": true,
+      "meaning_ko": "은혜·상서로움에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "돌봄",
+        "도움",
+        "관계",
+        "기회",
+        "시작",
+        "재시작"
+      ],
+      "style_tags": [
+        "차분함",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-051",
+      "hangul": "은채",
+      "hanja": "恩彩",
+      "reading_verified": true,
+      "meaning_ko": "은혜·빛깔에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "돌봄",
+        "도움",
+        "관계",
+        "표현",
+        "예술",
+        "교류"
+      ],
+      "style_tags": [
+        "차분함",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-052",
+      "hangul": "은지",
+      "hanja": "恩智",
+      "reading_verified": true,
+      "meaning_ko": "은혜·슬기에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "돌봄",
+        "도움",
+        "관계",
+        "배움",
+        "탐구",
+        "독학",
+        "질문"
+      ],
+      "style_tags": [
+        "차분함",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-053",
+      "hangul": "은재",
+      "hanja": "恩材",
+      "reading_verified": true,
+      "meaning_ko": "은혜·재목에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "돌봄",
+        "도움",
+        "관계",
+        "제작",
+        "기술",
+        "준비"
+      ],
+      "style_tags": [
+        "차분함",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-054",
+      "hangul": "채원",
+      "hanja": "彩元",
+      "reading_verified": true,
+      "meaning_ko": "빛깔·으뜸에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "표현",
+        "예술",
+        "교류",
+        "시작",
+        "기반",
+        "독립"
+      ],
+      "style_tags": [
+        "현대적",
+        "선명함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-055",
+      "hangul": "채은",
+      "hanja": "彩恩",
+      "reading_verified": true,
+      "meaning_ko": "빛깔·은혜에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "표현",
+        "예술",
+        "교류",
+        "돌봄",
+        "도움",
+        "관계"
+      ],
+      "style_tags": [
+        "현대적",
+        "선명함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-056",
+      "hangul": "채윤",
+      "hanja": "彩潤",
+      "reading_verified": true,
+      "meaning_ko": "빛깔·윤택함에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "표현",
+        "예술",
+        "교류",
+        "돌봄",
+        "성장",
+        "흐름"
+      ],
+      "style_tags": [
+        "현대적",
+        "선명함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-057",
+      "hangul": "채린",
+      "hanja": "彩潾",
+      "reading_verified": true,
+      "meaning_ko": "빛깔·맑은물에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "표현",
+        "예술",
+        "교류",
+        "흐름",
+        "관찰",
+        "다듬기"
+      ],
+      "style_tags": [
+        "현대적",
+        "선명함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-058",
+      "hangul": "예린",
+      "hanja": "藝潾",
+      "reading_verified": true,
+      "meaning_ko": "재주·맑은물에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "제작",
+        "예술",
+        "기술",
+        "흐름",
+        "관찰",
+        "다듬기"
+      ],
+      "style_tags": [
+        "고전적",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-059",
+      "hangul": "예원",
+      "hanja": "藝元",
+      "reading_verified": true,
+      "meaning_ko": "재주·으뜸에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "제작",
+        "예술",
+        "기술",
+        "시작",
+        "기반",
+        "독립"
+      ],
+      "style_tags": [
+        "고전적",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-060",
+      "hangul": "예진",
+      "hanja": "藝眞",
+      "reading_verified": true,
+      "meaning_ko": "재주·진실에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "제작",
+        "예술",
+        "기술",
+        "자기 기준",
+        "선언",
+        "약속"
+      ],
+      "style_tags": [
+        "고전적",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-061",
+      "hangul": "예나",
+      "hanja": "藝娜",
+      "reading_verified": true,
+      "meaning_ko": "재주·아름다움에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "제작",
+        "예술",
+        "기술",
+        "표현"
+      ],
+      "style_tags": [
+        "고전적",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-062",
+      "hangul": "예준",
+      "hanja": "藝俊",
+      "reading_verified": true,
+      "meaning_ko": "재주·뛰어남에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "제작",
+        "예술",
+        "기술",
+        "도전"
+      ],
+      "style_tags": [
+        "고전적",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-063",
+      "hangul": "수아",
+      "hanja": "秀雅",
+      "reading_verified": true,
+      "meaning_ko": "빼어남·우아함에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "성장",
+        "다듬기",
+        "기술",
+        "예술",
+        "자기 기준"
+      ],
+      "style_tags": [
+        "고전적",
+        "차분함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-064",
+      "hangul": "수빈",
+      "hanja": "秀彬",
+      "reading_verified": true,
+      "meaning_ko": "빼어남·빛남에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "성장",
+        "다듬기",
+        "기술",
+        "제작"
+      ],
+      "style_tags": [
+        "고전적",
+        "차분함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-065",
+      "hangul": "수현",
+      "hanja": "秀賢",
+      "reading_verified": true,
+      "meaning_ko": "빼어남·어짊에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "성장",
+        "다듬기",
+        "기술",
+        "배움",
+        "관찰",
+        "관리",
+        "책임"
+      ],
+      "style_tags": [
+        "고전적",
+        "차분함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-066",
+      "hangul": "수민",
+      "hanja": "秀敏",
+      "reading_verified": true,
+      "meaning_ko": "빼어남·민첩함에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "성장",
+        "다듬기",
+        "기술",
+        "관찰",
+        "결단",
+        "도전"
+      ],
+      "style_tags": [
+        "고전적",
+        "차분함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-067",
+      "hangul": "수연",
+      "hanja": "秀妍",
+      "reading_verified": true,
+      "meaning_ko": "빼어남·고움에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "성장",
+        "다듬기",
+        "기술",
+        "표현",
+        "예술"
+      ],
+      "style_tags": [
+        "고전적",
+        "차분함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-068",
+      "hangul": "태윤",
+      "hanja": "泰潤",
+      "reading_verified": true,
+      "meaning_ko": "큼·윤택함에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "기반",
+        "독립",
+        "보호",
+        "돌봄",
+        "성장",
+        "흐름"
+      ],
+      "style_tags": [
+        "선명함",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-069",
+      "hangul": "태민",
+      "hanja": "泰敏",
+      "reading_verified": true,
+      "meaning_ko": "큼·민첩함에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "기반",
+        "독립",
+        "보호",
+        "관찰",
+        "결단",
+        "도전"
+      ],
+      "style_tags": [
+        "선명함",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-070",
+      "hangul": "태현",
+      "hanja": "泰賢",
+      "reading_verified": true,
+      "meaning_ko": "큼·어짊에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "기반",
+        "독립",
+        "보호",
+        "배움",
+        "관찰",
+        "관리",
+        "책임"
+      ],
+      "style_tags": [
+        "선명함",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-071",
+      "hangul": "태준",
+      "hanja": "泰俊",
+      "reading_verified": true,
+      "meaning_ko": "큼·뛰어남에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "기반",
+        "독립",
+        "보호",
+        "기술",
+        "제작",
+        "도전"
+      ],
+      "style_tags": [
+        "선명함",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-serious-072",
+      "hangul": "민서",
+      "hanja": "敏瑞",
+      "reading_verified": true,
+      "meaning_ko": "민첩함·상서로움에서 착안한 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "관찰",
+        "결단",
+        "도전",
+        "기회",
+        "시작",
+        "재시작"
+      ],
+      "style_tags": [
+        "현대적",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-playful-001",
+      "hangul": "뚝딱",
+      "hanja": null,
+      "reading_verified": false,
+      "meaning_ko": "손으로 직접 만들고 고치는 장면에서 만든 별명.",
+      "meaning_kind": "creative_nickname",
+      "motif_tags": [
+        "제작",
+        "기술"
+      ],
+      "style_tags": [
+        "현대적"
+      ],
+      "naturalness": 3,
+      "is_playful": true,
+      "review_status": "verified",
+      "source_url": "urn:make-the-one:names:ko-names-v1",
+      "provenance_note": "프로젝트에서 만든 재미 별명과 설명이며 한자·고유어 어원 주장 없음.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-playful-002",
+      "hangul": "반짝",
+      "hanja": null,
+      "reading_verified": false,
+      "meaning_ko": "새로운 생각이 드러나는 장면에서 만든 별명.",
+      "meaning_kind": "creative_nickname",
+      "motif_tags": [
+        "밝힘",
+        "표현"
+      ],
+      "style_tags": [
+        "현대적"
+      ],
+      "naturalness": 3,
+      "is_playful": true,
+      "review_status": "verified",
+      "source_url": "urn:make-the-one:names:ko-names-v1",
+      "provenance_note": "프로젝트에서 만든 재미 별명과 설명이며 한자·고유어 어원 주장 없음.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-playful-003",
+      "hangul": "척척",
+      "hanja": null,
+      "reading_verified": false,
+      "meaning_ko": "맡은 일을 차례로 해내는 장면에서 만든 별명.",
+      "meaning_kind": "creative_nickname",
+      "motif_tags": [
+        "관리",
+        "책임"
+      ],
+      "style_tags": [
+        "현대적"
+      ],
+      "naturalness": 3,
+      "is_playful": true,
+      "review_status": "verified",
+      "source_url": "urn:make-the-one:names:ko-names-v1",
+      "provenance_note": "프로젝트에서 만든 재미 별명과 설명이며 한자·고유어 어원 주장 없음.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-playful-004",
+      "hangul": "퐁당",
+      "hanja": null,
+      "reading_verified": false,
+      "meaning_ko": "새로운 곳으로 들어가는 장면에서 만든 별명.",
+      "meaning_kind": "creative_nickname",
+      "motif_tags": [
+        "도전",
+        "이동"
+      ],
+      "style_tags": [
+        "현대적"
+      ],
+      "naturalness": 3,
+      "is_playful": true,
+      "review_status": "verified",
+      "source_url": "urn:make-the-one:names:ko-names-v1",
+      "provenance_note": "프로젝트에서 만든 재미 별명과 설명이며 한자·고유어 어원 주장 없음.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-playful-005",
+      "hangul": "쑥쑥",
+      "hanja": null,
+      "reading_verified": false,
+      "meaning_ko": "계속 배우고 자라는 장면에서 만든 별명.",
+      "meaning_kind": "creative_nickname",
+      "motif_tags": [
+        "성장",
+        "배움"
+      ],
+      "style_tags": [
+        "현대적"
+      ],
+      "naturalness": 3,
+      "is_playful": true,
+      "review_status": "verified",
+      "source_url": "urn:make-the-one:names:ko-names-v1",
+      "provenance_note": "프로젝트에서 만든 재미 별명과 설명이며 한자·고유어 어원 주장 없음.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-playful-006",
+      "hangul": "살금",
+      "hanja": null,
+      "reading_verified": false,
+      "meaning_ko": "조용히 살펴보는 장면에서 만든 별명.",
+      "meaning_kind": "creative_nickname",
+      "motif_tags": [
+        "관찰",
+        "고독"
+      ],
+      "style_tags": [
+        "현대적"
+      ],
+      "naturalness": 3,
+      "is_playful": true,
+      "review_status": "verified",
+      "source_url": "urn:make-the-one:names:ko-names-v1",
+      "provenance_note": "프로젝트에서 만든 재미 별명과 설명이며 한자·고유어 어원 주장 없음.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-playful-007",
+      "hangul": "톡톡",
+      "hanja": null,
+      "reading_verified": false,
+      "meaning_ko": "사람들과 생각을 주고받는 장면에서 만든 별명.",
+      "meaning_kind": "creative_nickname",
+      "motif_tags": [
+        "교류",
+        "질문"
+      ],
+      "style_tags": [
+        "현대적"
+      ],
+      "naturalness": 3,
+      "is_playful": true,
+      "review_status": "verified",
+      "source_url": "urn:make-the-one:names:ko-names-v1",
+      "provenance_note": "프로젝트에서 만든 재미 별명과 설명이며 한자·고유어 어원 주장 없음.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-playful-008",
+      "hangul": "둥실",
+      "hanja": null,
+      "reading_verified": false,
+      "meaning_ko": "흐름을 따라 여행하는 장면에서 만든 별명.",
+      "meaning_kind": "creative_nickname",
+      "motif_tags": [
+        "흐름",
+        "여정"
+      ],
+      "style_tags": [
+        "현대적"
+      ],
+      "naturalness": 3,
+      "is_playful": true,
+      "review_status": "verified",
+      "source_url": "urn:make-the-one:names:ko-names-v1",
+      "provenance_note": "프로젝트에서 만든 재미 별명과 설명이며 한자·고유어 어원 주장 없음.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-playful-009",
+      "hangul": "활짝",
+      "hanja": null,
+      "reading_verified": false,
+      "meaning_ko": "함께 새로운 출발을 하는 장면에서 만든 별명.",
+      "meaning_kind": "creative_nickname",
+      "motif_tags": [
+        "시작",
+        "공동체"
+      ],
+      "style_tags": [
+        "현대적"
+      ],
+      "naturalness": 3,
+      "is_playful": true,
+      "review_status": "verified",
+      "source_url": "urn:make-the-one:names:ko-names-v1",
+      "provenance_note": "프로젝트에서 만든 재미 별명과 설명이며 한자·고유어 어원 주장 없음.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-playful-010",
+      "hangul": "튼튼",
+      "hanja": null,
+      "reading_verified": false,
+      "meaning_ko": "기반을 지키고 돌보는 장면에서 만든 별명.",
+      "meaning_kind": "creative_nickname",
+      "motif_tags": [
+        "보호",
+        "기반"
+      ],
+      "style_tags": [
+        "현대적"
+      ],
+      "naturalness": 3,
+      "is_playful": true,
+      "review_status": "verified",
+      "source_url": "urn:make-the-one:names:ko-names-v1",
+      "provenance_note": "프로젝트에서 만든 재미 별명과 설명이며 한자·고유어 어원 주장 없음.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-playful-011",
+      "hangul": "도란",
+      "hanja": null,
+      "reading_verified": false,
+      "meaning_ko": "사람들과 이야기를 나누는 장면에서 만든 별명.",
+      "meaning_kind": "creative_nickname",
+      "motif_tags": [
+        "동행",
+        "관계"
+      ],
+      "style_tags": [
+        "현대적"
+      ],
+      "naturalness": 3,
+      "is_playful": true,
+      "review_status": "verified",
+      "source_url": "urn:make-the-one:names:ko-names-v1",
+      "provenance_note": "프로젝트에서 만든 재미 별명과 설명이며 한자·고유어 어원 주장 없음.",
+      "corpus_version": "ko-names-v1"
+    },
+    {
+      "name_id": "ko-playful-012",
+      "hangul": "싱긋",
+      "hanja": null,
+      "reading_verified": false,
+      "meaning_ko": "새로운 만남을 반기는 장면에서 만든 별명.",
+      "meaning_kind": "creative_nickname",
+      "motif_tags": [
+        "기회",
+        "합류"
+      ],
+      "style_tags": [
+        "현대적"
+      ],
+      "naturalness": 3,
+      "is_playful": true,
+      "review_status": "verified",
+      "source_url": "urn:make-the-one:names:ko-names-v1",
+      "provenance_note": "프로젝트에서 만든 재미 별명과 설명이며 한자·고유어 어원 주장 없음.",
+      "corpus_version": "ko-names-v1"
+    }
+  ]
+}

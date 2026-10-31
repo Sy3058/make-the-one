@@ -24,3 +24,33 @@ jobs:
       - run: npm run typecheck
       - run: npm test
       - run: npm run build
+
+  database-checks:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16.15@sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c
+        env:
+          POSTGRES_USER: user
+          POSTGRES_PASSWORD: ci-only
+          POSTGRES_DB: make_the_one
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U user -d make_the_one"
+          --health-interval 5s --health-timeout 3s --health-retries 20
+    env:
+      PGHOST: 127.0.0.1
+      PGPORT: '5432'
+      PGUSER: user
+      PGPASSWORD: ci-only
+      INDEX_DIR: data/generated/ci
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: npm
+      - run: npm ci
+      - run: npm run build:index -- 2024 2024 seoul data/generated/ci
+      - run: npm run test:db
