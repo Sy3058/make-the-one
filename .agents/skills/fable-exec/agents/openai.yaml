@@ -1,0 +1,4 @@
+interface:
+  display_name: "Fable Exec"
+  short_description: "근본원인과 검증 증거를 기준으로 코드를 구현합니다"
+  default_prompt: "$fable-exec을 사용해 이 변경을 구현하고 검증해 주세요."

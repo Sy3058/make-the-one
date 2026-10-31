@@ -1,0 +1,52 @@
+{
+  "description": "Project-local Codex hooks adapted from d-web; no Claude dependencies.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$(git rev-parse --show-toplevel)/.codex/hooks/session_start.py\"",
+            "timeout": 10
+          }
+        ],
+        "matcher": "startup|resume|clear|compact|fork"
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$(git rev-parse --show-toplevel)/.codex/hooks/pre_patch.py\"",
+            "timeout": 10
+          }
+        ],
+        "matcher": "^apply_patch$"
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$(git rev-parse --show-toplevel)/.codex/hooks/post_patch.py\"",
+            "timeout": 30
+          }
+        ],
+        "matcher": "^apply_patch$"
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$(git rev-parse --show-toplevel)/.codex/hooks/stop.py\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

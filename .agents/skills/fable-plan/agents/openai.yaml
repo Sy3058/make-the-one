@@ -1,0 +1,4 @@
+interface:
+  display_name: "Fable Plan"
+  short_description: "기존 결정과 검증 근거로 구현 계획을 수립합니다"
+  default_prompt: "$fable-plan을 사용해 이 작업의 구현 계획을 세워 주세요."

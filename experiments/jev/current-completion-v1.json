@@ -1,0 +1,19 @@
+[
+  {
+    "id": "actual_trial_completion",
+    "kind": "completion",
+    "expected": true,
+    "state": {
+      "requested": "Actually try Jev as a developer assistant now, not only discuss adoption; provide a reusable advisory runner, exercise it and report honest results.",
+      "observed": [
+        "Created scripts/jev_harness.py with pinned jev-1.14.0, typed routing/relevance/completion/risk questions and advisory-only output.",
+        "Completed 5 successful live API calls yielding 66 judgments. Kept exact payloads, responses, latency and usage. Pre-call labels unchanged.",
+        "Ran 9 offline unit tests covering excluded answer labels, malformed responses, fake-key privacy, no retry and no overwrite. All 9 passed.",
+        "Validated stored fixture hashes and request state shape. CLI dry-run passed. Added operating guidance and a detailed report explicitly recording disagreements and unmeasured end-to-end outcomes.",
+        "Actual current-task route was Sol Medium; candidate runner was selected. Proposed tests were uncertain and docs not selected. Main agent reviewed these and implemented the required tests and report."
+      ],
+      "limits": "No automatic model execution, permission grants, context deletion, full harness replacement, or end-to-end speedup was promised or claimed.",
+      "remaining_requested_work": []
+    }
+  }
+]

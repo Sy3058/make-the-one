@@ -1,0 +1,4 @@
+interface:
+  display_name: "Fable Review"
+  short_description: "실제 코드와 실패 시나리오로 변경을 검토합니다"
+  default_prompt: "$fable-review를 사용해 이 변경을 검토해 주세요."
