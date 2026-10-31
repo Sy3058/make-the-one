@@ -1,0 +1,53 @@
+[
+  {
+    "id": "current_route",
+    "kind": "route",
+    "state": "Implement and validate a standard-library Jev advisory CLI, exercise it on bounded live cases, and report the measurements. Never execute proposed actions or log API keys.",
+    "expected": "sol_medium"
+  },
+  {
+    "id": "runner",
+    "kind": "relevance",
+    "state": {
+      "task": "Implement and validate a standard-library Jev advisory CLI, exercise it on bounded live cases, and report the measurements. Never execute proposed actions or log API keys.",
+      "candidate": "scripts/jev_harness.py: current advisory CLI with request building, response validation and receipt writing."
+    },
+    "expected": true
+  },
+  {
+    "id": "new_tests",
+    "kind": "relevance",
+    "state": {
+      "task": "Implement and validate a standard-library Jev advisory CLI, exercise it on bounded live cases, and report the measurements. Never execute proposed actions or log API keys.",
+      "candidate": "tests/test_jev_harness.py: proposed new tests for payload privacy, response validation and exclusive receipt creation."
+    },
+    "expected": true
+  },
+  {
+    "id": "guide",
+    "kind": "relevance",
+    "state": {
+      "task": "Implement and validate a standard-library Jev advisory CLI, exercise it on bounded live cases, and report the measurements. Never execute proposed actions or log API keys.",
+      "candidate": "docs/CODEX_SETUP.md: current model policy and instructions for tool usage."
+    },
+    "expected": true
+  },
+  {
+    "id": "old_hooks",
+    "kind": "relevance",
+    "state": {
+      "task": "Implement and validate a standard-library Jev advisory CLI, exercise it on bounded live cases, and report the measurements. Never execute proposed actions or log API keys.",
+      "candidate": "tests/test_codex_hooks.py: punctuation and file-path hook regression tests; no Jev transport or advisory CLI coverage."
+    },
+    "expected": false
+  },
+  {
+    "id": "ui",
+    "kind": "relevance",
+    "state": {
+      "task": "Implement and validate a standard-library Jev advisory CLI, exercise it on bounded live cases, and report the measurements. Never execute proposed actions or log API keys.",
+      "candidate": "Future UI palette file: proposed colors for character cards; no developer tool behavior."
+    },
+    "expected": false
+  }
+]

@@ -1,0 +1,51 @@
+{
+  "model": "jev-1.14.0",
+  "question_version": "sol-harness-v1",
+  "successful_requests": 5,
+  "judgments": 66,
+  "agreement_with_author_labels": 56,
+  "input_tokens": 18307,
+  "output_tokens": 3143,
+  "estimated_usd": 0.0007688940000000001,
+  "latency_ms": {
+    "min": 182.0,
+    "median": 214.25,
+    "max": 250.05
+  },
+  "option_order_changes": [
+    "typo_fix"
+  ],
+  "by_request": [
+    {
+      "receipt": "current-task-live-v1.json",
+      "n": 6,
+      "agreement": 4
+    },
+    {
+      "receipt": "routing-live-v1.json",
+      "n": 20,
+      "agreement": 17
+    },
+    {
+      "receipt": "relevance-live-v1.json",
+      "n": 8,
+      "agreement": 8
+    },
+    {
+      "receipt": "checks-live-v1.json",
+      "n": 12,
+      "agreement": 11
+    },
+    {
+      "receipt": "routing-reversed-live-v1.json",
+      "n": 20,
+      "agreement": 16
+    }
+  ],
+  "limitations": [
+    "Author-labeled convenience cases, not independent ground truth or held-out evaluation.",
+    "No end-to-end coding success, baseline Sol cost, or development time comparison.",
+    "Reverse-order trial is a repeated sample, not 20 new independent tasks.",
+    "Estimated API cost from reported usage and published price, not a settled invoice."
+  ]
+}

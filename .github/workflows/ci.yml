@@ -5,13 +5,20 @@ on:
   pull_request:
 
 jobs:
+  publication-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/check_publish.py --ref HEAD
+      - run: python3 -B -m unittest discover -s tests -p 'test_*.py' -v
+
   checks:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version-file: '.nvmrc'
           cache: npm
       - run: npm ci
       - run: npm run typecheck

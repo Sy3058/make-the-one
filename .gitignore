@@ -1,6 +1,51 @@
-node_modules/
+# Project build artifacts
 .next/
+*.tsbuildinfo
 .env*
-!.env.example
 data/generated/
+
+# Credentials and local environment
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+.aws/
+secrets/
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+.npmrc
+.pypirc
+.git-credentials
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+
+# Local runtime artifacts
+.tools/
+node_modules/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.codex-log/
+hook_outputs/
 *.log
+dist/
+coverage/
+.coverage
+.coverage.*
+*.local
+.DS_Store
+
+# Private sources, working notes and raw execution records
+docs/private/
+PROJECT.md
+reports/security/
+experiments/jev/*-live-*.json

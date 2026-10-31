@@ -1,6 +1,6 @@
 {
   "version": "mt1-v1",
-  "sourceUrl": "https://docs.google.com/spreadsheets/d/1BA9Po0CIEQOEjw-CDZXhAqgFCmLH79YIm1vCbLwWDKU/edit",
+  "sourceUrl": "urn:make-the-one:ruleset:mt1-v1",
   "rules": [
     {
       "id": "M001",

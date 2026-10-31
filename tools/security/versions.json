@@ -1,0 +1,19 @@
+{
+  "skillspector": {
+    "commit": "e7172462caf367736645f66c1aa154ca5f9c64dc",
+    "source": "https://github.com/NVIDIA/SkillSpector",
+    "version": "2.12.0"
+  },
+  "osv_scanner": {
+    "version": "v2.7.0",
+    "url": "https://github.com/google/osv-scanner/releases/download/v2.7.0/osv-scanner_linux_amd64",
+    "digest": "sha256:160c6253e2922e9e0a6a9771c5c4c40a4b3c6090b34a3cdd5e80c96cc2e4218b"
+  },
+  "codex_security": {
+    "version": "0.7.0",
+    "integrity": "sha512-N8BZ6JyfAWGKwzAdBdIX5AjlsZobXORY15CQ3zMFBQk4CBY9ue4kwnyf+6SdSPaZPHXsWnsuMYZcElMhZBaHPg==",
+    "package": "@openai/codex-security"
+  },
+  "python": "3.12.13",
+  "platform": "linux_amd64"
+}
