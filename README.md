@@ -1,6 +1,10 @@
 # Make The One 계산·검색 구현 초안
 
-이 폴더는 Master PRD v0.3의 한국 가상 원국 정책을 실행 가능한 코드로 옮긴 초안이다. 계산·검색 코드와 출처를 확인한 이름 자료를 포함한다. 로컬 Meta 호출, PostgreSQL 16 연결 및 작은 색인 적재를 검증했다. 제품 화면과 전체 색인은 구현·검증 대기다.
+이 폴더는 Master PRD v0.3의 한국 가상 원국 정책을 실행 가능한 코드로 옮긴 초안이다. 계산·검색 코드와 출처를 확인한 이름 자료를 포함한다. 로컬 Meta 호출, PostgreSQL 16 연결 및 작은 색인 적재를 검증했다. `/me`의 입력·결과 화면은 최소 흐름으로 구현했으며 전체 색인과 공유 기능은 구현·검증 대기다.
+
+## `/me` 화면
+
+한국어 이야기 30~1200자를 입력하면 기존 `/api/generate`의 가상 출생과 이름 3+1개를 보여준다. 결과가 도착하면 브라우저 기본 Canvas 2D에서 유성 한 개를 짧게 그린 뒤 프레임 루프를 멈춘다. 움직임 줄이기 설정에서는 애니메이션을 생략한다. 색상과 치수는 [디자인 기준](DESIGN.md) 및 `app/styles/design-tokens.ts`를 따른다. 정적 스타일은 vanilla-extract로 생성하며 외부 이미지·웹폰트·애니메이션 렌더링 라이브러리를 사용하지 않는다. 실제 생성에는 서버 Meta 키와 PostgreSQL 색인·이름 적재가 필요하다. `/character`, PNG 카드, X 공유와 분석 이벤트는 후속 범위다.
 
 ## 브랜치 운영
 
@@ -14,7 +18,7 @@
 
 | 항목 | 현재 정의·구현 | 대조 결과 |
 | --- | --- | --- |
-| 앱·API | Next.js 16.4.3, React 19.2.0, TypeScript 5.9.3; `app/api/generate/route.ts` | 단일 Node/Route Handler 구조 일치. `/me`·`/character` 화면은 없음 |
+| 앱·API | Next.js 16.4.3, React 19.2.0, TypeScript 5.9.3; `app/api/generate/route.ts` | 단일 Node/Route Handler 구조 일치. `/me` 최소 화면 구현, `/character` 화면 대기 |
 | 입출력 검증 | Zod 4.6.7 | 입력·모티프 검증 코드 있음. API 최종 응답 스키마 검증은 별도 확인 필요 |
 | 검색 DB | `pg` 8.16.3, `db/001_init.sql` | 로컬 PostgreSQL 16.15 연결·초기화·작은 색인 적재 확인 |
 | 절입 계산 | astronomy-engine 2.1.19 | 지정 버전·SearchSunLongitude 사용 일치 |
@@ -22,7 +26,7 @@
 | 독립 계산 대조 | lunar-javascript 1.7.7 | 개발 의존성 고정, 비경계 360개 표본의 네 기둥 일치 |
 | 제품 모델 | 서버의 muse-spark-1.3, `META_ALLOW_12=1`일 때 1.2 대체 경로 | Standard 모델 ID 일치. 1.3 실제 구조화 추출 성공. 쿼터 잔액·1.2 대체 모델은 미확인 |
 | 실행·검사 | `.nvmrc`·engines·CI에서 Node 24.22.2 고정; npm lockfile; typecheck·test·build | 직접 의존성 버전과 lockfile 일치. CI 정의 존재와 실제 실행 성공은 구분 |
-| 카드·분석·배포 | 구현·배포 설정 없음 | PNG·X 공유 UI·분석 및 호스팅 검증 대기 |
+| 화면·카드·분석·배포 | `/me` 최소 입력·결과 UI, 카드·분석·배포 설정 없음 | `/character`·PNG·X 공유·분석 및 호스팅 검증 대기 |
 
 Meta 공식 문서는 위 Standard 모델 ID와 [Chat Completions 호출 형식](https://dev.meta.ai/docs/protocols/chat-completions)을 제공한다. 프로젝트 계정의 사용 권한은 문서 확인만으로 검증되지 않는다. Node 24.22.2는 [Next.js 공식 최소 Node 20.9 조건](https://nextjs.org/docs/app/getting-started/installation)을 충족한다. Python 파일은 개발 보조 도구이며 별도 Python 제품 API를 도입한 상태가 아니다.
 
@@ -81,7 +85,7 @@ DB는 `127.0.0.1:5432`로만 공개하며 named volume에 보관한다. 초기�
 
 ## 테스트 범위
 
-`npm test`는 절기·시간 보정 경계와 추천 규칙을 검사하고, `npm run typecheck`와 `npm run build`는 형식 및 Next.js 빌드를 확인한다. GitHub Actions에서도 커밋과 PR마다 같은 검사를 실행한다. 실제 DB 적재 회귀 검사는 `npm run test:db`로 분리하며 CI의 PostgreSQL 16 서비스에서도 실행한다. 현재 화면은 없다.
+`npm test`는 절기·시간 보정 경계와 추천 규칙을 검사하고, `npm run typecheck`와 `npm run build`는 형식 및 Next.js 빌드를 확인한다. GitHub Actions에서도 커밋과 PR마다 같은 검사를 실행한다. 실제 DB 적재 회귀 검사는 `npm run test:db`로 분리하며 CI의 PostgreSQL 16 서비스에서도 실행한다. `/me`의 실제 생성과 시각적 동작은 Meta·DB가 준비된 브라우저에서 추가 확인이 필요하다.
 
 계산 정책: 평균태양시 = UTC + 경도×4분, 연·월은 UTC 절기 순간, 일은 태양시 23시, 시간은 2시간 단위. 절입은 astronomy-engine 2.1.19, 역사적 법정시는 moment-timezone 0.6.5의 전체 시간대 자료를 사용한다. `data/ruleset.json`은 명리 해석 규칙표 v1의 48개 매핑을 옮긴 것이며 일부 12운성 규칙은 검색에서 제외되어 있다. 숫자 점수는 서사 추천용 편집 규칙이다.
 

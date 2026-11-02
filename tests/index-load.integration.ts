@@ -19,7 +19,7 @@ const source=resolve(process.env.INDEX_DIR??'data/generated/pilot-2024');
 const manifest=JSON.parse(readFileSync(join(source,'manifest.json'),'utf8'));
 const temporary=mkdtempSync(join(tmpdir(),'mto-index-check-'));
 after(()=>rmSync(temporary,{recursive:true,force:true}));
-const environment={PATH:process.env.PATH,DATABASE_URL:process.env.DATABASE_URL};
+const environment={PATH:process.env.PATH,DATABASE_URL:process.env.DATABASE_URL,NODE_ENV:'test' as const};
 function run(script:string,args:string[]=[]){
   return spawnSync(process.execPath,['--import','tsx',script,...args],{encoding:'utf8',env:environment});
 }
