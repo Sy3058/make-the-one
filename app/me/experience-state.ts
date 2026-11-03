@@ -1,5 +1,5 @@
 type Name = {name: string; meaning: string};
-type Interpretation = {kind:'chart';paragraphs:string[]};
+type Interpretation = {kind:'chart';sections:{id:string;title:string;paragraphs:string[]}[];basis:{label:string;text:string}[]};
 export type Result = {
   fictionalBirth: {city: string; civilTime: string; utcOffsetMinutes: number};
   pillars: [string, string, string, string];
@@ -24,7 +24,14 @@ export function isResult(value: unknown): value is Result {
     data.pillars.every(pillar => typeof pillar === 'string' && /^[甲乙丙丁戊己庚辛壬癸][子丑寅卯辰巳午未申酉戌亥]$/.test(pillar)) &&
     Array.isArray(data.seriousNames) && data.seriousNames.length === 3 &&
     data.seriousNames.every(validName) && !!interpretation && typeof interpretation==='object' &&
-    interpretation.kind==='chart' && textArray(interpretation.paragraphs,1,6,1500);
+    interpretation.kind==='chart' && Array.isArray(interpretation.sections) && interpretation.sections.length===4 &&
+    interpretation.sections.every((section,index)=>!!section && typeof section==='object' &&
+      section.id===['character','work','money','relationships'][index] &&
+      typeof section.title==='string' && section.title.length>0 && section.title.length<=50 &&
+      textArray(section.paragraphs,1,4,1500)) &&
+    Array.isArray(interpretation.basis) && interpretation.basis.length>=1 && interpretation.basis.length<=8 &&
+    interpretation.basis.every(fact=>!!fact && typeof fact==='object' && typeof fact.label==='string' &&
+      fact.label.length>0 && fact.label.length<=50 && typeof fact.text==='string' && fact.text.length>0 && fact.text.length<=1500);
 }
 
 export type Status = 'idle' | 'loading' | 'falling' | 'ready';

@@ -7,7 +7,7 @@ const result:Result={fictionalBirth:{city:'seoul',civilTime:'2024-02-15 14:32:05
   {name:'은지',meaning:'창작적 이름 풀이'},
   {name:'채은',meaning:'창작적 이름 풀이'},
   {name:'지유',meaning:'창작적 이름 풀이'},
-],interpretation:{kind:'chart',paragraphs:['계산된 네 기둥 자체의 풀이입니다.']}};
+],interpretation:{kind:'chart',sections:['character','work','money','relationships'].map(id=>({id,title:id,paragraphs:['쉬운 생활 영역별 풀이입니다.']})),basis:[{label:'계산 근거',text:'네 기둥에서 확인한 구성입니다.'}]}};
 const entered=()=>experienceReducer(initialState,{type:'edit',story});
 
 test('API success waits for the falling star before revealing names',()=>{
@@ -73,12 +73,20 @@ test('birth offsets must be present and use valid integer minutes',()=>{
   assert.equal(isResult(result),true);
   assert.equal(isResult({...result,fictionalBirth:{...result.fictionalBirth,utcOffsetMinutes:600}}),true);
 });
-test('a result must include a bounded chart-only reading',()=>{
+test('results require complete readable sections and bounded calculation details',()=>{
   const {interpretation,...without}=result;
   assert.equal(isResult(without),false);
-  for(const invalid of [{...interpretation,paragraphs:[]},{...interpretation,kind:'story'},
-    {paragraphs:['legacy story connection']},{...interpretation,paragraphs:['x'.repeat(1501)]}]){
-    assert.equal(isResult({...result,interpretation:invalid}),false);
-  }
+  for(const invalid of [
+    {...interpretation,sections:[]},
+    {...interpretation,kind:'story'},
+    {kind:'chart',paragraphs:['legacy technical reading']},
+    {...interpretation,sections:[...interpretation.sections].reverse()},
+    {...interpretation,sections:interpretation.sections.map(section=>({...section,paragraphs:['x'.repeat(1501)]}))},
+    {...interpretation,sections:[null,...interpretation.sections.slice(1)]},
+    {...interpretation,sections:interpretation.sections.map(section=>({...section,paragraphs:[]}))},
+    {...interpretation,basis:[]},
+    {...interpretation,basis:[{label:'valid',text:null}]},
+    {...interpretation,basis:[null]},
+  ])assert.equal(isResult({...result,interpretation:invalid}),false);
   assert.equal(isResult(result),true);
 });

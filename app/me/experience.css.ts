@@ -129,6 +129,13 @@ export const pillarValue = style({display: 'grid', gap: design.spaceSmall, margi
 export const pillarGlyph = style({rubyPosition:'under'});
 export const pillarReading = style({color:vars.color.muted,fontSize:design.smallSize,fontWeight:400});
 export const readingParagraph = style({margin:`${design.spaceSmall} 0 0`,fontSize:design.bodySize,lineHeight:1.8,wordBreak:'keep-all',overflowWrap:'anywhere'});
+export const readingSection = style({marginTop:design.spaceLarge});
+export const readingHeading = style({margin:0,fontSize:design.bodySize,fontWeight:650,lineHeight:1.6,color:vars.color.accent});
+export const readingBasis = style({marginTop:design.spaceLarge,paddingTop:design.spaceMedium,borderTop:`1px solid ${vars.color.line}`});
+export const basisSummary = style({cursor:'pointer',fontSize:design.smallSize,lineHeight:1.8,color:vars.color.muted,selectors:{'&:focus-visible':{outline:`2px solid ${vars.color.meteor}`,outlineOffset:'3px'}}});
+export const basisList = style({margin:0});
+export const basisItem = style({marginTop:design.spaceMedium});
+export const basisText = style({margin:`${design.spaceSmall} 0 0`,fontSize:design.smallSize,lineHeight:1.8,color:vars.color.muted,wordBreak:'keep-all',overflowWrap:'anywhere'});
 export const commonSaju = style({margin: `${design.spaceMedium} 0 0`, color: vars.color.muted, fontSize: design.smallSize, lineHeight: 1.6, wordBreak: 'keep-all'});
 
 export const birth = style({

@@ -97,7 +97,18 @@ export function NameExperience() {
             </section>
             <section className={styles.saju} aria-labelledby="interpretation-title">
               <h3 id="interpretation-title" className={styles.sectionHeading}>가상 사주 풀이</h3>
-              {result.interpretation.paragraphs.map((paragraph,index)=><p className={styles.readingParagraph} key={index}>{paragraph}</p>)}
+              {result.interpretation.sections.map(section=><section className={styles.readingSection} key={section.id} aria-labelledby={`reading-${section.id}`}>
+                <h4 id={`reading-${section.id}`} className={styles.readingHeading}>{section.title}</h4>
+                {section.paragraphs.map((paragraph,index)=><p className={styles.readingParagraph} key={index}>{paragraph}</p>)}
+              </section>)}
+              <details className={styles.readingBasis}>
+                <summary className={styles.basisSummary}>풀이의 계산 근거 보기</summary>
+                <p className={styles.commonSaju}>아래는 네 기둥에서 계산한 구성입니다. 위 문장은 이를 바탕으로 쓴 창작 풀이입니다.</p>
+                <dl className={styles.basisList}>{result.interpretation.basis.map(fact=><div className={styles.basisItem} key={fact.label}>
+                  <dt className={styles.readingHeading}>{fact.label}</dt>
+                  <dd className={styles.basisText}>{fact.text}</dd>
+                </div>)}</dl>
+              </details>
             </section>
           </article>
           <h2 className={styles.alternativeHeading}>함께 어울리는 이름</h2>
