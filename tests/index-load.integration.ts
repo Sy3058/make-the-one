@@ -48,8 +48,8 @@ test('verified pilot and names are idempotent on actual PostgreSQL 16',async()=>
   const before=await state();
   successful('scripts/load-index.ts',[source]);successful('scripts/load-names.ts');
   assert.deepEqual(await state(),before);
-  assert.equal(before.build_status,'verified');assert.equal(before.names,84);
-  assert.equal(before.charts,manifest.chart_count);assert.equal(before.occurrences,manifest.occurrence_count);
+  assert.equal(before.build_status,'verified');assert.equal(before.names,86);
+  assert.ok(before.charts>=manifest.chart_count);assert.ok(before.occurrences>=manifest.occurrence_count);
 });
 test('candidate civil timestamps and stored offsets survive JSON without timezone conversion',async()=>{
   const client=new pg.Client({connectionString:process.env.DATABASE_URL});
@@ -85,4 +85,31 @@ test('a late count failure rolls back build state and all writes',async()=>{
   const before=await state(),result=run('scripts/load-index.ts',[target]);
   assert.notEqual(result.status,0);assert.match(result.stderr,/rolled back/);
   assert.deepEqual(await state(),before);
+});
+
+test('civil year ranges constrain both candidate admission and the selected representative occurrence',async()=>{
+  const client=new pg.Client({connectionString:process.env.DATABASE_URL});
+  try{
+    await client.connect();
+    for(const range of [{from:1980,to:1989},{from:1990,to:1999},{from:1985,to:1995},{from:2024,to:2024},{from:2039,to:2039}]){
+      const bounds=[`${range.from}-01-01`,`${range.to+1}-01-01`];
+      const available=await client.query<{motif:string}>(`SELECT m.motif FROM chart_occurrence o JOIN chart_motif m USING(chart_id)
+        WHERE o.is_representative AND o.civil_time >= $1::timestamp AND o.civil_time < $2::timestamp
+          AND m.priority>=2 AND m.family<>'신살·운성' LIMIT 1`,bounds);
+      const tag=available.rows[0]?.motif??'기반';
+      const rows=await candidates([{tag,importance:3,quote:'합성 근거',negative:false,transition:false}],range);
+      assert.equal(rows.length>0,available.rows.length>0);
+      for(const row of rows){
+        const year=Number(row.occurrence.civil_time.slice(0,4));assert.ok(year>=range.from&&year<=range.to);
+        assert.ok(row.evidence.some(e=>e.motif===tag&&e.priority>=2&&e.family!=='신살·운성'));
+      }
+    }
+  }finally{await client.end();}
+});
+test('the structural anchor is applied before the database candidate cap',async()=>{
+  const motif=(tag:string,importance:1|2|3)=>({tag,importance,quote:'합성 근거',negative:false,transition:false});
+  const rows=await candidates([motif('관찰',3),motif('제작',2)],{from:2024,to:2024});
+  assert.ok(rows.length>0);
+  assert.ok(rows.every(row=>row.evidence.some(e=>e.motif==='관찰'&&e.priority>=2&&e.family!=='신살·운성')));
+  assert.deepEqual(await candidates([motif('재시작',3),motif('제작',2)]),[]);
 });

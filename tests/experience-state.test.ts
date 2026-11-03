@@ -1,13 +1,14 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {experienceReducer,initialState,isResult,type Result} from '../app/me/experience-state.ts';
+import {experienceReducer,initialState,isResult,isRecommendation,type Result,type Recommendation} from '../app/me/experience-state.ts';
 
 const story='  가상의 인물은 마을에서 책을 읽고 이웃을 돌보며 배움을 이어가고 자신의 생각을 글로 표현했다.  ';
-const result:Result={fictionalBirth:{city:'seoul',civilTime:'2024-02-15 14:32:05',utcOffsetMinutes:540},pillars:['甲辰','丙寅','己酉','辛未'],seriousNames:[
-  {name:'은지',meaning:'창작적 이름 풀이'},
-  {name:'채은',meaning:'창작적 이름 풀이'},
-  {name:'지유',meaning:'창작적 이름 풀이'},
-],interpretation:{kind:'chart',sections:['character','work','money','relationships'].map(id=>({id,title:id,paragraphs:['쉬운 생활 영역별 풀이입니다.']})),basis:[{label:'계산 근거',text:'네 기둥에서 확인한 구성입니다.'}]}};
+const recommendation:Recommendation={chartId:'a'.repeat(64),fictionalBirth:{city:'seoul',civilTime:'2024-02-15 14:32:05',utcOffsetMinutes:540},pillars:['甲辰','丙寅','己酉','辛未'],
+name:{name:'은지',hanja:'恩智',kind:'hanja',meaning:'창작적 이름 풀이',wordMeaning:null,sourceUrl:'https://efamily.scourt.go.kr/'},
+interpretation:{kind:'chart',sections:['character','work','money','relationships'].map(id=>({id,title:id,paragraphs:['쉬운 생활 영역별 풀이입니다.']})),basis:[{label:'계산 근거',text:'네 기둥에서 확인한 구성입니다.'}]}};
+const second:Recommendation={...recommendation,chartId:'b'.repeat(64),name:{...recommendation.name,name:'하늘',kind:'native',hanja:null,wordMeaning:'땅 위의 넓은 공간'},pillars:['甲辰','丙寅','戊午','辛未']};
+const third:Recommendation={...recommendation,chartId:'c'.repeat(64),name:{...recommendation.name,name:'지유'},pillars:['甲辰','丙寅','甲子','辛未']};
+const result:Result={recommendations:[recommendation,second,third]};
 const entered=()=>experienceReducer(initialState,{type:'edit',story});
 
 test('API success waits for the falling star before revealing names',()=>{
@@ -50,32 +51,41 @@ test('unfinished searches cannot reset or reveal stale results',()=>{
   assert.equal(experienceReducer(entered(),{type:'success',result}).result,null);
 });
 
-test('three-name responses are accepted without a playful name',()=>{
+test('three independent charts and names are required; legacy shared results are rejected',()=>{
   assert.equal(isResult(result),true);
-  assert.equal(isResult({...result,seriousNames:result.seriousNames.slice(0,2)}),false);
-  assert.equal(isResult({...result,seriousNames:[null,null,null]}),false);
+  assert.equal(isResult({recommendations:result.recommendations.slice(0,2)}),false);
+  assert.equal(isResult({recommendations:[recommendation,null,third]}),false);
+  assert.equal(isResult(recommendation),false);
+  for(const duplicate of [{...second,chartId:recommendation.chartId},{...second,pillars:recommendation.pillars},{...second,name:recommendation.name}])
+    assert.equal(isResult({recommendations:[recommendation,duplicate,third]}),false);
 });
-test('results require four ordered pillar pairs before they can be revealed',()=>{
-  const {pillars,...missing}=result;
-  assert.equal(isResult(missing),false);
-  assert.equal(isResult({...result,pillars:pillars.slice(0,3)}),false);
-  assert.equal(isResult({...result,pillars:[...pillars,'甲子']}),false);
-  assert.equal(isResult({...result,pillars:['甲辰','not a pillar','己酉','辛未']}),false);
-  assert.equal(isResult({...result,pillars:['甲辰','丙寅',null,'辛未']}),false);
-  assert.equal(isResult(result),true);
+test('Hanja and native names enforce their separate display contracts',()=>{
+  for(const name of [{...recommendation.name,hanja:null},{...second.name,hanja:'天空'},{...second.name,wordMeaning:null},
+    {...second.name,sourceUrl:'javascript:alert(1)'},{...second.name,kind:'nickname'}])
+    assert.equal(isRecommendation({...recommendation,name}),false);
+  assert.equal(isRecommendation(second),true);
+});
+test('recommendations require four ordered pillar pairs before they can be revealed',()=>{
+  const {pillars,...missing}=recommendation;
+  assert.equal(isRecommendation(missing),false);
+  assert.equal(isRecommendation({...recommendation,pillars:pillars.slice(0,3)}),false);
+  assert.equal(isRecommendation({...recommendation,pillars:[...pillars,'甲子']}),false);
+  assert.equal(isRecommendation({...recommendation,pillars:['甲辰','not a pillar','己酉','辛未']}),false);
+  assert.equal(isRecommendation({...recommendation,pillars:['甲辰','丙寅',null,'辛未']}),false);
+  assert.equal(isRecommendation(recommendation),true);
 });
 test('birth offsets must be present and use valid integer minutes',()=>{
-  const {utcOffsetMinutes,...birthWithoutOffset}=result.fictionalBirth;
-  assert.equal(isResult({...result,fictionalBirth:birthWithoutOffset}),false);
+  const {utcOffsetMinutes,...birthWithoutOffset}=recommendation.fictionalBirth;
+  assert.equal(isRecommendation({...recommendation,fictionalBirth:birthWithoutOffset}),false);
   for(const offset of ['540',null,NaN,Infinity,540.5,841,-841]){
-    assert.equal(isResult({...result,fictionalBirth:{...result.fictionalBirth,utcOffsetMinutes:offset}}),false);
+    assert.equal(isRecommendation({...recommendation,fictionalBirth:{...recommendation.fictionalBirth,utcOffsetMinutes:offset}}),false);
   }
-  assert.equal(isResult(result),true);
-  assert.equal(isResult({...result,fictionalBirth:{...result.fictionalBirth,utcOffsetMinutes:600}}),true);
+  assert.equal(isRecommendation(recommendation),true);
+  assert.equal(isRecommendation({...recommendation,fictionalBirth:{...recommendation.fictionalBirth,utcOffsetMinutes:600}}),true);
 });
-test('results require complete readable sections and bounded calculation details',()=>{
-  const {interpretation,...without}=result;
-  assert.equal(isResult(without),false);
+test('recommendations require complete readable sections and bounded calculation details',()=>{
+  const {interpretation,...without}=recommendation;
+  assert.equal(isRecommendation(without),false);
   for(const invalid of [
     {...interpretation,sections:[]},
     {...interpretation,kind:'story'},
@@ -87,6 +97,6 @@ test('results require complete readable sections and bounded calculation details
     {...interpretation,basis:[]},
     {...interpretation,basis:[{label:'valid',text:null}]},
     {...interpretation,basis:[null]},
-  ])assert.equal(isResult({...result,interpretation:invalid}),false);
-  assert.equal(isResult(result),true);
+  ])assert.equal(isRecommendation({...recommendation,interpretation:invalid}),false);
+  assert.equal(isRecommendation(recommendation),true);
 });

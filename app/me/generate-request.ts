@@ -1,13 +1,14 @@
+import type {GenerationOptions} from '../../src/generation-input';
 export class DisplayError extends Error {}
 
-export async function requestGeneration(story: string, timeoutMs = 60_000): Promise<unknown> {
+export async function requestGeneration(story: string, timeoutMs = 60_000, options:GenerationOptions={}): Promise<unknown> {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), timeoutMs);
   try {
     const response = await fetch('/api/generate', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({mode: 'me', story}),
+      body: JSON.stringify({mode: 'me', story,...options}),
       signal: controller.signal,
     });
     const data: unknown = await response.json().catch(error => {

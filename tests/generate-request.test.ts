@@ -52,3 +52,14 @@ test('API errors retain their recovery message',async()=>{
       error instanceof DisplayError&&error.message==='검증된 추천 자료를 준비 중입니다.');
   });
 });
+
+test('name feel and inclusive year bounds are sent with the story',async()=>{
+  let body:unknown;
+  await withApi(async(req,res)=>{
+    let text='';for await(const chunk of req)text+=chunk;body=JSON.parse(text);
+    res.setHeader('Content-Type','application/json');res.end('{"ok":true}');
+  },async()=>{
+    await requestGeneration('합성 이야기',2000,{nameFeel:'feminine',yearRange:{from:1985,to:1995}});
+    assert.deepEqual(body,{mode:'me',story:'합성 이야기',nameFeel:'feminine',yearRange:{from:1985,to:1995}});
+  });
+});

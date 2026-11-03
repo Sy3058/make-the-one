@@ -1,6 +1,6 @@
-import type {Result} from './experience-state';
+import type {Recommendation} from './experience-state';
 
-export function formatCivilBirth(birth: Result['fictionalBirth']): string {
+export function formatCivilBirth(birth: Recommendation['fictionalBirth']): string {
   const minutes = Math.abs(birth.utcOffsetMinutes);
   const sign = birth.utcOffsetMinutes < 0 ? '-' : '+';
   const hours = String(Math.floor(minutes / 60)).padStart(2, '0');
