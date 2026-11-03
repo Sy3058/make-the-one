@@ -3,7 +3,7 @@ import type {Evidence,Name,Motif} from './rank';
 const {Pool}=pg;
 let pool:pg.Pool|undefined;
 export function db(){if(!process.env.DATABASE_URL) throw new Error('DATABASE_URL unavailable');
-  return pool??=new Pool({connectionString:process.env.DATABASE_URL,max:5,statement_timeout:10_000});}
+  return pool??=new Pool({connectionString:process.env.DATABASE_URL,max:5,connectionTimeoutMillis:5_000,statement_timeout:10_000});}
 export async function candidates(motifs:Motif[]){
   const tags=motifs.filter(m=>!m.negative).map(m=>m.tag);
   if(!tags.length) return [];
@@ -17,7 +17,8 @@ export async function candidates(motifs:Motif[]){
     p.query<Evidence>(`SELECT chart_id,rule_id,motif,priority,family,evidence FROM chart_motif
       WHERE chart_id=ANY($1) AND motif=ANY($2)`,[chartIds,tags]),
     p.query<{chart_id:string;year_pillar:string;month_pillar:string;day_pillar:string;hour_pillar:string}>(`SELECT * FROM chart WHERE chart_id=ANY($1)`,[chartIds]),
-    p.query<{chart_id:string;place_id:string;instant_utc:string;civil_time:string;boundary_distance_min:number}>(`SELECT DISTINCT ON (chart_id) chart_id,place_id,instant_utc,civil_time,boundary_distance_min
+    // Keep the local civil timestamp as text; pg's Date parser applies the server timezone.
+    p.query<{chart_id:string;place_id:string;instant_utc:string;civil_time:string;utc_offset_min:number;boundary_distance_min:number}>(`SELECT DISTINCT ON (chart_id) chart_id,place_id,instant_utc,civil_time::text AS civil_time,utc_offset_min,boundary_distance_min
       FROM chart_occurrence WHERE chart_id=ANY($1) AND is_representative=true
       ORDER BY chart_id,boundary_distance_min DESC,instant_utc,place_id`,[chartIds])
   ]);

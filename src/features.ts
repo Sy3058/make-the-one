@@ -1,4 +1,4 @@
-import {BRANCHES, STEMS, type Chart} from './calendar.js';
+import {BRANCHES, STEMS, type Chart} from './ganzhi';
 import ruleset from '../data/ruleset.json' with {type:'json'};
 
 const element=(stem:string)=>Math.floor(STEMS.indexOf(stem)/2);

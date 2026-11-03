@@ -2,19 +2,17 @@ import Astronomy from 'astronomy-engine';
 import moment from 'moment-timezone';
 import { createHash } from 'node:crypto';
 
-export const STEMS = [...'甲乙丙丁戊己庚辛壬癸'];
-export const BRANCHES = [...'子丑寅卯辰巳午未申酉戌亥'];
+import {ganzhi,STEMS,BRANCHES,type Chart} from './ganzhi';
+export {STEMS,BRANCHES,ganzhi,type Chart} from './ganzhi';
 export const POLICY_ID = 'kr-mean-solar-23-v1';
 const DAY_MS = 86_400_000;
 const termsCache = new Map<number, SolarTerm[]>();
 const windowCache = new Map<number, SolarTerm[]>();
 export type SolarTerm = { year: number; longitude: number; utc: Date; isJie: boolean };
 export type Place = { id: string; name: string; longitude: number; latitude?: number; source: string };
-export type Chart = { year: string; month: string; day: string; hour: string };
 export type Occurrence = { chart: Chart; chartId: string; place: Place; utc: Date; civil: string;
   utcOffsetMin: number; solar: string; boundaryDistanceMin: number };
 const mod = (n:number,m:number) => ((n % m)+m)%m;
-export function ganzhi(index:number) { const i=mod(index,60); return STEMS[i%10]+BRANCHES[i%12]; }
 
 // 24 apparent longitude events, from Li Chun to the following Da Han.
 export function solarTerms(year:number): SolarTerm[] {

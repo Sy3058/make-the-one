@@ -5,6 +5,7 @@ import {cpSync,mkdtempSync,rmSync,readFileSync,writeFileSync,appendFileSync} fro
 import {tmpdir} from 'node:os';
 import {join,resolve} from 'node:path';
 import pg from 'pg';
+import {candidates,db} from '../src/db.ts';
 
 // CI supplies component variables, avoiding checked-in credential-bearing URLs.
 if(!process.env.DATABASE_URL&&process.env.PGHOST&&process.env.PGPASSWORD){
@@ -19,7 +20,8 @@ const source=resolve(process.env.INDEX_DIR??'data/generated/pilot-2024');
 const manifest=JSON.parse(readFileSync(join(source,'manifest.json'),'utf8'));
 const temporary=mkdtempSync(join(tmpdir(),'mto-index-check-'));
 after(()=>rmSync(temporary,{recursive:true,force:true}));
-const environment={PATH:process.env.PATH,DATABASE_URL:process.env.DATABASE_URL};
+after(()=>db().end());
+const environment={PATH:process.env.PATH,DATABASE_URL:process.env.DATABASE_URL,NODE_ENV:'test' as const};
 function run(script:string,args:string[]=[]){
   return spawnSync(process.execPath,['--import','tsx',script,...args],{encoding:'utf8',env:environment});
 }
@@ -48,6 +50,27 @@ test('verified pilot and names are idempotent on actual PostgreSQL 16',async()=>
   assert.deepEqual(await state(),before);
   assert.equal(before.build_status,'verified');assert.equal(before.names,84);
   assert.equal(before.charts,manifest.chart_count);assert.equal(before.occurrences,manifest.occurrence_count);
+});
+test('candidate civil timestamps and stored offsets survive JSON without timezone conversion',async()=>{
+  const client=new pg.Client({connectionString:process.env.DATABASE_URL});
+  try{
+    await client.connect();
+    const motif=await client.query<{motif:string}>(`SELECT motif FROM chart_motif
+      WHERE priority>=2 AND family<>'신살·운성' ORDER BY motif LIMIT 1`);
+    assert.ok(motif.rows.length);
+    const rows=await candidates([{tag:motif.rows[0].motif,importance:3,quote:'합성 이야기',negative:false,transition:false}]);
+    assert.ok(rows.length);
+    const row=rows[0];
+    const expected=await client.query<{civil_time:string;utc_offset_min:number}>(`SELECT civil_time::text AS civil_time,utc_offset_min
+      FROM chart_occurrence WHERE chart_id=$1 AND place_id=$2 AND instant_utc=$3`,
+      [row.id,row.occurrence.place_id,row.occurrence.instant_utc]);
+    assert.equal(typeof row.occurrence.civil_time,'string');
+    const payload=JSON.parse(JSON.stringify({civilTime:row.occurrence.civil_time,utcOffsetMinutes:row.occurrence.utc_offset_min}));
+    assert.equal(payload.civilTime,expected.rows[0].civil_time);
+    assert.equal(typeof payload.utcOffsetMinutes,'number');
+    assert.equal(payload.utcOffsetMinutes,expected.rows[0].utc_offset_min);
+    assert.match(payload.civilTime,/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:/);
+  }finally{await client.end();}
 });
 test('a changed artifact fails checksum verification before changing the DB',async()=>{
   const target=join(temporary,'corrupt');cpSync(source,target,{recursive:true});

@@ -11,12 +11,15 @@ test('weak star cannot admit a chart without a structural anchor',()=>{
   assert.ok((chartScore(motifs,e)??0)>70);
   assert.ok(finalScore(80,60)>finalScore(70,60));
 });
-test('name set has three different initials and meaning tags plus one playful',()=>{
+test('three diverse names are returned without requiring a playful candidate',()=>{
   const names:Name[]=[
     {name_id:'1',hangul:'가온',meaning_ko:'중심',motif_tags:['기반'],style_tags:['중립적'],naturalness:5,is_playful:false},
     {name_id:'2',hangul:'나래',meaning_ko:'날개',motif_tags:['전환'],style_tags:['중립적'],naturalness:4,is_playful:false},
     {name_id:'3',hangul:'도담',meaning_ko:'건강한 성장',motif_tags:['성장','전환'],style_tags:['중립적'],naturalness:4,is_playful:false},
     {name_id:'4',hangul:'다온',meaning_ko:'오는 것',motif_tags:['기반'],style_tags:[],naturalness:4,is_playful:true}];
   const x=pickNames(names,motifs);
-  assert.equal(x?.serious.length,3);assert.equal(x?.playful.name.hangul,'다온');
+  assert.equal(x?.serious.length,3);
+  assert.ok(x?.serious.every(item=>!item.name.is_playful));
+  assert.deepEqual(pickNames(names.filter(n=>!n.is_playful),motifs),x);
+  assert.equal(x&&'playful' in x,false);
 });

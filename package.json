@@ -37,6 +37,8 @@
     "@types/pg": "8.15.5",
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.2",
+    "@vanilla-extract/css": "1.21.3",
+    "@vanilla-extract/next-plugin": "2.5.2",
     "lunar-javascript": "1.7.7",
     "tsx": "4.20.6",
     "typescript": "5.9.3"
