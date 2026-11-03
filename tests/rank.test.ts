@@ -23,3 +23,35 @@ test('three diverse names are returned without requiring a playful candidate',()
   assert.deepEqual(pickNames(names.filter(n=>!n.is_playful),motifs),x);
   assert.equal(x&&'playful' in x,false);
 });
+
+import {pickPairs,matchesNameFeel,type NameDetails} from '../src/rank.ts';
+const detail=(id:string,hangul:string,tag:string,feel:'masculine'|'feminine'|'neutral'='neutral'):NameDetails=>({
+  name_id:id,hangul,hanja:null,name_kind:'native',name_feels:[feel],word_meaning:'단어 뜻',source_url:'https://krdict.korean.go.kr/',
+  meaning_ko:'창작 뜻',motif_tags:[tag],style_tags:[],naturalness:5,is_playful:false,
+});
+const row=(id:string,tag:string,day='甲子')=>({id,chart:{year_pillar:'甲辰',month_pillar:'丙寅',day_pillar:day,hour_pillar:'辛未'},
+  evidence:[{chart_id:id,rule_id:'M001',motif:tag,priority:3,family:'십성',evidence:{}}]});
+const twoMotifs:Motif[]=[{tag:'기반',importance:3,quote:'기반',negative:false,transition:false},{tag:'전환',importance:3,quote:'전환',negative:false,transition:false}];
+test('name feel admits neutral names, excludes the other preference and never admits playful names',()=>{
+  const male=detail('m','태준','기반','masculine'),female=detail('f','서아','기반','feminine'),neutral=detail('n','하늘','기반');
+  assert.equal(matchesNameFeel(male,'feminine'),false);assert.equal(matchesNameFeel(female,'masculine'),false);
+  for(const feel of ['any','masculine','feminine'] as const)assert.equal(matchesNameFeel(neutral,feel),true);
+  assert.equal(pickPairs([row('a','기반'),row('b','기반','戊午'),row('c','기반','庚申')],[male,female,{...neutral,is_playful:true}],twoMotifs),null);
+});
+test('joint assignment preserves a scarce name for the chart that requires it',()=>{
+  const a=row('a','기반'),b=row('b','기반','戊午'),c=row('c','기반','庚申');
+  a.evidence.push(row('a','전환').evidence[0]);c.evidence.push(row('c','전환').evidence[0]);
+  const rows=[a,b,c];
+  const names=[{...detail('1','하늘','기반'),motif_tags:['기반','전환']},detail('2','이슬','전환'),detail('3','나래','전환')];
+  const picked=pickPairs(rows,names,twoMotifs);
+  assert.ok(picked);assert.equal(picked.length,3);
+  assert.equal(picked.find(p=>p.row.id==='b')?.name.hangul,'하늘');
+  assert.equal(new Set(picked.map(p=>p.name.hangul)).size,3);
+  assert.deepEqual(pickPairs([...rows].reverse(),[...names].reverse(),twoMotifs),picked);
+});
+test('same pillars with different IDs cannot fill multiple result slots; insufficient matches stay empty',()=>{
+  const names=[detail('1','하늘','기반'),detail('2','이슬','기반'),detail('3','나래','기반')];
+  assert.equal(pickPairs([row('a','기반'),row('b','기반'),row('c','기반','戊午')],names,twoMotifs),null);
+  assert.equal(pickPairs([row('a','기반'),row('b','기반','戊午'),row('c','기반','庚申')],names.slice(0,2),twoMotifs),null);
+  assert.ok(pickPairs([row('a','기반'),row('b','기반','戊午'),row('c','기반','庚申')],names,twoMotifs));
+});

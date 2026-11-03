@@ -16,6 +16,8 @@ try{
     await client.query(readFileSync(new URL('../db/001_init.sql',import.meta.url),'utf8'));
     console.log('PostgreSQL 16 initial schema applied.');
   }
+  await client.query(readFileSync(new URL('../db/002_occurrence_years.sql',import.meta.url),'utf8'));
+  console.log('Civil-year lookup index is present.');
 }catch{
   await client?.query('ROLLBACK').catch(()=>{});
   console.error('DB initialization failed; check connection, version and existing schema. Details suppressed.');

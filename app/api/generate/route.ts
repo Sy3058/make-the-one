@@ -1,11 +1,9 @@
 import {NextResponse} from 'next/server';
-import {z} from 'zod';
+import {generationInput} from '../../../src/generation-input';
 import {extractMotifs,MetaServiceError} from '../../../src/meta';
 import {candidates,verifiedNames} from '../../../src/db';
-import {chartScore,finalScore,pickNames} from '../../../src/rank';
+import {pickPairs} from '../../../src/rank';
 import {interpretChart} from '../../../src/interpretation';
-const input=z.object({mode:z.enum(['me','character']),story:z.string().min(30).max(1200),
-  existingName:z.string().max(30).optional(),style:z.enum(['차분함','선명함','고전적','현대적','중립적']).optional()});
 export async function POST(req:Request){
   let stage:'input'|'model'|'database'|'ranking'='input';
   const started=performance.now();
@@ -15,33 +13,28 @@ export async function POST(req:Request){
     const now=performance.now();durations[stage]+=now-stageStarted;stageStarted=now;
   };
   try {
-    const body=input.safeParse(await req.json());
-    if(!body.success)return NextResponse.json({error:'이야기를 30~1200자로 입력해 주세요.'},{status:400});
+    const body=generationInput.safeParse(await req.json());
+    if(!body.success)return NextResponse.json({error:'이야기와 이름 느낌, 출생연도 범위(1980~2039년)를 확인해 주세요.'},{status:400});
     endStage();stage='model';
     const motifs=await extractMotifs(body.data.story);
     endStage();stage='database';
-    const rows=await candidates(motifs);
+    const rows=await candidates(motifs,body.data.yearRange);
     const names=(await verifiedNames()).filter(n=>n.hangul!==body.data.existingName);
-    if(!rows.length||names.filter(n=>!n.is_playful).length<3)
-      return NextResponse.json({error:'검증된 추천 자료를 준비 중입니다.'},{status:503});
+    if(names.length<3)return NextResponse.json({error:'검증된 이름 자료를 준비 중입니다.'},{status:503});
     endStage();stage='ranking';
-    const ordered=rows.map(row=>({...row,C:chartScore(motifs,row.evidence)}))
-      .filter((x):x is typeof x & {C:number}=>x.C!==null)
-      .sort((a,b)=>b.C-a.C||a.id.localeCompare(b.id)).slice(0,30);
-    const ranked=ordered.flatMap(row=>{const supported=motifs.filter(m=>row.evidence.some(e=>e.motif===m.tag&&e.priority>=2&&e.family!=='신살·운성'));
-      const picked=pickNames(names,supported,body.data.style);
-      return picked?[{...row,picked,F:finalScore(row.C,picked.mean)}]:[];})
-      .sort((a,b)=>b.F-a.F||a.id.localeCompare(b.id));
-    const best=ranked[0];
-    if(!best)return NextResponse.json({error:'이야기와 맞는 후보를 찾지 못했습니다.'},{status:422});
-    const interpretation=interpretChart({year:best.chart.year_pillar,month:best.chart.month_pillar,day:best.chart.day_pillar,hour:best.chart.hour_pillar});
-    return NextResponse.json({fictionalBirth:{city:best.occurrence.place_id,civilTime:best.occurrence.civil_time,utcOffsetMinutes:best.occurrence.utc_offset_min,
-      utc:best.occurrence.instant_utc},pillars:[best.chart.year_pillar,best.chart.month_pillar,best.chart.day_pillar,best.chart.hour_pillar],
-      motifs:motifs.map(m=>({tag:m.tag,importance:m.importance})),interpretation,
-      evidence:best.evidence.filter(e=>e.priority>=2&&e.family!=='신살·운성').slice(0,2).map(e=>({ruleId:e.rule_id,motif:e.motif})),
-      seriousNames:best.picked.serious.map(x=>({name:x.name.hangul,meaning:x.name.meaning_ko})),
-      shareText:`이야기에서 찾은 가상의 사주와 이름: ${best.picked.serious[0].name.hangul} #MakeTheOne`,
-      versions:{policy:'kr-mean-solar-23-v1',ruleset:'mt1-v1',model:'muse-spark-1.3'}});
+    const pairs=pickPairs(rows,names,motifs,body.data.style,body.data.nameFeel);
+    if(!pairs)return NextResponse.json({error:'조건에 맞는 서로 다른 사주와 이름 세 쌍을 찾지 못했어요. 출생연도 범위를 넓히거나 이름 느낌을 바꿔 주세요.'},{status:422});
+    const recommendations=pairs.map(({row,name})=>({
+      chartId:row.id,
+      name:{name:name.hangul,hanja:name.hanja,kind:name.name_kind,meaning:name.meaning_ko,wordMeaning:name.word_meaning,sourceUrl:name.source_url},
+      fictionalBirth:{city:row.occurrence.place_id,civilTime:row.occurrence.civil_time,utcOffsetMinutes:row.occurrence.utc_offset_min,utc:row.occurrence.instant_utc},
+      pillars:[row.chart.year_pillar,row.chart.month_pillar,row.chart.day_pillar,row.chart.hour_pillar],
+      interpretation:interpretChart({year:row.chart.year_pillar,month:row.chart.month_pillar,day:row.chart.day_pillar,hour:row.chart.hour_pillar}),
+      evidence:row.evidence.filter(e=>e.priority>=2&&e.family!=='신살·운성').slice(0,2).map(e=>({ruleId:e.rule_id,motif:e.motif})),
+      shareText:`이야기에서 찾은 가상의 사주와 이름: ${name.hangul} #MakeTheOne`,
+    }));
+    return NextResponse.json({recommendations,motifs:motifs.map(m=>({tag:m.tag,importance:m.importance})),
+      versions:{policy:'kr-mean-solar-23-v1',ruleset:'mt1-v1',ranking:'three-pairs-v1',names:'ko-names-v2',model:'muse-spark-1.3'}});
   } catch(error) {
     if(error instanceof MetaServiceError){
       console.error('generate failed',{stage,code:error.code,upstreamStatus:error.upstreamStatus});

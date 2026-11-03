@@ -46,3 +46,36 @@ export function pickNames(names:Name[],motifs:Motif[],style?:string){
   return {serious:selected,mean:selected.reduce((a,b)=>a+b.score,0)/3};
 }
 export function finalScore(c:number,nameMean:number){return 0.8*c+0.2*nameMean;}
+
+export type NameDetails=Name & {hanja:string|null;name_kind:'hanja'|'native';name_feels:('masculine'|'feminine'|'neutral')[];word_meaning:string|null;source_url:string};
+export function matchesNameFeel(name:NameDetails,feel:'any'|'masculine'|'feminine'='any'){
+  return feel==='any'||name.name_feels.includes(feel)||name.name_feels.includes('neutral');
+}
+// Only two other names can be occupied in a three-pair assignment, so each chart's top three suffice.
+export function pickPairs<T extends {id:string;evidence:Evidence[];chart:{year_pillar:string;month_pillar:string;day_pillar:string;hour_pillar:string}}>(
+  rows:T[],names:NameDetails[],motifs:Motif[],style?:string,feel:'any'|'masculine'|'feminine'='any'){
+  const eligible=names.filter(n=>!n.is_playful&&matchesNameFeel(n,feel));
+  const seen=new Set<string>();
+  const charts=rows.map(row=>({row,C:chartScore(motifs,row.evidence)}))
+    .filter((x):x is {row:T;C:number}=>x.C!==null)
+    .sort((a,b)=>b.C-a.C||a.row.id.localeCompare(b.row.id))
+    .filter(({row})=>{const key=[row.chart.year_pillar,row.chart.month_pillar,row.chart.day_pillar,row.chart.hour_pillar].join('');
+      if(seen.has(key))return false;seen.add(key);return true;}).slice(0,30);
+  const options=charts.map(({row,C})=>{
+    const supported=motifs.filter(m=>row.evidence.some(e=>e.motif===m.tag&&e.priority>=2&&e.family!=='신살·운성'));
+    return eligible.filter(n=>n.motif_tags.some(t=>supported.some(m=>!m.negative&&m.tag===t)))
+      .map(name=>({row,name,C,N:nameScore(name,supported,style),F:finalScore(C,nameScore(name,supported,style))}))
+      .sort((a,b)=>b.F-a.F||a.name.name_id.localeCompare(b.name.name_id)).slice(0,3);
+  }).filter(items=>items.length);
+  type Pair=typeof options[number][number];
+  let best:Pair[]|null=null,total=-Infinity,key='';
+  for(let i=0;i<options.length-2;i++)for(let j=i+1;j<options.length-1;j++)for(let k=j+1;k<options.length;k++){
+    for(const a of options[i])for(const b of options[j])for(const c of options[k]){
+      const set=[a,b,c];if(new Set(set.map(p=>p.name.hangul)).size!==3)continue;
+      const score=a.F+b.F+c.F;
+      const tie=set.map(p=>p.row.id+'/'+p.name.name_id).sort().join('|');
+      if(score>total||(score===total&&tie<key)){best=set;total=score;key=tie;}
+    }
+  }
+  return best?.sort((a,b)=>b.F-a.F||a.row.id.localeCompare(b.row.id)||a.name.name_id.localeCompare(b.name.name_id))??null;
+}

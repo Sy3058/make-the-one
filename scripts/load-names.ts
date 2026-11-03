@@ -11,11 +11,12 @@ try{
   const existing=await client.query(`SELECT ${columns.join(',')} FROM name_entry WHERE name_id=ANY($1)`,[corpus.entries.map(n=>n.name_id)]);
   for(const row of existing.rows){
     const expected=corpus.entries.find(n=>n.name_id===row.name_id)!;
-    if(columns.some(key=>JSON.stringify(row[key])!==JSON.stringify(expected[key])))
+    if(columns.some(key=>key!=='corpus_version'&&JSON.stringify(row[key])!==JSON.stringify(expected[key]))||
+      !['ko-names-v1',corpus.version].includes(row.corpus_version))
       throw new Error('Existing name data differs; refusing overwrite');
   }
   for(const entry of corpus.entries){
-    await client.query(`INSERT INTO name_entry (${columns.join(',')}) VALUES (${columns.map((_,i)=>'$'+(i+1)).join(',')}) ON CONFLICT (name_id) DO NOTHING`,columns.map(key=>entry[key]));
+    await client.query(`INSERT INTO name_entry (${columns.join(',')}) VALUES (${columns.map((_,i)=>'$'+(i+1)).join(',')}) ON CONFLICT (name_id) DO UPDATE SET corpus_version=EXCLUDED.corpus_version`,columns.map(key=>entry[key]));
   }
   await client.query('COMMIT');
   console.log(JSON.stringify({corpusVersion:corpus.version,serious:corpus.entries.filter(n=>!n.is_playful).length,playful:corpus.entries.filter(n=>n.is_playful).length}));

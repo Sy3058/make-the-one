@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {interpretChart} from '../src/interpretation.ts';
 import {extract} from '../src/features.ts';
 import {ganzhi,type Chart} from '../src/ganzhi.ts';
-import {isResult} from '../app/me/experience-state.ts';
+import {isRecommendation} from '../app/me/experience-state.ts';
 
 const chart:Chart={year:'甲辰',month:'丙子',day:'甲子',hour:'丁卯'};
 const prose=(value:ReturnType<typeof interpretChart>)=>value.sections.flatMap(section=>section.paragraphs).join(' ');
@@ -57,7 +57,7 @@ test('varied pillar combinations keep frontend bounds and reference only calcula
   for(let index=0;index<180;index++){
     const value={year:ganzhi(index),month:ganzhi(index*7+1),day:ganzhi(index*11+3),hour:ganzhi(index*13+5)};
     const result=interpretChart(value),calculated=extract(value);
-    assert.equal(isResult({fictionalBirth:{city:'seoul',civilTime:'2024-01-01 00:00:00',utcOffsetMinutes:540},pillars:Object.values(value),seriousNames:Array.from({length:3},()=>({name:'fixture',meaning:'fixture'})),interpretation:result}),true);
+    assert.equal(isRecommendation({chartId:'a'.repeat(64),fictionalBirth:{city:'seoul',civilTime:'2024-01-01 00:00:00',utcOffsetMinutes:540},pillars:Object.values(value),name:{name:'은지',hanja:'恩智',kind:'hanja',meaning:'fixture',wordMeaning:null,sourceUrl:'https://efamily.scourt.go.kr/'},interpretation:result}),true);
     assert.ok(result.references.every(reference=>calculated.some(feature=>feature.ruleId===reference.ruleId&&feature.priority>=2&&feature.family!=='신살·운성')));
     assert.ok(result.sections.every(section=>section.ruleIds.every(id=>result.references.some(reference=>reference.ruleId===id))));
     assert.doesNotMatch(prose(result),/초년|중년|말년|대운|세운|질병|결혼 시기|반드시|운명/);

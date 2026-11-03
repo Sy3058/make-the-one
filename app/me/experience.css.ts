@@ -158,3 +158,9 @@ export const name = style({fontSize: design.resultSize, fontWeight: 700, lineHei
 export const restart = style([button, {marginTop: design.spaceLarge, width: '100%'}]);
 export const status = style({position: 'relative', maxWidth: vars.layout.contentWidth, margin: '0 auto'});
 export const srOnly = style({position: 'absolute', width: '1px', height: '1px', padding: 0, margin: '-1px', overflow: 'hidden', clipPath: 'inset(50%)', whiteSpace: 'nowrap', border: 0});
+
+export const options=style({display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(140px,1fr))',gap:design.spaceMedium});
+export const optionLabel=style({display:'grid',gap:design.spaceSmall,fontSize:design.bodySize});
+export const select=style({width:'100%',minHeight:design.buttonHeight,padding:design.spaceSmall,background:vars.color.surfaceRaised,color:vars.color.text,border:`1px solid ${vars.color.line}`,borderRadius:design.smallRadius,fontSize:design.bodySize,colorScheme:'dark'});
+export const resultCards=style({display:'grid',gap:design.spaceLarge,marginTop:design.spaceLarge});
+export const nameAnnotation=style({fontSize:design.resultSize,fontWeight:400});
