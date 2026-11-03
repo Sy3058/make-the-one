@@ -30,6 +30,6 @@ export function validateNameCorpus(value:unknown=corpus){
     }
   }
   const verified=parsed.entries.filter(n=>n.review_status==='verified');
-  if(verified.filter(n=>!n.is_playful).length<72||verified.filter(n=>n.is_playful).length<12) throw new Error('Verified corpus requires at least 72 serious and 12 playful names');
+  if(verified.filter(n=>!n.is_playful).length<72) throw new Error('Verified corpus requires at least 72 serious names');
   return {version:parsed.version,entries:verified};
 }

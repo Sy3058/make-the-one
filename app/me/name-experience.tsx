@@ -1,17 +1,12 @@
 'use client';
 
-import {useState, type FormEvent} from 'react';
+import {useEffect, useReducer, useRef, type FormEvent} from 'react';
 import {MeteorSky} from './meteor-sky';
+import {DisplayError, requestGeneration} from './generate-request';
+import {experienceReducer, initialState, isResult} from './experience-state';
+import {formatCivilBirth} from './birth-time';
+import {readPillar,readPillarCharacter} from './pillar-reading';
 import * as styles from './experience.css';
-
-type Name = {name: string; meaning: string};
-type Result = {
-  fictionalBirth: {city: string; civilTime: string};
-  seriousNames: Name[];
-  playfulName: Name;
-};
-
-class DisplayError extends Error {}
 
 const cities: Record<string, string> = {
   seoul: '서울', seongnam: '성남', incheon: '인천', suwon: '수원',
@@ -20,97 +15,101 @@ const cities: Record<string, string> = {
   gwangju: '광주', mokpo: '목포', daegu: '대구', pohang: '포항',
   busan: '부산', changwon: '창원', ulsan: '울산', jeju: '제주',
 };
-
-function isResult(value: unknown): value is Result {
-  if (!value || typeof value !== 'object') return false;
-  const data = value as Partial<Result>;
-  const validName = (name: unknown): name is Name =>
-    !!name && typeof name === 'object' &&
-    typeof (name as Name).name === 'string' && typeof (name as Name).meaning === 'string';
-  return !!data.fictionalBirth &&
-    typeof data.fictionalBirth.city === 'string' &&
-    typeof data.fictionalBirth.civilTime === 'string' &&
-    Array.isArray(data.seriousNames) && data.seriousNames.length === 3 &&
-    data.seriousNames.every(validName) && validName(data.playfulName);
-}
+const pillarLabels = ['연주', '월주', '일주', '시주'] as const;
 
 export function NameExperience() {
-  const [story, setStory] = useState('');
-  const [status, setStatus] = useState<'idle' | 'loading' | 'falling' | 'ready'>('idle');
-  const [result, setResult] = useState<Result | null>(null);
-  const [error, setError] = useState('');
-  const [playKey, setPlayKey] = useState(0);
+  const [state, dispatch] = useReducer(experienceReducer, initialState);
+  const {story, status, result, error} = state;
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const resultHeadingRef = useRef<HTMLHeadingElement>(null);
+  const previousStatus = useRef(status);
+  const requestPending = useRef(false);
+
+  useEffect(() => {
+    if (status === 'ready' && !isResult(result)) {
+      dispatch({type: 'reset'});
+      return;
+    }
+    if (status === 'ready') resultHeadingRef.current?.focus();
+    if (status === 'idle' && previousStatus.current !== 'idle') textareaRef.current?.focus();
+    previousStatus.current = status;
+  }, [status, result]);
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (status === 'loading' || status === 'falling') return;
-    if (story.trim().length < 30) {
-      setError('이야기를 30자 이상 적어주세요.');
-      return;
-    }
-    setError('');
-    setResult(null);
-    setStatus('loading');
+    if (status !== 'idle' || requestPending.current) return;
+    dispatch({type: 'start'});
+    if (story.trim().length < 30 || story.trim().length > 1200) return;
+    requestPending.current = true;
     try {
-      const response = await fetch('/api/generate', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({mode: 'me', story: story.trim()}),
-      });
-      const data: unknown = await response.json().catch(() => null);
-      if (!response.ok) {
-        const message = data && typeof data === 'object' && 'error' in data && typeof data.error === 'string'
-          ? data.error : '지금은 결과를 만들 수 없습니다. 다시 시도해 주세요.';
-        throw new DisplayError(message);
-      }
+      const data = await requestGeneration(story.trim());
       if (!isResult(data)) throw new DisplayError('결과를 읽을 수 없습니다. 다시 시도해 주세요.');
-      setResult(data);
-      setStatus('falling');
-      setPlayKey(key => key + 1);
+      dispatch({type: 'success', result: data});
     } catch (caught) {
-      setError(caught instanceof DisplayError ? caught.message : '연결을 확인하고 다시 시도해 주세요.');
-      setStatus('idle');
+      dispatch({type: 'error', message: caught instanceof DisplayError ? caught.message : '연결을 확인하고 다시 시도해 주세요.'});
+    } finally {
+      requestPending.current = false;
     }
   }
 
   const busy = status === 'loading' || status === 'falling';
   return <div className={styles.page}>
-    <main className={styles.main}>
+    <div className={styles.scene}>
+      <MeteorSky status={status} onComplete={() => dispatch({type: 'complete'})} />
+    </div>
+    <main className={styles.main} aria-busy={busy}>
       <div className={styles.brand}>MAKE THE ONE</div>
-      <div className={styles.scene}>
-        <MeteorSky playKey={playKey} onComplete={() => setStatus('ready')} />
-        {result && status === 'ready' && <span className={styles.arrival} aria-hidden="true">{result.seriousNames[0].name}</span>}
+      <div className={styles.content}>
+        {status === 'idle' && <>
+          <h1 className={styles.heading}>당신의 이야기에 어울리는 이름</h1>
+          <form className={styles.form} onSubmit={submit}>
+            <label className={styles.label} htmlFor="story">이야기</label>
+            <textarea
+              ref={textareaRef} id="story" className={styles.textarea} value={story}
+              onChange={event => dispatch({type: 'edit', story: event.target.value})}
+              minLength={30} maxLength={1200} required
+              placeholder="어떤 시간을 지나왔고, 무엇을 중요하게 여기나요?"
+              aria-describedby={error ? 'story-hint story-error' : 'story-hint'}
+            />
+            <div className={styles.formFooter}>
+              <p id="story-hint" className={styles.hint}>30~1200자 · Meta API로 처리됩니다. 민감한 정보는 적지 마세요. ({story.length}/1200)</p>
+              <button className={styles.button} type="submit">이름 찾기</button>
+            </div>
+            {error && <p id="story-error" role="alert" className={styles.message}>{error}</p>}
+          </form>
+        </>}
+        {busy && <div className={styles.searching}>
+          <h1 className={styles.searchHeading}>{status === 'loading' ? '당신의 별을 찾고 있어요' : '별 하나가 당신에게 내려옵니다'}</h1>
+        </div>}
+        {result && status === 'ready' && isResult(result) && <section className={styles.result} aria-labelledby="result-title">
+          <h1 ref={resultHeadingRef} tabIndex={-1} id="result-title" className={styles.heading}>당신에게 도착한 이름</h1>
+          <article className={styles.primaryCard} aria-labelledby="primary-name">
+            <h2 id="primary-name" className={styles.primaryName}>{result.seriousNames[0].name}</h2>
+            <p className={styles.primaryMeaning}>{result.seriousNames[0].meaning}</p>
+            <section className={styles.saju} aria-labelledby="saju-title">
+              <h3 id="saju-title" className={styles.sectionHeading}>가상의 사주</h3>
+              <p className={styles.birth}>가상의 출생 · {cities[result.fictionalBirth.city] ?? result.fictionalBirth.city} · {formatCivilBirth(result.fictionalBirth)}</p>
+              <dl className={styles.pillars}>{result.pillars.map((pillar, index) => <div className={styles.pillar} key={pillarLabels[index]}>
+                <dt className={styles.pillarLabel}>{pillarLabels[index]}</dt>
+                <dd className={styles.pillarValue} aria-label={readPillar(pillar)}>{Array.from(pillar).map((character, position) => <ruby className={styles.pillarGlyph} key={position}>{character}<rt className={styles.pillarReading}>{readPillarCharacter(character)}</rt></ruby>)}</dd>
+              </div>)}</dl>
+              <p className={styles.commonSaju}>세 이름에 공통으로 적용되는 가상의 사주입니다.</p>
+            </section>
+            <section className={styles.saju} aria-labelledby="interpretation-title">
+              <h3 id="interpretation-title" className={styles.sectionHeading}>가상 사주 풀이</h3>
+              {result.interpretation.paragraphs.map((paragraph,index)=><p className={styles.readingParagraph} key={index}>{paragraph}</p>)}
+            </section>
+          </article>
+          <h2 className={styles.alternativeHeading}>함께 어울리는 이름</h2>
+          <ul className={styles.names}>{result.seriousNames.slice(1).map(name => <li className={styles.nameCard} key={name.name}>
+            <span className={styles.name}>{name.name}</span>
+          </li>)}</ul>
+          <button type="button" className={styles.restart} onClick={() => dispatch({type: 'reset'})}>새로운 이름 찾기</button>
+        </section>}
       </div>
-      <h1 className={styles.heading}>당신의 이야기에 어울리는 이름</h1>
-      <form className={styles.form} onSubmit={submit}>
-        <label className={styles.label} htmlFor="story">이야기</label>
-        <textarea
-          id="story" className={styles.textarea} value={story}
-          onChange={event => setStory(event.target.value)}
-          minLength={30} maxLength={1200} required disabled={busy}
-          placeholder="어떤 시간을 지나왔고, 무엇을 중요하게 여기나요?"
-          aria-describedby="story-hint"
-        />
-        <div className={styles.formFooter}>
-          <p id="story-hint" className={styles.hint}>30~1200자 · Meta API로 처리됩니다. 민감한 정보는 적지 마세요. ({story.length}/1200)</p>
-          <button className={styles.button} type="submit" disabled={busy}>
-            {status === 'loading' ? '이름 찾는 중' : status === 'falling' ? '별이 내려오는 중' : '이름 찾기'}
-          </button>
-        </div>
-      </form>
-      <div role="status" aria-live="polite">
-        {error && <p className={styles.message}>{error}</p>}
-        {status === 'loading' && <p className={styles.message}>이야기를 읽고 있어요.</p>}
-      </div>
-      {result && status === 'ready' && <section className={styles.result} aria-labelledby="result-title">
-        <h2 id="result-title" className={styles.resultHeading}>당신에게 도착한 이름</h2>
-        <p className={styles.birth}>가상의 출생 · {cities[result.fictionalBirth.city] ?? result.fictionalBirth.city} · {result.fictionalBirth.civilTime.slice(0, 16).replace('T', ' ')}</p>
-        <ul className={styles.names}>{result.seriousNames.map(name => <li className={styles.nameCard} key={name.name}>
-          <span className={styles.name}>{name.name}</span><span className={styles.meaning}>{name.meaning}</span>
-        </li>)}</ul>
-        <h3 className={styles.bonus}>재미 이름</h3>
-        <div className={styles.nameCard}><span className={styles.name}>{result.playfulName.name}</span><span className={styles.meaning}>{result.playfulName.meaning}</span></div>
-      </section>}
     </main>
+    <div className={styles.status} role="status" aria-live="polite">
+      {busy && <span className={styles.srOnly}>{status === 'loading' ? '이름을 찾고 있습니다.' : '이름을 찾았습니다. 별이 내려오고 있습니다.'}</span>}
+    </div>
   </div>;
 }

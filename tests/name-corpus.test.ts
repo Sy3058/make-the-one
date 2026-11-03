@@ -8,6 +8,11 @@ test('source-checked corpus has 72 serious names and 12 separate authored nickna
   assert.equal(result.entries.filter(n=>!n.is_playful).length,72);
   assert.equal(result.entries.filter(n=>n.is_playful).length,12);
 });
+test('a corpus of serious names alone passes verification',()=>{
+  const serious=structuredClone(corpus);
+  serious.entries=serious.entries.filter(entry=>!entry.is_playful);
+  assert.equal(validateNameCorpus(serious).entries.length,72);
+});
 test('wrong Hanja reading and unverified court characters prevent loading',()=>{
   const wrong=structuredClone(corpus);wrong.entries[0].hangul='겨윤';
   assert.throws(()=>validateNameCorpus(wrong),/reading/);

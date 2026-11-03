@@ -42,9 +42,7 @@ export function pickNames(names:Name[],motifs:Motif[],style?:string){
     if(selected.some(x=>x.name.motif_tags[0]===item.name.motif_tags[0])) continue;
     selected.push(item); if(selected.length===3) break;
   }
-  const playful=names.filter(n=>n.is_playful).map(n=>({name:n,score:nameScore(n,motifs,style)}))
-    .sort((a,b)=>b.score-a.score||a.name.name_id.localeCompare(b.name.name_id))[0];
-  if(selected.length!==3||!playful) return null;
-  return {serious:selected,playful,mean:selected.reduce((a,b)=>a+b.score,0)/3};
+  if(selected.length!==3) return null;
+  return {serious:selected,mean:selected.reduce((a,b)=>a+b.score,0)/3};
 }
 export function finalScore(c:number,nameMean:number){return 0.8*c+0.2*nameMean;}
