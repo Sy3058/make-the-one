@@ -49,3 +49,8 @@ docs/private/
 PROJECT.md
 reports/security/
 experiments/jev/*-live-*.json
+
+# Local source archives retained for offline provenance checks.
+/data/sources/hanja.pdf
+/data/sources/hanja-rutopio.json
+/data/sources/Unihan17.zip

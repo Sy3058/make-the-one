@@ -1,6 +1,7 @@
 """Exercise publication checks against real temporary Git snapshots."""
 
 import subprocess
+import json
 import tempfile
 import unittest
 from pathlib import Path
@@ -81,6 +82,22 @@ class PublishCheckTests(unittest.TestCase):
         result = self.run_check()
         self.assertEqual(result.returncode, 1)
         self.assertIn("symlink", result.stdout)
+
+    def test_large_hanja_json_exception_is_narrow_and_still_scans_secrets(self):
+        value = {"version": "hanja-search-v4", "entries": {}, "index": {}, "counts": {}, "source_audit": {}, "concepts": {}, "concept_audit": {}, "padding": "a" * 1_000_000}
+        raw = json.dumps(value)
+        self.stage("data/hanja/catalog.json", raw)
+        self.assertEqual(self.run_check().returncode, 0)
+        self.stage("data/hanja/other.json", raw)
+        self.assertIn("1 MB", self.run_check().stdout)
+        self.git("reset", "--", "data/hanja/other.json")
+        value["padding"] = "ghp_" + "A" * 36
+        self.stage("data/hanja/catalog.json", json.dumps(value))
+        self.assertIn("GitHub token", self.run_check().stdout)
+        self.stage("data/hanja/catalog.json", "[]")
+        self.assertIn("invalid Hanja JSON", self.run_check().stdout)
+        self.stage("data/hanja/catalog.json", "a" * 8_000_001)
+        self.assertIn("8 MB", self.run_check().stdout)
 
     def test_key_formats_and_large_files_are_rejected_without_values(self):
         samples = ["-----BEGIN " + "PRIVATE KEY-----", "AKIA" + "A" * 16,

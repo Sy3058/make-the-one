@@ -16,3 +16,5 @@ python3 -B -m unittest discover -s tests -p 'test_*.py' -v
 기본 검사는 작업 디렉터리 대신 Git index 전체의 blob을 검사한다. `--ref`는 지정 커밋의 전체 트리를 검사한다. 비밀 파일·내부 Drive 링크·개인 절대 경로·대표 토큰/개인키/자격증명 URL, 충돌·symlink·대형 파일을 차단하며 매칭된 값은 출력하지 않는다. CI는 체크아웃된 커밋 트리와 오프라인 Python 회귀 검사를 실행한다.
 
 패턴 검사만으로 모든 비밀이나 개인 서사를 식별할 수는 없다. stage diff와 PR 제목·본문을 직접 검토하고, 범위에 맞는 보안 검증을 함께 적용한다. 스크립트는 PR 본문·과거 Git 이력·외부 서비스 권한을 검사하지 않는다. CI job 정의는 branch protection을 자동 설정하지 않으므로 병합 전 모든 실제 check 결과를 확인한다.
+
+한자 데이터는 의미 없는 분할을 피하기 위해 정확히 `data/hanja/catalog.json`과 `data/hanja/sources.json` 두 경로에만 파일당 8,000,000바이트 한도를 적용한다. 지정된 JSON 버전·최상위 필드를 확인하고 비밀·개인 경로 등 기존 내용 검사는 그대로 실행한다. 그 외 파일은 기존 1,000,000바이트 한도다. 데이터 내용과 파생 색인은 `python3 -B scripts/hanja_inventory.py --check`와 Python 회귀에서 검증한다.
