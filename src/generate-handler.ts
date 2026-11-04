@@ -7,6 +7,8 @@ import {extractMotifs,MetaServiceError} from './meta';
 import {candidates,verifiedNames} from './db';
 import {pickPairs} from './rank';
 import {interpretChart} from './interpretation';
+import {elementDistribution} from './elements';
+import {nameElementVersion} from './name-elements';
 type Dependencies={admit:typeof admitGeneration;event:typeof safeRecordEvent};
 export function createGenerateHandler(dependencies:Partial<Dependencies>={}){
   const admit=dependencies.admit??admitGeneration,event=dependencies.event??safeRecordEvent;
@@ -43,6 +45,7 @@ export function createGenerateHandler(dependencies:Partial<Dependencies>={}){
     if(!pairs)return reply({error:'조건에 맞는 서로 다른 사주와 이름 세 쌍을 찾지 못했어요. 출생연도 범위를 넓히거나 이름 느낌을 바꿔 주세요.'},422);
     const recommendations=pairs.map(({row,name})=>({
       chartId:row.id,
+      elementBalance:{...elementDistribution({year:row.chart.year_pillar,month:row.chart.month_pillar,day:row.chart.day_pillar,hour:row.chart.hour_pillar}),nameElements:name.elements??[]},
       name:{name:name.hangul,hanja:name.hanja,kind:name.name_kind,meaning:name.meaning_ko,wordMeaning:name.word_meaning,sourceUrl:name.source_url},
       fictionalBirth:{city:row.occurrence.place_id,civilTime:row.occurrence.civil_time,utcOffsetMinutes:row.occurrence.utc_offset_min,utc:row.occurrence.instant_utc},
       pillars:[row.chart.year_pillar,row.chart.month_pillar,row.chart.day_pillar,row.chart.hour_pillar],
@@ -52,7 +55,7 @@ export function createGenerateHandler(dependencies:Partial<Dependencies>={}){
     }));
     completed=true;await event(mode,'generation_complete');
     return reply({recommendations,motifs:motifs.map(m=>({tag:m.tag,importance:m.importance})),
-      versions:{policy:'kr-mean-solar-23-v1',ruleset:'mt1-v1',ranking:'three-pairs-v1',names:'ko-names-v2',model:usedModel}});
+      versions:{policy:'kr-mean-solar-23-v1',ruleset:'mt1-v1',ranking:'three-pairs-elements-v1',nameElements:nameElementVersion,names:'ko-names-v3',model:usedModel}});
   } catch(error) {
     if(error instanceof InputError)return reply({error:error.message},error.status);
     if(error instanceof AdmissionError)return reply({code:error.code,error:error.message},error.status,error.retryAfter);

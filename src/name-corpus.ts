@@ -1,4 +1,5 @@
 import {z} from 'zod';
+import {statisticForName} from './name-statistic-catalog';
 import corpus from '../data/names.json' with {type:'json'};
 import ruleset from '../data/ruleset.json' with {type:'json'};
 
@@ -11,13 +12,14 @@ const entrySchema=z.object({name_id:z.string().min(1),hangul:z.string().regex(/^
   reading_verified:z.boolean(),meaning_ko:z.string().min(1),meaning_kind:z.enum(['creative_combination','creative_nickname','creative_native']),
   motif_tags:z.array(z.string()).min(1),style_tags:z.array(z.enum(styles)).min(1),naturalness:z.number().int().min(1).max(5),
   is_playful:z.boolean(),review_status:z.enum(['draft','verified','rejected']),source_url:z.string().min(1),
-  provenance_note:z.string().min(1),corpus_version:z.string().min(1)});
+  provenance_note:z.string().min(1),corpus_version:z.string().min(1),statistics_ref:z.string().min(1).optional()});
 const schema=z.object({version:z.string().min(1),characters:z.record(z.string(),characterSchema),entries:z.array(entrySchema)});
 export function validateNameCorpus(value:unknown=corpus){
   const parsed=schema.parse(value),ids=new Set<string>(),names=new Set<string>();
   for(const entry of parsed.entries){
     if(ids.has(entry.name_id)||names.has(entry.hangul)) throw new Error('Duplicate name ID or spelling');
     ids.add(entry.name_id);names.add(entry.hangul);
+    if(entry.statistics_ref)statisticForName(entry.statistics_ref,entry.hangul);
     if(entry.corpus_version!==parsed.version||entry.motif_tags.some(t=>!allowedMotifs.has(t))) throw new Error('Unknown name version or motif');
     if(entry.is_playful){
       if(entry.name_kind!=='nickname'||entry.hanja!==null||entry.meaning_kind!=='creative_nickname') throw new Error('Playful names must remain separate creative nicknames');

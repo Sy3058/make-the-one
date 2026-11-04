@@ -36,3 +36,11 @@ test('native names require a real word source and cannot masquerade as checked H
     assert.throws(()=>validateNameCorpus(value));
   }
 });
+
+
+test('statistics additions preserve checked characters and bind actual spellings to explicit sources',()=>{
+  const result=validateNameCorpus(),added=result.entries.filter(n=>n.statistics_ref);
+  assert.equal(added.length,10);assert.ok(added.every(n=>n.name_kind==='hanja'&&n.hanja&&n.review_status==='verified'));
+  const wrong=structuredClone(corpus);wrong.entries.find(n=>'statistics_ref' in n)!.statistics_ref='name-statistics/2025-female.json#서아';
+  assert.throws(()=>validateNameCorpus(wrong),/statistic reference/);
+});

@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {chartScore,finalScore,pickNames,type Evidence,type Motif,type Name} from '../src/rank.ts';
+import {chartScore,finalScore,pickNames,nameScore,type Evidence,type Motif,type Name} from '../src/rank.ts';
 const motifs:Motif[]=[{tag:'전환',importance:3,quote:'새로 시작했다',negative:false,transition:true},
   {tag:'기반',importance:2,quote:'뿌리를 찾았다',negative:false,transition:false}];
 const e:Evidence[]=[{chart_id:'a',rule_id:'M027',motif:'전환',priority:3,family:'상호작용',evidence:{}},
@@ -54,4 +54,17 @@ test('same pillars with different IDs cannot fill multiple result slots; insuffi
   assert.equal(pickPairs([row('a','기반'),row('b','기반'),row('c','기반','戊午')],names,twoMotifs),null);
   assert.equal(pickPairs([row('a','기반'),row('b','기반','戊午'),row('c','기반','庚申')],names.slice(0,2),twoMotifs),null);
   assert.ok(pickPairs([row('a','기반'),row('b','기반','戊午'),row('c','기반','庚申')],names,twoMotifs));
+});
+
+test('reviewed water materials improve names for water-scarce charts while missing evidence keeps the base score',()=>{
+  const rows=[row('a','기반','甲寅'),row('b','기반','乙卯'),row('c','기반','丙午')].map(r=>({...r,chart:{...r.chart,year_pillar:'甲寅',month_pillar:'丙午',hour_pillar:'戊辰'}}));
+  const names=[detail('1','서현','기반'),detail('2','민준','기반'),detail('3','지안','기반'),{...detail('4','하림','기반'),elements:['water',null] as const}];
+  const plain=pickPairs(rows,names.map(({elements:ignored,...name})=>name),twoMotifs)!;
+  const balanced=pickPairs(rows,names.map(n=>({...n,elements:n.elements?[...n.elements]:undefined})),twoMotifs)!;
+  assert.ok(!plain.some(p=>p.name.hangul==='하림'));assert.ok(balanced.some(p=>p.name.hangul==='하림'));
+  for(const pair of balanced){assert.ok(pair.N>=nameScore(pair.name,twoMotifs.filter(m=>m.tag==='기반')));assert.ok(pair.N<=100);}
+  const unknown=pickPairs(rows,names.map(n=>({...n,elements:[null,null]})),twoMotifs)!;
+  assert.deepEqual(unknown.map(p=>[p.row.id,p.name.name_id,p.N]),plain.map(p=>[p.row.id,p.name.name_id,p.N]));
+  const unrelated={...detail('0','이슬','전환'),elements:['water'] as const};
+  assert.ok(!pickPairs(rows,[...names.map(n=>({...n,elements:n.elements?[...n.elements]:undefined})),{...unrelated,elements:[...unrelated.elements]}],twoMotifs)!.some(p=>p.name.name_id==='0'));
 });

@@ -124,10 +124,37 @@ test('existing-name exclusion treats composed and decomposed Hangul identically 
   const handler=createGenerateHandler({admit:async()=>({id:'00000000-0000-0000-0000-000000000001',reserve:async()=>async()=>{},release:async()=>{}}),event:async()=>{}});
   const run=async(existingName?:string)=>{
     const response=await handler(new Request('http://localhost/api/generate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({mode:'character',story:'가상의 인물은 책을 읽으며 배움을 이어가고 아픈 이웃을 돌보며 따뜻한 관계를 맺었다.',yearRange:{from:2024,to:2024},existingName})}));
-    assert.equal(response.status,200);return (await response.json()).recommendations as {name:{name:string}}[];
+    assert.equal(response.status,200);const data=await response.json();
+    assert.equal(data.versions.ranking,'three-pairs-elements-v1');assert.equal(data.versions.names,'ko-names-v3');
+    for(const item of data.recommendations){assert.equal(Object.values(item.elementBalance.counts).reduce((sum:number,n)=>sum+Number(n),0),8);assert.ok(item.elementBalance.targets.length>0);}
+    return data.recommendations as {name:{name:string}}[];
   };
   try{
     const name=(await run())[0].name.name;
     for(const existing of [name,name.normalize('NFD')])assert.ok((await run(existing)).every(item=>item.name.name.normalize('NFC')!==name));
   }finally{if(previous===undefined)delete process.env.MODEL_API_KEY;else process.env.MODEL_API_KEY=previous;}
+});
+
+
+test('v2 names upgrade without changing reviewed facts, and mismatches roll back in an isolated schema',async()=>{
+  const schema='name_upgrade_'+Date.now().toString(36);
+  const client=new pg.Client({connectionString:process.env.DATABASE_URL});await client.connect();
+  const columns=['name_id','hangul','hanja','reading_verified','meaning_ko','motif_tags','style_tags','naturalness','is_playful','review_status','source_url','provenance_note'];
+  try{
+    await client.query(`CREATE SCHEMA ${schema}`);
+    await client.query(`CREATE TABLE ${schema}.name_entry (LIKE public.name_entry INCLUDING ALL)`);
+    await client.query(`INSERT INTO ${schema}.name_entry SELECT * FROM public.name_entry WHERE name_id NOT IN (SELECT 'ko-serious-'||lpad(n::text,3,'0') FROM generate_series(73,82) n)`);
+    await client.query(`UPDATE ${schema}.name_entry SET corpus_version='ko-names-v2'`);
+    const before=(await client.query(`SELECT ${columns.join(',')} FROM ${schema}.name_entry ORDER BY name_id`)).rows;
+    assert.equal(before.length,86);
+    const isolated=new URL(process.env.DATABASE_URL!);isolated.searchParams.set('options',`-c search_path=${schema}`);
+    const load=()=>spawnSync(process.execPath,['--import','tsx','scripts/load-names.ts'],{encoding:'utf8',env:{...environment,DATABASE_URL:isolated.href}});
+    assert.equal(load().status,0);
+    const after=(await client.query(`SELECT ${columns.join(',')} FROM ${schema}.name_entry WHERE name_id=ANY($1) ORDER BY name_id`,[before.map(n=>n.name_id)])).rows;
+    assert.deepEqual(after,before);
+    assert.equal((await client.query(`SELECT count(*)::int AS n FROM ${schema}.name_entry WHERE corpus_version='ko-names-v3'`)).rows[0].n,96);
+    await client.query(`UPDATE ${schema}.name_entry SET meaning_ko='synthetic mismatch' WHERE name_id='ko-serious-001'`);
+    const corrupted=(await client.query(`SELECT * FROM ${schema}.name_entry ORDER BY name_id`)).rows;
+    assert.equal(load().status,1);assert.deepEqual((await client.query(`SELECT * FROM ${schema}.name_entry ORDER BY name_id`)).rows,corrupted);
+  }finally{await client.query(`DROP SCHEMA IF EXISTS ${schema} CASCADE`);await client.end();}
 });
