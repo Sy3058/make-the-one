@@ -1,0 +1,13 @@
+{
+  "upstream": "https://github.com/rutopio/Korean-Name-Hanja-Charset",
+  "commit": "12df1ba1b4dfaa095813e4ddfba424e816f94c53",
+  "file": "data-gov.json",
+  "url": "https://raw.githubusercontent.com/rutopio/Korean-Name-Hanja-Charset/12df1ba1b4dfaa095813e4ddfba424e816f94c53/data-gov.json",
+  "sha256": "e7b0d6878c425b30eb9c1e878adba820a4a48f03d4e60fef028473999598caaf",
+  "license_notice": "LICENSES.md#rutopio",
+  "court_guidance": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+  "court_policy": "https://efamily.scourt.go.kr/sm/SmBottomCopyProtecPolic.do",
+  "review_date": "2026-11-04",
+  "naver_data_included": false,
+  "catalog_ready": false
+}
