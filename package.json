@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node --import tsx --test tests/*.test.ts",
-    "test:db": "node --env-file-if-exists=.env --env-file-if-exists=.env.local --import tsx --test tests/index-load.integration.ts",
+    "test:db": "node --env-file-if-exists=.env --env-file-if-exists=.env.local --import tsx --test tests/*.integration.ts",
     "typecheck": "tsc --noEmit",
     "build": "next build",
     "build:index": "node --import tsx scripts/build-index.ts",
@@ -13,7 +13,8 @@
     "check:services": "node --env-file-if-exists=.env --env-file-if-exists=.env.local --import tsx scripts/check-services.ts",
     "db:init": "node --env-file-if-exists=.env --env-file-if-exists=.env.local --import tsx scripts/init-db.ts",
     "load:names": "node --env-file-if-exists=.env --env-file-if-exists=.env.local --import tsx scripts/load-names.ts",
-    "dev": "next dev"
+    "dev": "next dev",
+    "report:usage": "node --env-file-if-exists=.env --env-file-if-exists=.env.local --import tsx scripts/report-usage.ts"
   },
   "keywords": [],
   "author": "",

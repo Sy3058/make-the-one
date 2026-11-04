@@ -15,8 +15,17 @@ test('invalid preferences and ranges are rejected before any model request',asyn
   let calls=0;t.mock.method(globalThis,'fetch',async()=>{calls++;throw new Error('must not call');});
   t.mock.method(console,'info',()=>{});
   for(const options of [{nameFeel:'unknown'},{yearRange:{from:1999,to:1990}},{yearRange:{from:1980,to:2040}},{story:' '.repeat(40)}]){
-    const response=await POST(new Request('http://localhost/api/generate',{method:'POST',body:JSON.stringify({mode:'me',story,...options})}));
+    const response=await POST(new Request('http://localhost/api/generate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({mode:'me',story,...options})}));
     assert.equal(response.status,400);
   }
   assert.equal(calls,0);
+});
+
+test('existing names normalize canonical Unicode before length validation and exclusion',()=>{
+  for(const name of ['서현','하늘']){
+    const input=generationInput.parse({mode:'character',story,existingName:' '+name.normalize('NFD')+' '});
+    assert.equal(input.existingName,name);
+  }
+  assert.equal(generationInput.parse({mode:'character',story,existingName:'가'.repeat(30).normalize('NFD')}).existingName,'가'.repeat(30));
+  assert.equal(generationInput.safeParse({mode:'character',story,existingName:'가'.repeat(31)}).success,false);
 });

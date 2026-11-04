@@ -5,6 +5,7 @@ import {cpSync,mkdtempSync,rmSync,readFileSync,writeFileSync,appendFileSync} fro
 import {tmpdir} from 'node:os';
 import {join,resolve} from 'node:path';
 import pg from 'pg';
+import {createGenerateHandler} from '../src/generate-handler.ts';
 import {candidates,db} from '../src/db.ts';
 
 // CI supplies component variables, avoiding checked-in credential-bearing URLs.
@@ -112,4 +113,21 @@ test('the structural anchor is applied before the database candidate cap',async(
   assert.ok(rows.length>0);
   assert.ok(rows.every(row=>row.evidence.some(e=>e.motif==='관찰'&&e.priority>=2&&e.family!=='신살·운성')));
   assert.deepEqual(await candidates([motif('재시작',3),motif('제작',2)]),[]);
+});
+
+
+test('existing-name exclusion treats composed and decomposed Hangul identically in real recommendations',async t=>{
+  const previous=process.env.MODEL_API_KEY;process.env.MODEL_API_KEY='synthetic-test-key';
+  const motifs=[{tag:'배움',importance:3,quote:'책을 읽으며',negative:false,transition:false},{tag:'돌봄',importance:2,quote:'이웃을 돌보며',negative:false,transition:false}];
+  t.mock.method(globalThis,'fetch',async()=>new Response(JSON.stringify({choices:[{message:{content:JSON.stringify({motifs})}}]})));
+  t.mock.method(console,'info',()=>{});
+  const handler=createGenerateHandler({admit:async()=>({id:'00000000-0000-0000-0000-000000000001',reserve:async()=>async()=>{},release:async()=>{}}),event:async()=>{}});
+  const run=async(existingName?:string)=>{
+    const response=await handler(new Request('http://localhost/api/generate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({mode:'character',story:'가상의 인물은 책을 읽으며 배움을 이어가고 아픈 이웃을 돌보며 따뜻한 관계를 맺었다.',yearRange:{from:2024,to:2024},existingName})}));
+    assert.equal(response.status,200);return (await response.json()).recommendations as {name:{name:string}}[];
+  };
+  try{
+    const name=(await run())[0].name.name;
+    for(const existing of [name,name.normalize('NFD')])assert.ok((await run(existing)).every(item=>item.name.name.normalize('NFC')!==name));
+  }finally{if(previous===undefined)delete process.env.MODEL_API_KEY;else process.env.MODEL_API_KEY=previous;}
 });
