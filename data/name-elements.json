@@ -1,0 +1,252 @@
+{
+  "version": "ko-name-elements-v1",
+  "method": "reviewed-meaning-materials",
+  "policy": "Project-authored semantic associations from checked glosses, not authoritative Hanja five-element classifications. Unknown meanings receive no element credit.",
+  "characters": {
+    "瑞": {
+      "element": null,
+      "gloss": "상서로움",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=745e",
+      "source_sha256": "0802bd04d285edd2abed8159c2fa795d40a46e3136a7b33b79f746478293b97c",
+      "rationale": "검증된 기초 뜻만으로 다섯 소재 중 하나를 확정하지 않는다."
+    },
+    "潤": {
+      "element": null,
+      "gloss": "윤택함",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=6f64",
+      "source_sha256": "94799045c35f350f229e8c7bf92ec6c84656990980f85ae594451ca22c2eea0f",
+      "rationale": "검증된 기초 뜻만으로 다섯 소재 중 하나를 확정하지 않는다."
+    },
+    "妍": {
+      "element": null,
+      "gloss": "고움",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=598d",
+      "source_sha256": "d58ef30b528c98d9bd757192862a0c034a22814f1d295edc35a0105b3c166232",
+      "rationale": "검증된 기초 뜻만으로 다섯 소재 중 하나를 확정하지 않는다."
+    },
+    "賢": {
+      "element": null,
+      "gloss": "어짊",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=8ce2",
+      "source_sha256": "06acfc35d7928105dbeca09ba023228c132fc6ee7adf25a2c1a6ffdcb692bf1e",
+      "rationale": "검증된 기초 뜻만으로 다섯 소재 중 하나를 확정하지 않는다."
+    },
+    "雅": {
+      "element": null,
+      "gloss": "우아함",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=96c5",
+      "source_sha256": "50b13d5d6323e128122e5f0c0bf0f0298a487db8aea6d4ee8f873b23407f0c5c",
+      "rationale": "검증된 기초 뜻만으로 다섯 소재 중 하나를 확정하지 않는다."
+    },
+    "宇": {
+      "element": null,
+      "gloss": "집",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=5b87",
+      "source_sha256": "28c722741e245d106a9f96ee041183e2920cddb54701a2f0e24b6317de753740",
+      "rationale": "검증된 기초 뜻만으로 다섯 소재 중 하나를 확정하지 않는다."
+    },
+    "恩": {
+      "element": null,
+      "gloss": "은혜",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=6069",
+      "source_sha256": "4f7f80f261fc2b994ed56c2d48012aeb6a80a859c8bccde23605affe43f10411",
+      "rationale": "검증된 기초 뜻만으로 다섯 소재 중 하나를 확정하지 않는다."
+    },
+    "英": {
+      "element": "wood",
+      "gloss": "꽃",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=82f1",
+      "source_sha256": "2eaef2257b6686df2f405565322e980a47327fd90730708e2d7506ed4c77abef",
+      "rationale": "검증된 뜻인 꽃을 식물 소재로 연결한다."
+    },
+    "律": {
+      "element": null,
+      "gloss": "규칙",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=5f8b",
+      "source_sha256": "93535c7cf3bde46e8c10507a39f33427756f1ef5fab431b38a9e5d046c210ce0",
+      "rationale": "검증된 기초 뜻만으로 다섯 소재 중 하나를 확정하지 않는다."
+    },
+    "眞": {
+      "element": null,
+      "gloss": "진실",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=771e",
+      "source_sha256": "46f5e13b4799a5b9fbc3ab6a4a180ef6e4af536f75091128547befe4fb1dd586",
+      "rationale": "검증된 기초 뜻만으로 다섯 소재 중 하나를 확정하지 않는다."
+    },
+    "元": {
+      "element": null,
+      "gloss": "으뜸",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=5143",
+      "source_sha256": "dc7ffdfc0a0bea8c85df8ba3d9750afad9002f6f9df069d02fd6460143e70518",
+      "rationale": "검증된 기초 뜻만으로 다섯 소재 중 하나를 확정하지 않는다."
+    },
+    "俊": {
+      "element": null,
+      "gloss": "뛰어남",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=4fca",
+      "source_sha256": "e8f086dd6772eefb7d8bd06e245bec580e4407b367e67765af07a14ec90c345c",
+      "rationale": "검증된 기초 뜻만으로 다섯 소재 중 하나를 확정하지 않는다."
+    },
+    "河": {
+      "element": "water",
+      "gloss": "강",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=6cb3",
+      "source_sha256": "f244cce3ea9068fccdca7a89f072a96281a86b16088118ffd36d1e8fbb90736e",
+      "rationale": "검증된 뜻인 강을 물 소재로 연결한다."
+    },
+    "智": {
+      "element": null,
+      "gloss": "슬기",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=667a",
+      "source_sha256": "5fd378713ea78f59d2e5027a5ed8b1eb25fb3f68cec70db54129e0022b82c95a",
+      "rationale": "검증된 기초 뜻만으로 다섯 소재 중 하나를 확정하지 않는다."
+    },
+    "柔": {
+      "element": null,
+      "gloss": "부드러움",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=67d4",
+      "source_sha256": "e5c116f09f18fb27fe421da346f739ee30824cdbc55ce97902993e7982577d59",
+      "rationale": "검증된 기초 뜻만으로 다섯 소재 중 하나를 확정하지 않는다."
+    },
+    "安": {
+      "element": null,
+      "gloss": "편안함",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=5b89",
+      "source_sha256": "94980130e33d6c997326cb4503af7ab2ef0bb33c39ba221a09e94bec3cc2ea22",
+      "rationale": "검증된 기초 뜻만으로 다섯 소재 중 하나를 확정하지 않는다."
+    },
+    "敏": {
+      "element": null,
+      "gloss": "민첩함",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=654f",
+      "source_sha256": "48030cbf882b1617b67b4639e437e5c279ab02ced04086cdc8475b27a464cf21",
+      "rationale": "검증된 기초 뜻만으로 다섯 소재 중 하나를 확정하지 않는다."
+    },
+    "浩": {
+      "element": null,
+      "gloss": "넓음",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=6d69",
+      "source_sha256": "81a83ccfddcc60d21df618cfdb4982dcce45809c3c539e2247d8a49025f827eb",
+      "rationale": "검증된 기초 뜻만으로 다섯 소재 중 하나를 확정하지 않는다."
+    },
+    "厚": {
+      "element": null,
+      "gloss": "두터움",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=539a",
+      "source_sha256": "afc415709341c28477f524522bf8448f02eeae8acb429698a6b790fbb4b02b96",
+      "rationale": "검증된 기초 뜻만으로 다섯 소재 중 하나를 확정하지 않는다."
+    },
+    "道": {
+      "element": null,
+      "gloss": "길",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=9053",
+      "source_sha256": "bdec5f7374340080335e654633cea9bc95a64d58393a1dc9ffa00840e696f664",
+      "rationale": "검증된 기초 뜻만으로 다섯 소재 중 하나를 확정하지 않는다."
+    },
+    "景": {
+      "element": "fire",
+      "gloss": "빛",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=666f",
+      "source_sha256": "52b8208402c507898b3dfe3fdab651421103fcf45d6927afdf633a27c5894376",
+      "rationale": "검증된 뜻인 빛을 불/빛 소재로 연결하는 편집 규칙이다."
+    },
+    "潾": {
+      "element": "water",
+      "gloss": "맑은물",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=6f7e",
+      "source_sha256": "35e48536606e2a5f3f673ef01e9b26f6284d9a0e550f9d615be2c2544157bd01",
+      "rationale": "검증된 뜻인 맑은 물을 물 소재로 연결한다."
+    },
+    "藍": {
+      "element": null,
+      "gloss": "쪽빛",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=85cd",
+      "source_sha256": "983d4009014b243ac497dc82ca568840dad8f6056a56db5c403058ec1f87858f",
+      "rationale": "검증된 기초 뜻만으로 다섯 소재 중 하나를 확정하지 않는다."
+    },
+    "娜": {
+      "element": null,
+      "gloss": "아름다움",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=5a1c",
+      "source_sha256": "f0993a34e10113503edc363610a2984dbdcf0e75c43e13981deef7ec15e77dd0",
+      "rationale": "검증된 기초 뜻만으로 다섯 소재 중 하나를 확정하지 않는다."
+    },
+    "彬": {
+      "element": null,
+      "gloss": "빛남",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=5f6c",
+      "source_sha256": "b1351e0b89b900f9393450a59cd06fc10c33dd92a3e4749b0b0fab792ab02cc5",
+      "rationale": "검증된 기초 뜻만으로 다섯 소재 중 하나를 확정하지 않는다."
+    },
+    "林": {
+      "element": "wood",
+      "gloss": "숲",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=6797",
+      "source_sha256": "2d834953c5e1044be574b9d3ae0a1c6477b820866994985b32b0b63351bd38cb",
+      "rationale": "검증된 뜻인 숲을 나무 소재로 연결한다."
+    },
+    "時": {
+      "element": null,
+      "gloss": "때",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=6642",
+      "source_sha256": "85fd2e43a74df20b5469377724f6460a14c9899d4196678d695bd0de4ef22462",
+      "rationale": "검증된 기초 뜻만으로 다섯 소재 중 하나를 확정하지 않는다."
+    },
+    "溫": {
+      "element": "fire",
+      "gloss": "따뜻함",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=6eab",
+      "source_sha256": "78fe5b4494544bfc2e7c1daba0aacb719e51229a727e72bc1afe82f0dd654ffe",
+      "rationale": "검증된 뜻인 따뜻함을 열 소재로 연결하는 편집 규칙이다."
+    },
+    "彩": {
+      "element": null,
+      "gloss": "빛깔",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=5f69",
+      "source_sha256": "a785c2f99c220256b89fbf27b49216c8642f3ce8911e7dda00f7c0e4fea49985",
+      "rationale": "검증된 기초 뜻만으로 다섯 소재 중 하나를 확정하지 않는다."
+    },
+    "材": {
+      "element": "wood",
+      "gloss": "재목",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=6750",
+      "source_sha256": "5e45a43d7e7a53767faae71f74cd3912ce53a78b756c1e1bd74c30750d16852e",
+      "rationale": "검증된 뜻인 재목을 나무 소재로 연결한다."
+    },
+    "藝": {
+      "element": null,
+      "gloss": "재주",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=85dd",
+      "source_sha256": "cc3c03b3a0b4a4fc1fdac190791cab365ec1df04b887bd85334078898dc6f6f3",
+      "rationale": "검증된 기초 뜻만으로 다섯 소재 중 하나를 확정하지 않는다."
+    },
+    "秀": {
+      "element": null,
+      "gloss": "빼어남",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=79c0",
+      "source_sha256": "8aa9dad8535aa25a7d67c4dbc16ddb69776c3321238c6a02cb1eb6ca142ca334",
+      "rationale": "검증된 기초 뜻만으로 다섯 소재 중 하나를 확정하지 않는다."
+    },
+    "泰": {
+      "element": null,
+      "gloss": "큼",
+      "source_url": "https://efamily.scourt.go.kr/webhanja/whjsearch?mode=unicodeInfo&code=6cf0",
+      "source_sha256": "9324fe7a20dcf6fe9b2658f1915deb499afae4188179efcc123def04ad1f45b5",
+      "rationale": "검증된 기초 뜻만으로 다섯 소재 중 하나를 확정하지 않는다."
+    }
+  },
+  "native_names": {
+    "하늘": {
+      "element": null,
+      "gloss": "땅 위에 넓게 펼쳐진 공간",
+      "source_url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=20311",
+      "rationale": "검증된 공간의 뜻만으로 다섯 소재 중 하나를 확정하지 않는다."
+    },
+    "이슬": {
+      "element": "water",
+      "gloss": "공기 속 수분이 응결해 맺힌 작은 물방울",
+      "source_url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=24868",
+      "rationale": "검증된 단어 뜻의 물방울을 물 소재로 연결한다."
+    }
+  }
+}

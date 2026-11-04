@@ -1,0 +1,114 @@
+{
+  "url": "https://namepick.tuneon.co.kr/trends/person/2025/female",
+  "scope": {
+    "from": "2025-01-01",
+    "to": "2025-12-31",
+    "as_of": "2026-10-11",
+    "region": "전국",
+    "sex": "female",
+    "coverage": "top-n",
+    "limit": 20
+  },
+  "rows": [
+    {
+      "name": "서아",
+      "rank": 1,
+      "count": 2016
+    },
+    {
+      "name": "서윤",
+      "rank": 2,
+      "count": 1877
+    },
+    {
+      "name": "하린",
+      "rank": 3,
+      "count": 1830
+    },
+    {
+      "name": "이서",
+      "rank": 4,
+      "count": 1785
+    },
+    {
+      "name": "하윤",
+      "rank": 5,
+      "count": 1721
+    },
+    {
+      "name": "아린",
+      "rank": 6,
+      "count": 1611
+    },
+    {
+      "name": "지안",
+      "rank": 7,
+      "count": 1594
+    },
+    {
+      "name": "지유",
+      "rank": 8,
+      "count": 1456
+    },
+    {
+      "name": "아윤",
+      "rank": 9,
+      "count": 1452
+    },
+    {
+      "name": "시아",
+      "rank": 10,
+      "count": 1435
+    },
+    {
+      "name": "윤서",
+      "rank": 11,
+      "count": 1249
+    },
+    {
+      "name": "지아",
+      "rank": 12,
+      "count": 1237
+    },
+    {
+      "name": "지우",
+      "rank": 13,
+      "count": 1208
+    },
+    {
+      "name": "유나",
+      "rank": 14,
+      "count": 1189
+    },
+    {
+      "name": "채이",
+      "rank": 15,
+      "count": 1161
+    },
+    {
+      "name": "수아",
+      "rank": 16,
+      "count": 1102
+    },
+    {
+      "name": "채아",
+      "rank": 17,
+      "count": 1070
+    },
+    {
+      "name": "도아",
+      "rank": 18,
+      "count": 1046
+    },
+    {
+      "name": "예린",
+      "rank": 19,
+      "count": 1031
+    },
+    {
+      "name": "유하",
+      "rank": 20,
+      "count": 1023
+    }
+  ]
+}

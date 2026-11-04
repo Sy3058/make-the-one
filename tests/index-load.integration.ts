@@ -49,7 +49,7 @@ test('verified pilot and names are idempotent on actual PostgreSQL 16',async()=>
   const before=await state();
   successful('scripts/load-index.ts',[source]);successful('scripts/load-names.ts');
   assert.deepEqual(await state(),before);
-  assert.equal(before.build_status,'verified');assert.equal(before.names,86);
+  assert.equal(before.build_status,'verified');assert.equal(before.names,96);
   assert.ok(before.charts>=manifest.chart_count);assert.ok(before.occurrences>=manifest.occurrence_count);
 });
 test('candidate civil timestamps and stored offsets survive JSON without timezone conversion',async()=>{

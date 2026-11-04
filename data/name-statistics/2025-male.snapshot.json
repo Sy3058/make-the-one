@@ -1,0 +1,114 @@
+{
+  "url": "https://namepick.tuneon.co.kr/trends/person/2025/male",
+  "scope": {
+    "from": "2025-01-01",
+    "to": "2025-12-31",
+    "as_of": "2026-10-11",
+    "region": "전국",
+    "sex": "male",
+    "coverage": "top-n",
+    "limit": 20
+  },
+  "rows": [
+    {
+      "name": "도윤",
+      "rank": 1,
+      "count": 2336
+    },
+    {
+      "name": "이준",
+      "rank": 2,
+      "count": 1958
+    },
+    {
+      "name": "하준",
+      "rank": 3,
+      "count": 1911
+    },
+    {
+      "name": "시우",
+      "rank": 4,
+      "count": 1797
+    },
+    {
+      "name": "도현",
+      "rank": 5,
+      "count": 1706
+    },
+    {
+      "name": "이안",
+      "rank": 6,
+      "count": 1653
+    },
+    {
+      "name": "태오",
+      "rank": 7,
+      "count": 1637
+    },
+    {
+      "name": "서준",
+      "rank": 8,
+      "count": 1598
+    },
+    {
+      "name": "선우",
+      "rank": 9,
+      "count": 1541
+    },
+    {
+      "name": "은우",
+      "rank": 10,
+      "count": 1495
+    },
+    {
+      "name": "수호",
+      "rank": 11,
+      "count": 1458
+    },
+    {
+      "name": "이현",
+      "rank": 12,
+      "count": 1444
+    },
+    {
+      "name": "도하",
+      "rank": 13,
+      "count": 1442
+    },
+    {
+      "name": "지호",
+      "rank": 14,
+      "count": 1387
+    },
+    {
+      "name": "우주",
+      "rank": 15,
+      "count": 1385
+    },
+    {
+      "name": "유준",
+      "rank": 16,
+      "count": 1284
+    },
+    {
+      "name": "은호",
+      "rank": 17,
+      "count": 1278
+    },
+    {
+      "name": "윤우",
+      "rank": 18,
+      "count": 1275
+    },
+    {
+      "name": "주원",
+      "rank": 19,
+      "count": 1154
+    },
+    {
+      "name": "시윤",
+      "rank": 20,
+      "count": 1153
+    }
+  ]
+}
