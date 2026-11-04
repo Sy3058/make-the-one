@@ -24,7 +24,8 @@ export class MetaServiceError extends Error {
 const defaultLimits={attemptTimeoutMs:20_000,totalTimeoutMs:40_000};
 const safeTokenCount=(value:unknown)=>typeof value==='number'&&Number.isSafeInteger(value)&&value>=0?value:undefined;
 
-export async function extractMotifs(story:string,limits=defaultLimits):Promise<Motif[]> {
+export type AttemptHooks={reserve:()=>Promise<(usage:unknown)=>Promise<void>>;onModel?:(model:string)=>void};
+export async function extractMotifs(story:string,limits=defaultLimits,hooks?:AttemptHooks):Promise<Motif[]> {
   const key=process.env.MODEL_API_KEY;
   if(!key) throw new MetaServiceError('MODEL_UNAVAILABLE');
   const models=['muse-spark-1.3',...(process.env.META_ALLOW_12==='1'?['muse-spark-1.2']:[])];
@@ -34,8 +35,15 @@ export async function extractMotifs(story:string,limits=defaultLimits):Promise<M
     for(let attempt=0;attempt<2;attempt++){
       const remaining=deadline-Date.now();
       if(remaining<=0) throw new MetaServiceError('MODEL_TIMEOUT');
+      const settle=await hooks?.reserve();
+      const attemptRemaining=deadline-Date.now();
+      if(attemptRemaining<=0){
+        try{await settle?.({prompt_tokens:0,completion_tokens:0});}catch{console.error('model accounting failed',{code:'BUDGET_SETTLEMENT_UNAVAILABLE'});}
+        throw new MetaServiceError('MODEL_TIMEOUT');
+      }
+      let accounting:unknown;
       const controller=new AbortController();
-      const timeout=setTimeout(()=>controller.abort(),Math.min(limits.attemptTimeoutMs,remaining));
+      const timeout=setTimeout(()=>controller.abort(),Math.min(limits.attemptTimeoutMs,attemptRemaining));
       const started=performance.now();
       let phase:'headers'|'body'|'validation'='headers';
       let headersMs:number|undefined,bodyMs:number|undefined,completionTokens:number|undefined,reasoningTokens:number|undefined;
@@ -55,13 +63,14 @@ export async function extractMotifs(story:string,limits=defaultLimits):Promise<M
         phase='validation';
         try {
           const data=JSON.parse(responseText) as {choices?:{message?:{content?:string}}[];
-            usage?:{completion_tokens?:unknown;completion_tokens_details?:{reasoning_tokens?:unknown}}};
+            usage?:{prompt_tokens?:unknown;completion_tokens?:unknown;completion_tokens_details?:{reasoning_tokens?:unknown}}};
+          accounting=data.usage;
           completionTokens=safeTokenCount(data.usage?.completion_tokens);
           reasoningTokens=safeTokenCount(data.usage?.completion_tokens_details?.reasoning_tokens);
           const parsed=outputSchema.parse(JSON.parse(data.choices?.[0]?.message?.content??''));
           if(new Set(parsed.motifs.map(m=>m.tag)).size!==parsed.motifs.length) throw new MetaServiceError('MODEL_RESPONSE_INVALID');
           if(parsed.motifs.some(m=>!story.includes(m.quote))) throw new MetaServiceError('MODEL_RESPONSE_INVALID');
-          outcome='ok';
+          outcome='ok';hooks?.onModel?.(model);
           return parsed.motifs;
         }catch(error){
           if(controller.signal.aborted) throw error;
@@ -73,6 +82,7 @@ export async function extractMotifs(story:string,limits=defaultLimits):Promise<M
         outcome=failure.code;
       }finally{
         clearTimeout(timeout);
+        try{await settle?.(accounting);}catch{console.error('model accounting failed',{code:'BUDGET_SETTLEMENT_UNAVAILABLE'});}
         console.info('model attempt timing',{model,attempt:attempt+1,phase,outcome,headersMs,bodyMs,
           elapsedMs:Math.round(performance.now()-started),completionTokens,reasoningTokens});
       }

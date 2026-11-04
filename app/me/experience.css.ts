@@ -1,5 +1,5 @@
-import {style} from '@vanilla-extract/css';
-import {design} from '../styles/design-tokens';
+import {style,assignVars} from '@vanilla-extract/css';
+import {design,palette} from '../styles/design-tokens';
 import {vars} from '../styles/theme.css';
 
 export const page = style({
@@ -164,3 +164,10 @@ export const optionLabel=style({display:'grid',gap:design.spaceSmall,fontSize:de
 export const select=style({width:'100%',minHeight:design.buttonHeight,padding:design.spaceSmall,background:vars.color.surfaceRaised,color:vars.color.text,border:`1px solid ${vars.color.line}`,borderRadius:design.smallRadius,fontSize:design.bodySize,colorScheme:'dark'});
 export const resultCards=style({display:'grid',gap:design.spaceLarge,marginTop:design.spaceLarge});
 export const nameAnnotation=style({fontSize:design.resultSize,fontWeight:400});
+
+export const characterPage=style({vars:assignVars(vars.color,{...palette,sky:'#160F25',skyGlow:'#362144',surface:'#241A33',surfaceRaised:'#342443',accent:'#E5C4FF',glow:'#CAA0F2',line:'#887194'})});
+export const routeLink=style({display:'inline-block',color:vars.color.accent,fontSize:design.smallSize,lineHeight:1.8,marginBottom:design.spaceMedium});
+export const contextInput=style([textarea,{minHeight:'100px'}]);
+export const actions=style({display:'grid',gap:design.spaceSmall,marginTop:design.spaceLarge});
+export const actionButtons=style({display:'flex',flexWrap:'wrap',gap:design.spaceSmall});
+export const secondaryButton=style([button,{background:vars.color.surfaceRaised,color:vars.color.accent,fontSize:design.smallSize,padding:`0 ${design.spaceSmall}`,selectors:{'&[aria-pressed="true"]':{background:vars.color.accent,color:vars.color.sky}}}]);

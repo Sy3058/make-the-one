@@ -1,7 +1,8 @@
 import {beforeEach,test} from 'node:test';
 import assert from 'node:assert/strict';
 import {extractMotifs,MetaServiceError} from '../src/meta.ts';
-import {POST} from '../app/api/generate/route.ts';
+import {createGenerateHandler} from '../src/generate-handler.ts';
+const POST=createGenerateHandler({admit:async()=>({id:'00000000-0000-0000-0000-000000000001',reserve:async()=>async()=>{},release:async()=>{}}),event:async()=>{}});
 
 beforeEach(t=>{if('mock' in t)t.mock.method(console,'info',()=>{});});
 
@@ -168,4 +169,26 @@ test('API reports the model stage safely and distinguishes invalid model output'
     assert.equal(timing.databaseMs,0);
     assert.equal(timing.rankingMs,0);
   });
+});
+
+test('every retry reserves an attempt and quota rejection stops the upstream',async()=>{
+  let reserves=0,calls=0;const settlements:unknown[]=[];
+  await withMeta(async()=>{calls++;throw new Error('synthetic disconnect');},async()=>{
+    await assert.rejects(extractMotifs(story,undefined,{reserve:async()=>{reserves++;return async usage=>{settlements.push(usage);};}}),MetaServiceError);
+    assert.equal(reserves,2);assert.equal(calls,2);assert.deepEqual(settlements,[undefined,undefined]);
+    calls=0;const quota=new Error('quota');
+    await assert.rejects(extractMotifs(story,undefined,{reserve:async()=>{throw quota;}}),error=>error===quota);assert.equal(calls,0);
+  });
+});
+test('model accounting passes provider token counts without narrative and identifies fallback success',async()=>{
+  let calls=0,used='';const settlements:unknown[]=[];
+  await withMeta(async()=>{
+    if(++calls<=2)throw new Error('synthetic primary outage');
+    return new Response(JSON.stringify({choices:[{message:{content:JSON.stringify({motifs})}}],usage:{prompt_tokens:1000,completion_tokens:500}}));
+  },async()=>{
+    await extractMotifs(story,undefined,{reserve:async()=>async usage=>{settlements.push(usage);},onModel:model=>{used=model;}});
+    assert.equal(used,'muse-spark-1.2');assert.equal(settlements.length,3);
+    assert.deepEqual(settlements[2],{prompt_tokens:1000,completion_tokens:500});
+    assert.ok(!JSON.stringify(settlements).includes(story));
+  },true);
 });

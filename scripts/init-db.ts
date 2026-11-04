@@ -18,6 +18,8 @@ try{
   }
   await client.query(readFileSync(new URL('../db/002_occurrence_years.sql',import.meta.url),'utf8'));
   console.log('Civil-year lookup index is present.');
+  await client.query(readFileSync(new URL('../db/003_usage_and_events.sql',import.meta.url),'utf8'));
+  console.log('Generation budget and aggregate event tables are present.');
 }catch{
   await client?.query('ROLLBACK').catch(()=>{});
   console.error('DB initialization failed; check connection, version and existing schema. Details suppressed.');
