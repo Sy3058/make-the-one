@@ -12,7 +12,7 @@ try{
   for(const row of existing.rows){
     const expected=corpus.entries.find(n=>n.name_id===row.name_id)!;
     if(columns.some(key=>key!=='corpus_version'&&JSON.stringify(row[key])!==JSON.stringify(expected[key]))||
-      !['ko-names-v1',corpus.version].includes(row.corpus_version))
+      !['ko-names-v1','ko-names-v2',corpus.version].includes(row.corpus_version))
       throw new Error('Existing name data differs; refusing overwrite');
   }
   for(const entry of corpus.entries){

@@ -1,3 +1,4 @@
+import {elementDistribution,elementSupport,type Element} from './elements';
 export type Motif={tag:string;importance:1|2|3;quote:string;negative:boolean;transition:boolean};
 export type Evidence={chart_id:string;rule_id:string;motif:string;priority:number;family:string;evidence:unknown};
 export type Name={name_id:string;hangul:string;meaning_ko:string;motif_tags:string[];style_tags:string[];
@@ -47,7 +48,7 @@ export function pickNames(names:Name[],motifs:Motif[],style?:string){
 }
 export function finalScore(c:number,nameMean:number){return 0.8*c+0.2*nameMean;}
 
-export type NameDetails=Name & {hanja:string|null;name_kind:'hanja'|'native';name_feels:('masculine'|'feminine'|'neutral')[];word_meaning:string|null;source_url:string};
+export type NameDetails=Name & {hanja:string|null;name_kind:'hanja'|'native';name_feels:('masculine'|'feminine'|'neutral')[];word_meaning:string|null;source_url:string;elements?:(Element|null)[]};
 export function matchesNameFeel(name:NameDetails,feel:'any'|'masculine'|'feminine'='any'){
   return feel==='any'||name.name_feels.includes(feel)||name.name_feels.includes('neutral');
 }
@@ -63,9 +64,15 @@ export function pickPairs<T extends {id:string;evidence:Evidence[];chart:{year_p
       if(seen.has(key))return false;seen.add(key);return true;}).slice(0,30);
   const options=charts.map(({row,C})=>{
     const supported=motifs.filter(m=>row.evidence.some(e=>e.motif===m.tag&&e.priority>=2&&e.family!=='신살·운성'));
-    return eligible.filter(n=>n.motif_tags.some(t=>supported.some(m=>!m.negative&&m.tag===t)))
-      .map(name=>({row,name,C,N:nameScore(name,supported,style),F:finalScore(C,nameScore(name,supported,style))}))
-      .sort((a,b)=>b.F-a.F||a.name.name_id.localeCompare(b.name.name_id)).slice(0,3);
+    const distribution=elementDistribution({year:row.chart.year_pillar,month:row.chart.month_pillar,day:row.chart.day_pillar,hour:row.chart.hour_pillar});
+    const relevant=eligible.filter(n=>n.motif_tags.some(t=>supported.some(m=>!m.negative&&m.tag===t)));
+    const support=(name:NameDetails)=>elementSupport(name.elements??[],distribution.targets);
+    return relevant.map(name=>{
+      const base=nameScore(name,supported,style),E=support(name);
+      // Unknown associations earn no bonus; unavailable materials preserve the previous score.
+      const N=Math.min(100,base+10*E);
+      return {row,name,C,N,E,F:finalScore(C,N)};
+    }).sort((a,b)=>b.F-a.F||a.name.name_id.localeCompare(b.name.name_id)).slice(0,3);
   }).filter(items=>items.length);
   type Pair=typeof options[number][number];
   let best:Pair[]|null=null,total=-Infinity,key='';

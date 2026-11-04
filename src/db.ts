@@ -1,4 +1,5 @@
 import pg from 'pg';
+import {reviewedNameElements} from './name-elements';
 import type {Evidence,NameDetails,Motif} from './rank';
 import {validateNameCorpus} from './name-corpus';
 import type {YearRange} from './generation-input';
@@ -46,6 +47,6 @@ export async function verifiedNames():Promise<NameDetails[]> {
     const entry=source.get(row.name_id);
     const fields=['hangul','hanja','reading_verified','meaning_ko','motif_tags','style_tags','naturalness','is_playful','corpus_version'] as const;
     if(!entry||entry.name_kind==='nickname'||fields.some(field=>JSON.stringify(row[field])!==JSON.stringify(entry[field])))return [];
-    return [{...entry,name_kind:entry.name_kind}];
+    return [{...entry,name_kind:entry.name_kind,elements:reviewedNameElements({...entry,name_kind:entry.name_kind})}];
   });
 }

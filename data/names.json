@@ -1,5 +1,5 @@
 {
-  "version": "ko-names-v2",
+  "version": "ko-names-v3",
   "checked_at": "2026-11-04",
   "review_method": "court-character-reading-check-and-Codex-editorial-review",
   "meaning_policy": "Character glosses are source-checked facts; combined meanings, motif tags and naturalness scores are project-authored creative judgments. No human-panel review is claimed.",
@@ -24,6 +24,12 @@
       "id": "nikl-spelling",
       "url": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=90&pageIndex=1&qna_seq=328273",
       "note": "Word-internal readings such as 림/린 are preserved; court-listed readings are checked per character."
+    },
+    {
+      "id": "court-statistics-secondary-2025",
+      "url": "https://namepick.tuneon.co.kr/data-sources/scourt-birth-name-ranking-2023-2025",
+      "cross_check_url": "https://poguenname.com/guide/2025-ranking",
+      "note": "2025 national male/female top-20 spellings, ranks and counts agree in two secondary sources. Court original currently unavailable. Frequency is not proof of Hanja or an element. Captured normalized aggregate facts and hashes are in data/name-statistics/."
     }
   ],
   "characters": {
@@ -387,7 +393,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "feminine"
@@ -418,7 +424,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "feminine"
@@ -450,7 +456,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -481,7 +487,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "feminine"
@@ -512,7 +518,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -543,7 +549,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "feminine"
@@ -574,7 +580,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -605,7 +611,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -636,7 +642,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -666,7 +672,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -697,7 +703,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "masculine"
@@ -728,7 +734,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -760,7 +766,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -792,7 +798,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "feminine"
@@ -824,7 +830,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -856,7 +862,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "feminine"
@@ -888,7 +894,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -920,7 +926,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -952,7 +958,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "feminine"
@@ -984,7 +990,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "masculine"
@@ -1016,7 +1022,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "masculine"
@@ -1048,7 +1054,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -1079,7 +1085,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "masculine"
@@ -1111,7 +1117,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "masculine"
@@ -1141,7 +1147,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "masculine"
@@ -1172,7 +1178,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -1203,7 +1209,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -1234,7 +1240,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -1265,7 +1271,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -1295,7 +1301,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "feminine"
@@ -1326,7 +1332,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "feminine"
@@ -1356,7 +1362,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "feminine"
@@ -1387,7 +1393,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -1418,7 +1424,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "feminine"
@@ -1449,7 +1455,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "masculine"
@@ -1480,7 +1486,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -1510,7 +1516,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "feminine"
@@ -1541,7 +1547,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -1572,7 +1578,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -1603,7 +1609,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -1635,7 +1641,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -1666,7 +1672,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "masculine"
@@ -1697,7 +1703,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "feminine"
@@ -1728,7 +1734,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -1759,7 +1765,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -1791,7 +1797,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -1822,7 +1828,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -1853,7 +1859,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -1884,7 +1890,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -1915,7 +1921,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "feminine"
@@ -1946,7 +1952,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "feminine"
@@ -1978,7 +1984,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "feminine"
@@ -2009,7 +2015,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -2040,7 +2046,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "feminine"
@@ -2071,7 +2077,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "feminine"
@@ -2102,7 +2108,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "feminine"
@@ -2133,7 +2139,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "feminine"
@@ -2164,7 +2170,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "feminine"
@@ -2195,7 +2201,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "feminine"
@@ -2226,7 +2232,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -2255,7 +2261,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "feminine"
@@ -2284,7 +2290,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "masculine"
@@ -2314,7 +2320,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "feminine"
@@ -2343,7 +2349,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -2375,7 +2381,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -2406,7 +2412,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "neutral"
@@ -2436,7 +2442,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "feminine"
@@ -2467,7 +2473,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "masculine"
@@ -2498,7 +2504,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "masculine"
@@ -2530,7 +2536,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "masculine"
@@ -2561,7 +2567,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "masculine"
@@ -2592,7 +2598,7 @@
       "review_status": "verified",
       "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
       "provenance_note": "글자·독음은 법원 조회, 개별 의미는 법원 훈·Unihan 대조. 이름 전체 뜻·모티프·말맛·자연스러움은 Codex 편집 판단이며 전통 작명 판정이나 사람 2명의 평가가 아니다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "hanja",
       "name_feels": [
         "feminine"
@@ -2618,7 +2624,7 @@
       "review_status": "verified",
       "source_url": "urn:make-the-one:names:ko-names-v1",
       "provenance_note": "프로젝트에서 만든 재미 별명과 설명이며 한자·고유어 어원 주장 없음.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "nickname",
       "name_feels": [
         "neutral"
@@ -2644,7 +2650,7 @@
       "review_status": "verified",
       "source_url": "urn:make-the-one:names:ko-names-v1",
       "provenance_note": "프로젝트에서 만든 재미 별명과 설명이며 한자·고유어 어원 주장 없음.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "nickname",
       "name_feels": [
         "neutral"
@@ -2670,7 +2676,7 @@
       "review_status": "verified",
       "source_url": "urn:make-the-one:names:ko-names-v1",
       "provenance_note": "프로젝트에서 만든 재미 별명과 설명이며 한자·고유어 어원 주장 없음.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "nickname",
       "name_feels": [
         "neutral"
@@ -2696,7 +2702,7 @@
       "review_status": "verified",
       "source_url": "urn:make-the-one:names:ko-names-v1",
       "provenance_note": "프로젝트에서 만든 재미 별명과 설명이며 한자·고유어 어원 주장 없음.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "nickname",
       "name_feels": [
         "neutral"
@@ -2722,7 +2728,7 @@
       "review_status": "verified",
       "source_url": "urn:make-the-one:names:ko-names-v1",
       "provenance_note": "프로젝트에서 만든 재미 별명과 설명이며 한자·고유어 어원 주장 없음.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "nickname",
       "name_feels": [
         "neutral"
@@ -2748,7 +2754,7 @@
       "review_status": "verified",
       "source_url": "urn:make-the-one:names:ko-names-v1",
       "provenance_note": "프로젝트에서 만든 재미 별명과 설명이며 한자·고유어 어원 주장 없음.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "nickname",
       "name_feels": [
         "neutral"
@@ -2774,7 +2780,7 @@
       "review_status": "verified",
       "source_url": "urn:make-the-one:names:ko-names-v1",
       "provenance_note": "프로젝트에서 만든 재미 별명과 설명이며 한자·고유어 어원 주장 없음.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "nickname",
       "name_feels": [
         "neutral"
@@ -2800,7 +2806,7 @@
       "review_status": "verified",
       "source_url": "urn:make-the-one:names:ko-names-v1",
       "provenance_note": "프로젝트에서 만든 재미 별명과 설명이며 한자·고유어 어원 주장 없음.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "nickname",
       "name_feels": [
         "neutral"
@@ -2826,7 +2832,7 @@
       "review_status": "verified",
       "source_url": "urn:make-the-one:names:ko-names-v1",
       "provenance_note": "프로젝트에서 만든 재미 별명과 설명이며 한자·고유어 어원 주장 없음.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "nickname",
       "name_feels": [
         "neutral"
@@ -2852,7 +2858,7 @@
       "review_status": "verified",
       "source_url": "urn:make-the-one:names:ko-names-v1",
       "provenance_note": "프로젝트에서 만든 재미 별명과 설명이며 한자·고유어 어원 주장 없음.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "nickname",
       "name_feels": [
         "neutral"
@@ -2878,7 +2884,7 @@
       "review_status": "verified",
       "source_url": "urn:make-the-one:names:ko-names-v1",
       "provenance_note": "프로젝트에서 만든 재미 별명과 설명이며 한자·고유어 어원 주장 없음.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "nickname",
       "name_feels": [
         "neutral"
@@ -2904,7 +2910,7 @@
       "review_status": "verified",
       "source_url": "urn:make-the-one:names:ko-names-v1",
       "provenance_note": "프로젝트에서 만든 재미 별명과 설명이며 한자·고유어 어원 주장 없음.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "nickname",
       "name_feels": [
         "neutral"
@@ -2935,7 +2941,7 @@
       "review_status": "verified",
       "source_url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=20311",
       "provenance_note": "국립국어원 한국어기초사전의 첫 번째 단어 뜻을 확인해 독립적으로 요약했다. 이름 풀이는 프로젝트 창작이며 이름 느낌과 자연스러움은 Codex 편집 판단이다. 사람 검수나 사용 빈도 통계를 뜻하지 않는다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "native",
       "name_feels": [
         "neutral"
@@ -2966,12 +2972,315 @@
       "review_status": "verified",
       "source_url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=24868",
       "provenance_note": "국립국어원 한국어기초사전의 첫 번째 단어 뜻을 확인해 독립적으로 요약했다. 이름 풀이는 프로젝트 창작이며 이름 느낌과 자연스러움은 Codex 편집 판단이다. 사람 검수나 사용 빈도 통계를 뜻하지 않는다.",
-      "corpus_version": "ko-names-v2",
+      "corpus_version": "ko-names-v3",
       "name_kind": "native",
       "name_feels": [
         "neutral"
       ],
       "word_meaning": "공기 속 수분이 응결해 맺힌 작은 물방울"
+    },
+    {
+      "name_id": "ko-serious-073",
+      "hangul": "아린",
+      "hanja": "雅潾",
+      "name_kind": "hanja",
+      "name_feels": [
+        "feminine"
+      ],
+      "word_meaning": null,
+      "reading_verified": true,
+      "meaning_ko": "우아함과 맑은 물의 뜻을 연결해 표현을 맑게 다듬는 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "예술",
+        "다듬기",
+        "관찰"
+      ],
+      "style_tags": [
+        "현대적",
+        "차분함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "2025 전국 female TOP20에서 한글 이름 확인(순위 6, 신고 1611건; 법원 직접 재확인 미완료, 두 외부 집계 일치). 한자 조합은 기존 검증된 글자만 사용한 프로젝트 편집이며 통계의 실제 신고 한자가 아니다. 뜻·태그·느낌·자연스러움은 편집 판단.",
+      "corpus_version": "ko-names-v3",
+      "statistics_ref": "name-statistics/2025-female.json#아린"
+    },
+    {
+      "name_id": "ko-serious-074",
+      "hangul": "아윤",
+      "hanja": "雅潤",
+      "name_kind": "hanja",
+      "name_feels": [
+        "feminine"
+      ],
+      "word_meaning": null,
+      "reading_verified": true,
+      "meaning_ko": "우아함과 윤택함을 연결해 삶과 표현을 가꾸는 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "예술",
+        "다듬기",
+        "돌봄",
+        "성장"
+      ],
+      "style_tags": [
+        "현대적",
+        "차분함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "2025 전국 female TOP20에서 한글 이름 확인(순위 9, 신고 1452건; 법원 직접 재확인 미완료, 두 외부 집계 일치). 한자 조합은 기존 검증된 글자만 사용한 프로젝트 편집이며 통계의 실제 신고 한자가 아니다. 뜻·태그·느낌·자연스러움은 편집 판단.",
+      "corpus_version": "ko-names-v3",
+      "statistics_ref": "name-statistics/2025-female.json#아윤"
+    },
+    {
+      "name_id": "ko-serious-075",
+      "hangul": "시아",
+      "hanja": "時雅",
+      "name_kind": "hanja",
+      "name_feels": [
+        "feminine"
+      ],
+      "word_meaning": null,
+      "reading_verified": true,
+      "meaning_ko": "때와 우아함을 연결해 자신의 시간과 표현을 가꾸는 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "기억",
+        "준비",
+        "전환",
+        "예술"
+      ],
+      "style_tags": [
+        "현대적",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "2025 전국 female TOP20에서 한글 이름 확인(순위 10, 신고 1435건; 법원 직접 재확인 미완료, 두 외부 집계 일치). 한자 조합은 기존 검증된 글자만 사용한 프로젝트 편집이며 통계의 실제 신고 한자가 아니다. 뜻·태그·느낌·자연스러움은 편집 판단.",
+      "corpus_version": "ko-names-v3",
+      "statistics_ref": "name-statistics/2025-female.json#시아"
+    },
+    {
+      "name_id": "ko-serious-076",
+      "hangul": "윤서",
+      "hanja": "潤瑞",
+      "name_kind": "hanja",
+      "name_feels": [
+        "feminine"
+      ],
+      "word_meaning": null,
+      "reading_verified": true,
+      "meaning_ko": "윤택함과 상서로움을 연결해 새로운 시작을 보살피는 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "돌봄",
+        "성장",
+        "기회",
+        "시작"
+      ],
+      "style_tags": [
+        "현대적",
+        "차분함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "2025 전국 female TOP20에서 한글 이름 확인(순위 11, 신고 1249건; 법원 직접 재확인 미완료, 두 외부 집계 일치). 한자 조합은 기존 검증된 글자만 사용한 프로젝트 편집이며 통계의 실제 신고 한자가 아니다. 뜻·태그·느낌·자연스러움은 편집 판단.",
+      "corpus_version": "ko-names-v3",
+      "statistics_ref": "name-statistics/2025-female.json#윤서"
+    },
+    {
+      "name_id": "ko-serious-077",
+      "hangul": "채아",
+      "hanja": "彩雅",
+      "name_kind": "hanja",
+      "name_feels": [
+        "feminine"
+      ],
+      "word_meaning": null,
+      "reading_verified": true,
+      "meaning_ko": "빛깔과 우아함을 연결해 자신의 표현을 다듬는 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "표현",
+        "예술",
+        "교류",
+        "다듬기"
+      ],
+      "style_tags": [
+        "현대적",
+        "선명함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "2025 전국 female TOP20에서 한글 이름 확인(순위 17, 신고 1070건; 법원 직접 재확인 미완료, 두 외부 집계 일치). 한자 조합은 기존 검증된 글자만 사용한 프로젝트 편집이며 통계의 실제 신고 한자가 아니다. 뜻·태그·느낌·자연스러움은 편집 판단.",
+      "corpus_version": "ko-names-v3",
+      "statistics_ref": "name-statistics/2025-female.json#채아"
+    },
+    {
+      "name_id": "ko-serious-078",
+      "hangul": "도아",
+      "hanja": "道雅",
+      "name_kind": "hanja",
+      "name_feels": [
+        "feminine"
+      ],
+      "word_meaning": null,
+      "reading_verified": true,
+      "meaning_ko": "길과 우아함을 연결해 스스로 고른 방향을 가꾸는 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "길찾기",
+        "선택",
+        "여정",
+        "예술"
+      ],
+      "style_tags": [
+        "현대적",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "2025 전국 female TOP20에서 한글 이름 확인(순위 18, 신고 1046건; 법원 직접 재확인 미완료, 두 외부 집계 일치). 한자 조합은 기존 검증된 글자만 사용한 프로젝트 편집이며 통계의 실제 신고 한자가 아니다. 뜻·태그·느낌·자연스러움은 편집 판단.",
+      "corpus_version": "ko-names-v3",
+      "statistics_ref": "name-statistics/2025-female.json#도아"
+    },
+    {
+      "name_id": "ko-serious-079",
+      "hangul": "유하",
+      "hanja": "柔河",
+      "name_kind": "hanja",
+      "name_feels": [
+        "feminine"
+      ],
+      "word_meaning": null,
+      "reading_verified": true,
+      "meaning_ko": "부드러움과 강을 연결해 관계와 흐름을 이어가는 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "관계",
+        "협상",
+        "연결",
+        "흐름",
+        "이동"
+      ],
+      "style_tags": [
+        "현대적",
+        "차분함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "2025 전국 female TOP20에서 한글 이름 확인(순위 20, 신고 1023건; 법원 직접 재확인 미완료, 두 외부 집계 일치). 한자 조합은 기존 검증된 글자만 사용한 프로젝트 편집이며 통계의 실제 신고 한자가 아니다. 뜻·태그·느낌·자연스러움은 편집 판단.",
+      "corpus_version": "ko-names-v3",
+      "statistics_ref": "name-statistics/2025-female.json#유하"
+    },
+    {
+      "name_id": "ko-serious-080",
+      "hangul": "수호",
+      "hanja": "秀浩",
+      "name_kind": "hanja",
+      "name_feels": [
+        "masculine"
+      ],
+      "word_meaning": null,
+      "reading_verified": true,
+      "meaning_ko": "빼어남과 넓음을 연결해 익힌 역량을 넓혀 가는 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "성장",
+        "다듬기",
+        "기술",
+        "개척",
+        "확산"
+      ],
+      "style_tags": [
+        "현대적",
+        "선명함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "2025 전국 male TOP20에서 한글 이름 확인(순위 11, 신고 1458건; 법원 직접 재확인 미완료, 두 외부 집계 일치). 한자 조합은 기존 검증된 글자만 사용한 프로젝트 편집이며 통계의 실제 신고 한자가 아니다. 뜻·태그·느낌·자연스러움은 편집 판단.",
+      "corpus_version": "ko-names-v3",
+      "statistics_ref": "name-statistics/2025-male.json#수호"
+    },
+    {
+      "name_id": "ko-serious-081",
+      "hangul": "은호",
+      "hanja": "恩浩",
+      "name_kind": "hanja",
+      "name_feels": [
+        "masculine"
+      ],
+      "word_meaning": null,
+      "reading_verified": true,
+      "meaning_ko": "은혜와 넓음을 연결해 받은 도움을 널리 나누는 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "돌봄",
+        "도움",
+        "관계",
+        "개척",
+        "확산"
+      ],
+      "style_tags": [
+        "현대적",
+        "중립적"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "2025 전국 male TOP20에서 한글 이름 확인(순위 17, 신고 1278건; 법원 직접 재확인 미완료, 두 외부 집계 일치). 한자 조합은 기존 검증된 글자만 사용한 프로젝트 편집이며 통계의 실제 신고 한자가 아니다. 뜻·태그·느낌·자연스러움은 편집 판단.",
+      "corpus_version": "ko-names-v3",
+      "statistics_ref": "name-statistics/2025-male.json#은호"
+    },
+    {
+      "name_id": "ko-serious-082",
+      "hangul": "윤우",
+      "hanja": "潤宇",
+      "name_kind": "hanja",
+      "name_feels": [
+        "neutral"
+      ],
+      "word_meaning": null,
+      "reading_verified": true,
+      "meaning_ko": "윤택함과 집의 뜻을 연결해 함께 살아갈 기반을 가꾸는 이름.",
+      "meaning_kind": "creative_combination",
+      "motif_tags": [
+        "돌봄",
+        "성장",
+        "기반",
+        "보호",
+        "공동체"
+      ],
+      "style_tags": [
+        "현대적",
+        "차분함"
+      ],
+      "naturalness": 4,
+      "is_playful": false,
+      "review_status": "verified",
+      "source_url": "https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010",
+      "provenance_note": "2025 전국 male TOP20에서 한글 이름 확인(순위 18, 신고 1275건; 법원 직접 재확인 미완료, 두 외부 집계 일치). 한자 조합은 기존 검증된 글자만 사용한 프로젝트 편집이며 통계의 실제 신고 한자가 아니다. 뜻·태그·느낌·자연스러움은 편집 판단.",
+      "corpus_version": "ko-names-v3",
+      "statistics_ref": "name-statistics/2025-male.json#윤우"
     }
   ],
   "preference_policy": "Name feel is a project editorial impression, not measured gender usage or a restriction on who can use a name. Neutral names are eligible for either preference."
